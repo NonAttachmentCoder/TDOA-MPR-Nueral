@@ -1,0 +1,1 @@
+Figures must be generated from verified experiment outputs. This folder contains no paper result figure until the corresponding experiment contract is frozen and the result files, code version and plotting transformations are recorded.

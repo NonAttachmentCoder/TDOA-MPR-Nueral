@@ -1,0 +1,270 @@
+% TDOA-MPR working research paper, 2026-11-23.
+% Scientific narrative is prospective: no learned numerical results exist.
+% Do not remove evidence-status markers without observed experiment files.
+\documentclass[journal]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{url}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\EE}{\mathbb{E}}
+\newcommand{\Tr}{\operatorname{tr}}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\papertodo}[1]{\par\noindent\textbf{[Research manuscript: #1]}\par}
+\newcommand{\bu}{\mathbf{u}}
+\newcommand{\bs}{\mathbf{s}}
+\newcommand{\by}{\mathbf{y}}
+\newcommand{\bQ}{\mathbf{Q}}
+\newcommand{\bH}{\mathbf{H}}
+\allowdisplaybreaks
+\begin{document}
+
+\title{Physics-Embedded Neural Estimation for Unified Near-Field and Far-Field TDOA Localization}
+\author{Author information to be confirmed}
+\maketitle
+
+\begin{abstract}
+Time-difference-of-arrival (TDOA) localization requires an estimator to extract direction and range information from spatially distributed receivers without assuming the source distance in advance. The modified polar representation (MPR) expresses the source through a unit direction and an inverse range, providing a common description of near-field positioning and far-field direction finding. Existing MPR algorithms offer accurate estimation under their statistical assumptions, while practical TDOA measurements can exhibit correlated reference errors, uncertain receiver locations, and deviations from the nominal arrival-time model. This paper investigates a physics-embedded neural estimator for such measurements. A numerically stable TDOA forward map is evaluated at the network's own successive source estimates, and the resulting discrepancies are combined with receiver geometry and full measurement and position-error covariance information in a learned recurrent representation. The estimator outputs direction and signed inverse range without an analytical localization initializer or a terminal classical solver. A prospective numerical protocol is developed to examine Gaussian accuracy, behavior over source range and receiver geometry, contamination of individual and reference receivers, model mismatch, and the computational cost of neural inference relative to classical MPR methods. The proposed computation and protocol are specified; comparative accuracy is left to measurement rather than presumed from architecture.
+\end{abstract}
+
+\begin{IEEEkeywords}
+Time difference of arrival, source localization, modified polar representation, near-field and far-field estimation, physics-embedded learning.
+\end{IEEEkeywords}
+\IEEEpeerreviewmaketitle
+
+\section{Introduction}
+\label{sec:introduction}
+\IEEEPARstart{T}{ime}-difference-of-arrival (TDOA) measurements from spatially separated receivers support the localization of a source without knowledge of its transmission epoch. A near-field emitter is characterized by its position through differences in propagation distance, whereas the same measurements predominantly convey its direction when the source is distant. A localization algorithm based solely on a spherical wavefront may exhibit a range-dependent threshold, while applying a plane-wave approximation too early introduces a bias for sources that are not sufficiently far from the receivers. The appropriate regime is typically unknown before estimation.
+
+Wang and Ho~\cite{wangho2017} addressed this difficulty by representing a source through its direction and inverse range, known as the modified polar representation (MPR), and developing iterative maximum-likelihood estimation (MLE) initialized by semidefinite relaxation. Sun \emph{et al.}~\cite{sunho2019} subsequently derived closed-form TDOA--MPR solutions based on successive unconstrained minimization and a generalized trust-region subproblem, together with bias and covariance analysis. Related convex relaxation formulations were studied in~\cite{wangho2019convex}. The projection-based methods of Sun \emph{et al.}~\cite{sun2024projection} further exploit the structure of MPR to organize direction and inverse-range estimation, and establish important relationships with the generalized trust-region solution. More recent analysis examines the advantages and limitations of MPR relative to Cartesian localization~\cite{sun2026comparison}. These results establish the common near-/far-field MPR representation and several effective analytical solvers. Neither MPR nor its ability to represent distant sources is a new contribution of the present study.
+
+The accuracy of an estimator also depends on how the TDOA observations are formed and combined. Difference measurements sharing a reference receiver contain correlated errors even when the original receiver arrival-time errors are independent. Receiver-position errors introduce additional geometry-dependent uncertainty. Moreover, propagation through non-line-of-sight (NLOS) paths can lead to delay biases that are not described by a nominal Gaussian covariance. Robust TDOA localization under NLOS has already been studied using optimization-based methods~\cite{wangso2016}; hence robustness itself cannot be attributed exclusively to learned processing.
+
+Under correct Gaussian assumptions, properly implemented classical MPR estimators provide demanding accuracy references. Under mismatch, a statistical model that does not represent the actual error structure may be insufficient. This motivates examining whether a learned estimator can combine information about the received differences, their common reference, the receiver network, and the consistency of a single source more effectively than a fixed nominal computation. A useful learning method should retain the exact geometrical relationship while leaving the statistical fusion rule sufficiently flexible to adapt to the observed evidence.
+
+Model-based deep learning provides different ways to combine analytical knowledge with trainable inference~\cite{shlezinger2023}. Learned direction estimation methods such as DA-MUSIC~\cite{merkofer2024} use data-dependent representations in conjunction with established signal-processing operations. Recurrent inference machines~\cite{putzky2017} and learned state-estimation methods such as KalmanNet~\cite{revach2022} instead place trainable computations within a repeated inference process. These methods concern different measurements and tasks; they inform the organization of a physics-embedded estimator without establishing its accuracy for TDOA--MPR.
+
+This paper investigates a neural-first estimator for a single source observed once by eight receivers. Its inputs are seven reference-station range differences, the reported receiver positions, and the nominal covariances of the measurement and receiver-position errors. The output is a unit source direction and signed inverse range. The network constructs a common latent representation from the receivers and repeatedly evaluates the exact TDOA map at its own state predictions. The physical query supplies range-dependent consistency information, whereas learned operations combine the query residuals with geometry and uncertainty. No classical positioning initializer, solver iteration, or analytical output correction is required during inference.
+
+The research contribution under investigation is thus a \emph{computational mechanism}, not a new near-/far-field coordinate representation: (i) a correlated TDOA observation interface retaining the common-reference structure and reported receiver-position uncertainty; (ii) a dynamic neural computation using an exact, well-conditioned MPR forward query, including the inverse-range zero limit; and (iii) a matched evaluation protocol to determine whether these design choices improve the direction/inverse-range tradeoff or robustness relative to classical and learned controls. The first two items are specified as mathematical and computational constructions. The third is an experimental question; no comparative performance claim is established by the present working draft.
+
+The remainder is organized as follows. Section II presents the model and local information structure. Section III describes the candidate estimator and training criterion. Section IV specifies the numerical evaluation required to assess its accuracy and limitations. Section V summarizes the scope of the resulting study.
+
+\section{Measurement Model}
+\label{sec:model}
+Consider a stationary source at an unknown position \(\mathbf p^\circ\in\RR^3\) and \(M\) spatially distributed receivers, with true positions \(\bs_i^\circ\), \(i=0,\ldots,M-1\). Receiver 0 serves as the reference. The signal propagation speed \(c\) is assumed known and common to all receivers. With emission time \(t_e\), the ideal time at receiver \(i\) is \(t_e+\|\mathbf p^\circ-\bs_i^\circ\|/c\). A time difference eliminates \(t_e\).
+
+The observed range difference (TDOA multiplied by \(c\)) is
+\begin{equation}
+ y_i=c(t_i-t_0)=\|\mathbf p^\circ-\bs_i^\circ\|
+ -\|\mathbf p^\circ-\bs_0^\circ\|+n_{r,i},
+ \quad i=1,\ldots,M-1 .
+ \label{eq:tdoa}
+\end{equation}
+Let \(D\in\RR^{(M-1)\times M}\) have row \(i\) equal to \(\mathbf e_i^T-\mathbf e_0^T\). If arrival-range errors have covariance \(\bQ_{\mathrm{toa}}\), then
+\begin{equation}
+ \mathbf n_r=D\mathbf e,\qquad
+ \bQ_r=D\bQ_{\mathrm{toa}}D^T .
+ \label{eq:covdiff}
+\end{equation}
+When \(\bQ_{\mathrm{toa}}=\sigma^2I\), the diagonal entries of \(\bQ_r\) are \(2\sigma^2\) and its off-diagonal entries are \(\sigma^2\). The data are therefore not seven independent range measurements. Other differencing references contain the same receiver-level information when the corresponding covariance is transformed consistently.
+
+The measured receiver positions are
+\begin{equation}
+ \mathbf s_i=\bs_i^\circ+\mathbf e_{s,i},
+ \label{eq:reported}
+\end{equation}
+where \(\mathbf e_s=[\mathbf e_{s,0}^T,\ldots,\mathbf e_{s,M-1}^T]^T\) has nominal covariance \(\bQ_s\). The nominal arrival and receiver-position errors are independent. The available data are
+\begin{equation}
+ X=(\by,S_{\mathrm{rep}},\bQ_r,\bQ_s)
+ \label{eq:input}
+\end{equation}
+with dimensions \(M-1\), \(M\times3\), \((M-1)\times(M-1)\), and \(3M\times3M\), respectively. All covariance matrices are in meters squared. The source and true receiver positions are not inference inputs.
+
+\subsection{Modified polar representation and stable TDOA map}
+Write the true position as
+\begin{equation}
+ \mathbf p^\circ=\bu^\circ/g^\circ,\quad
+ \|\bu^\circ\|=1,\quad g^\circ=1/\|\mathbf p^\circ\|>0 .
+ \label{eq:mpr}
+\end{equation}
+Let \(a_i=\|\bu-g\bs_i\|\) and \(a_0=\|\bu-g\bs_0\|\). Direct substitution into (\ref{eq:tdoa}) gives \((a_i-a_0)/g\) for \(g>0\). Rationalizing the numerator yields
+\begin{equation}
+ h_i(\bu,g,S)=
+ \frac{-2\bu^T(\bs_i-\bs_0)+g(\|\bs_i\|^2-\|\bs_0\|^2)}
+ {\|\bu-g\bs_i\|+\|\bu-g\bs_0\|}.
+ \label{eq:stable}
+\end{equation}
+Unlike the direct quotient, (\ref{eq:stable}) has an exact continuous limit at zero inverse range:
+\begin{equation}
+ h_i(\bu,0,S)=-\bu^T(\bs_i-\bs_0).
+ \label{eq:far}
+\end{equation}
+The stable expression is used by both the physical query and numerical checks. A negative estimated \(g\) is retained as a smooth algebraic continuation; it does not represent a physical negative source distance. Cartesian recovery is meaningful only for \(g>0\).
+
+Define the projected wavefront vectors \(\mathbf b_i=(\bu-g\bs_i)/a_i\), and set
+\[
+ N_i=-2\bu^T(\bs_i-\bs_0)+g(\|\bs_i\|^2-\|\bs_0\|^2),\quad T_i=a_i+a_0.
+\]
+The derivatives with respect to the ambient direction and inverse range are
+\begin{align}
+ \frac{\partial h_i}{\partial\bu}
+ &=-\frac{2(\bs_i-\bs_0)^T}{T_i}
+  -\frac{N_i(\mathbf b_i+\mathbf b_0)^T}{T_i^2},
+ \label{eq:du}\\
+ \frac{\partial h_i}{\partial g}
+ &=\frac{\|\bs_i\|^2-\|\bs_0\|^2}{T_i}
+ +\frac{N_i(\mathbf b_i^T\bs_i+\mathbf b_0^T\bs_0)}{T_i^2}.
+ \label{eq:dg}
+\end{align}
+The expression for \(\partial h_i/\partial\bu\) is used only along tangent directions that preserve \(\|\bu\|=1\). Let \(E\in\RR^{3\times2}\) satisfy \(E^T\bu=0\), \(E^TE=I_2\), and define
+\begin{equation}
+ \bH=\left[\frac{\partial\mathbf h}{\partial\bu}E,\,
+ \frac{\partial\mathbf h}{\partial g}\right].
+ \label{eq:H}
+\end{equation}
+In the far-field limit,
+\begin{equation}
+ \left.\frac{\partial h_i}{\partial g}\right|_{g=0}
+ =\tfrac12\big(\|P_{\bu}\bs_i\|^2-\|P_{\bu}\bs_0\|^2\big),
+ \quad P_{\bu}=I-\bu\bu^T.
+ \label{eq:curvature}
+\end{equation}
+This shows that the inverse-range sensitivity depends on transverse receiver geometry, even at zero inverse range. It may be small or ill-conditioned for particular receiver layouts; the limit does not imply that all networks have identical radial information.
+
+\subsection{Receiver-position uncertainty and local bound}
+Let \(J_s\in\RR^{(M-1)\times3M}\) be the derivative of \(\mathbf h\) with respect to the receiver-coordinate vector \(\mathbf s\). Expanding around the reported positions gives
+\begin{equation}
+ \mathbf y-\mathbf h(\bu,g,S_{\mathrm{rep}})
+ \simeq \mathbf n_r-J_s\mathbf e_s,\qquad
+ C(\bu,g)\simeq\bQ_r+J_s\bQ_sJ_s^T .
+ \label{eq:effcov}
+\end{equation}
+The signed cross term vanishes under the stated independent zero-mean error assumption. This first-order covariance is not an exact marginal likelihood for finite receiver-position errors. A Gaussian approximation with state-dependent \(C\) also includes \(\log\det C\); minimizing the whitened residual alone is generally not an exact MLE.
+
+For local tangent parameters \((\delta\eta_1,\delta\eta_2,\delta g)\), the first-order information and inverse are
+\begin{equation}
+ F=\bH^T C^{-1}\bH,\qquad B_{\mathrm{loc}}=F^{-1},
+ \label{eq:localbound}
+\end{equation}
+when \(F\) is nonsingular. With known receiver positions and fixed \(\bQ_r\), (\ref{eq:localbound}) gives the conditional Gaussian CRLB. Otherwise it is identified only as a linearized information reference. In particular, its use outside the small-error region or near an ill-conditioned geometry requires qualification rather than drawing a universally valid performance bound.
+
+\section{Proposed Method}
+\label{sec:method}
+This section specifies an initial neural candidate, denoted Dynamic-TDOA-MPR. The aim is to investigate learned fusion of correlated TDOA evidence with a physical representation shared across source distances, rather than to unfold a particular published TDOA optimizer. All trainable components operate on the available input (\ref{eq:input}).
+
+\subsection{Covariance-aware receiver representation}
+For each frame define the reported network RMS aperture
+\begin{equation}
+ L=\max\left(1\ {\rm m},
+  \sqrt{\frac1M\sum_{i=0}^{M-1}\|\bs_i-\bar{\bs}\|^2}\right),
+ \quad \bar{\bs}=\frac1M\sum_i\bs_i .
+ \label{eq:aperture}
+\end{equation}
+Station coordinates, range differences and covariance matrices are normalized by \(L\) or \(L^2\), as appropriate. Since reference-star TDOAs are correlated, the network receives the entire \(\bQ_r\), not just its diagonal. It also receives the complete \(\bQ_s\). In the implemented prototype, the data generator happens to use diagonal station-position covariance; the input interface does not impose that restriction.
+
+For receiver \(i>0\), a shared encoder constructs a token from the observed and predicted normalized range differences, their discrepancy, its standardized value, the normalized receiver and baseline coordinates, reported local station-position uncertainty, a row of the TDOA correlation matrix, the current source estimate, and the local predicted wavefront direction. Thus each token preserves both the reference-star relation and receiver-specific information. The full covariance and normalized aperture are also provided to the global encoder.
+
+\subsection{Dynamic physical queries and latent inference}
+Let \(\mathbf z_i^{(t)}\) denote receiver tokens and \(\mathbf m^{(t)}\) a common hidden state. The first stage uses the measured differences and geometry without a state-dependent prediction. After a state estimate \((\hat\bu^{(t)},\hat g^{(t)})\) is produced, later stages compute
+\begin{equation}
+ \tilde y_i^{(t)}=h_i(\hat\bu^{(t)},\hat g^{(t)},S_{\mathrm{rep}}),\qquad
+ r_i^{(t)}=y_i-\tilde y_i^{(t)} .
+ \label{eq:query}
+\end{equation}
+This is an observation-space consistency query, not an analytical GN step. A station encoder \(\phi_\omega\) processes the tokens. A pooled representation and the covariance context are fused into a global feature \(\mathbf a^{(t)}\). The shared recurrent cell computes
+\begin{equation}
+ \mathbf m^{(t+1)}
+ ={\rm GRU}_\omega\big(\mathbf a^{(t)},\mathbf m^{(t)}\big).
+ \label{eq:memory}
+\end{equation}
+Two learned readouts map the hidden state into direction and scaled signed inverse range:
+\begin{equation}
+ \hat\bu^{(t+1)}=
+ \frac{f_{\omega,u}(\mathbf m^{(t+1)})}
+ {\|f_{\omega,u}(\mathbf m^{(t+1)})\|},\qquad
+ \hat g^{(t+1)}
+ =\frac{\kappa}{L}\tanh f_{\omega,g}(\mathbf m^{(t+1)}),
+ \label{eq:readout}
+\end{equation}
+with \(\kappa=4\) in the present implementation. This range scaling is a training and numerical design choice, not a physical limit. It permits exact zero and negative estimates, but restricts \(|\hat g|L<4\); the support and saturation must be disclosed and tested.
+
+The current prototype uses three stages, a receiver-shared multilayer perceptron, mean/max receiver pooling, and one shared recurrent cell. All stages use the same parameters. There is no target-dependent analytical initialization and no terminal classical solver. If repeated physical queries fail to improve accuracy relative to a matched no-query network, the proposed mechanism will not have been supported.
+
+\subsection{Training and deployment}
+For training sample \(k\), let \((\bu_k^\circ,g_k^\circ)\) be private simulation truth, and let \((\hat\bu_k^{(t)},\hat g_k^{(t)})\) denote the stage-\(t\) estimate. The development objective is
+\begin{equation}
+ \mathcal L_t=
+ \frac1K\sum_{k=1}^K
+ \left[1-\hat\bu_k^{(t)T}\bu_k^\circ
+ +\lambda_gL_k^2(\hat g_k^{(t)}-g_k^\circ)^2\right].
+ \label{eq:loss}
+\end{equation}
+The current code uses \(\lambda_g=0.4\), final-stage supervision, and \(0.35\) times the average intermediate-stage loss. The chordal direction term is a stable optimization surrogate; paper evaluation uses squared geodesic angular error, not the training surrogate. The interval of simulated geometries, distances, receiver errors, contamination, and random seeds must be reported with any trained result. Ground-truth range, clean TDOA and true station locations are never input features.
+
+Training proceeds on independent simulated source/receiver configurations; the code includes a short development CLI only. Inference consumes only \((\by,S_{\mathrm{rep}},\bQ_r,\bQ_s)\) and performs a fixed number of learned physical-query stages. Its complexity consists of network encoding, a small number of \(O(M)\) range-difference evaluations, pooling, and recurrent readouts. A fair runtime comparison must measure full preprocessing, input formation, and all output operations rather than comparing a neural forward pass with only a classical solver's final step.
+
+\section{Numerical Evaluation}
+\label{sec:evaluation}
+\papertodo{This section defines a prospective study, not completed simulations. Insert actual figures, uncertainty intervals, method identities, and failure counts only after verified runs. No numerical superiority is asserted.}
+
+\subsection{Experimental protocol and references}
+A common eight-receiver 3-D, single-source scenario is used for all measurements. The true receiver configuration generates TDOAs; an independently perturbed configuration is supplied as \(S_{\mathrm{rep}}\). Receiver-level arrival errors are generated before reference differencing, maintaining (\ref{eq:covdiff}). The clean Gaussian condition follows the nominal covariances; mismatched conditions separately introduce non-Gaussian receiver delay errors, reference receiver contamination, or inaccurate station reports. All methods are evaluated with paired frames and the same visible inputs within the limits of their declared interfaces.
+
+The primary metrics are
+\begin{align}
+ R_u&=\frac1N\sum_{k=1}^N
+  \arccos^2\!\left(\mathrm{clip}(\hat\bu_k^T\bu_k^\circ,-1,1)\right),\\
+ R_g&=\frac1N\sum_{k=1}^N(\hat g_k-g_k^\circ)^2 ,
+ \label{eq:risk}
+\end{align}
+in rad\(^{2}\) and m\(^{-2}\), respectively. Negative inverse-range outputs and failed estimates are explicitly counted. Cartesian-position errors, when available for positive finite range, can be secondary diagnostics, but they cannot replace the two primary risks. Paired confidence intervals and complete trial counts will accompany measured differences.
+
+The intended analytic comparators are the MPR MLE of~\cite{wangho2017}, SUM and GTRS~\cite{sunho2019}, and, where a faithful implementation has been verified, NSP/INSP~\cite{sun2024projection}. The available prototype numerical WLS serves as an implementation sanity check and is not a substitute for any of those published algorithms. Bound curves use the conditional Gaussian CRLB for known receiver positions or an explicitly labelled linearized approximation with position uncertainty. No published baseline will be named in a numerical legend until its exact implementation and input statistics have been qualified.
+
+\subsection{Gaussian accuracy across uncertainty and source distance}
+The first experiment varies the receiver-arrival error level and receiver-position uncertainty while fixing source and geometry. It asks whether the learned estimator approaches the best classical MPR comparators under the correctly specified Gaussian model. The second experiment sweeps the range from a near-field regime through the far-field limit under two receiver geometries with controlled extent. In addition to the two MSEs, it will display the zero-\(g\) estimate risk \(g^{\circ2}\) as a radial reference, allowing apparent small-\(g\) gains to be distinguished from a useful recovery of curvature information.
+
+The expected physical behavior, but not a predicted numerical result, is that the common direction is constrained primarily by plane-wave range differences, whereas inverse-range sensitivity depends on transverse geometry and the curvature term in (\ref{eq:curvature}). This hypothesis is falsifiable by examining the actual direction/range errors and the local information condition number.
+
+\subsection{Measurement-model mismatch}
+Three mismatched measurement families are planned. First, rare high-variance arrival errors are generated independently at receiver level and then differenced, so that a contaminated reference receiver produces a correlated event across all seven range differences. Second, a positive excess propagation delay represents an idealized NLOS-like bias. Its statistics are not assumed to be a universal model of real channels. Third, systematic receiver-clock and reported-position deviations are considered separately. A common clock shift is removed by differencing; differential offsets are not.
+
+The intended comparison asks whether learned fusion is less sensitive to these errors than classical estimators used with the same nominal covariance. It does not presume that training on one contamination family generalizes to an unseen failure mechanism. Robust TDOA algorithms designed for NLOS conditions~\cite{wangso2016} should be considered where their assumptions and inputs are matched.
+
+\subsection{Ablation study and processing time}
+A matched no-physical-query model, with the same data, parameter budget, and training schedule, is the most direct control for the proposed dynamic consistency mechanism. A second control removes the full TDOA covariance correlations while retaining variances. Both conditions must be independently trained and evaluated rather than zeroing features at test time and interpreting the resulting distribution shift as an architectural ablation. The proposed full model will be assessed on both Gaussian and mismatch conditions. CPU single-frame and batched inference times, parameter counts, and complete classical solver times will be reported under identical precision and input-residency assumptions.
+
+\begin{table}[t]
+\centering
+\caption{Planned comparisons. No timings or risk values have been measured.}
+\label{tab:planned}
+\begin{tabular}{lccc}
+\toprule
+Method & Direction MSE & Inverse-range MSE & Runtime \\
+\midrule
+Wang--Ho MPR MLE & Pending & Pending & Pending\\
+Sun--Ho--Wan SUM/GTRS & Pending & Pending & Pending\\
+NSP/INSP (if qualified) & Pending & Pending & Pending\\
+Numerical WLS sanity check & Pending & Pending & Pending\\
+Neural full & Pending & Pending & Pending\\
+Neural no-query control & Pending & Pending & Pending\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\papertodo{Planned figures: (1) Gaussian arrival/position uncertainty;
+(2) range--geometry and the exact far-field limit; (3) arrival contamination
+and reference-receiver corruption; (4) NLOS-like bias and reported-position/
+differential-clock error; (5) matched ablations. Do not insert idealized curves
+or placeholder numerical results.}
+
+\section{Conclusion}
+\label{sec:conclusion}
+This study specifies a physics-embedded neural approach to TDOA localization using a modified polar representation. A stable range-difference map supports an exact zero-inverse-range limit, while receiver-level differencing and reported position covariance preserve the observation dependencies important for statistical fusion. The neural candidate uses learned latent updates driven by its own physical query residuals and returns direction and signed inverse range without a terminal classical solution. These constructions define the proposed computational mechanism, but they do not establish a performance advantage. That conclusion requires faithful classical comparisons, matched learned controls, and independent evaluation under both correctly specified and mismatched measurements.
+
+\bibliographystyle{IEEEtran}
+\bibliography{bibtex/references}
+\end{document}
