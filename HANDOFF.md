@@ -10,7 +10,7 @@ The user authorized building a new TDOA-specific analog of AOA-MPR-Nueral in `No
 - `src/tdoa_mpr/physics.py`: rationalized stable exact forward map, tangent Jacobians and local information.
 - `src/tdoa_mpr/covariance.py`, `simulation.py`: full reference differencing, first-order nuisance covariance, independent Gaussian and optional contamination generator.
 - `src/tdoa_mpr/baseline.py`: independent multi-start nonlinear WLS numerical comparator; not official published MLE/SUM/GTRS.
-- `src/tdoa_mpr/neural.py`, `train.py`, `evaluate.py`: initial neural-first repeated physical query, training loss and *development* run entry points; no trained evidence claimed.
+- `src/tdoa_mpr/neural.py`, `train.py`, `evaluate.py`: initial neural-first repeated physical query, training loss, trainable matched no-query/diagonal-Qr controls and *development* run entry points; no validated performance claimed.
 - `tests/`, `.github/workflows/tests.yml`: analytical limits, finite differences, covariance checks, model forward/backward.
 - `paper/IEEEtran_TDOA_MPR.tex`, BibTeX, Logic_Master, EXPERIMENT_CONTRACT: complete early argument and prospective study with results explicitly pending.
 - `baselines/matlab/sun2019/`: attributed MATLAB 2019 source snapshot from a public mirror, with CISP license; official bytewise fidelity and actual comparison remain unverified.
@@ -23,7 +23,7 @@ The user authorized building a new TDOA-specific analog of AOA-MPR-Nueral in `No
 
 ## Verification and next action
 
-1. Verify GitHub Actions result for the latest main commit. Fix actual test failures, not assumptions. Check compilation of IEEEtran/BibTeX manuscript (and bibliography references).
+1. GitHub Actions on earlier commits passed Python 3.10/3.12 unit tests, a two-step end-to-end train/evaluate smoke run, and IEEEtran/BibTeX compilation; re-check current main after edits. These are engineering checks only, not scientific performance evidence.
 2. Obtain and qualify official Ho MATLAB examples under license; audit units, TDOA signs, covariance, reference ordering, and exact output identity. Do not call Python WLS an original source-paper algorithm.
 3. Review whether candidate neural information paths and bounded g readout are scientifically appropriate before expensive training. A short training smoke test is permitted but is not a paper result.
 4. Freeze a small paired P0 for Gaussian/reference contamination vs matched ablations before any formal testing; keep confirmation scenes unopened.
