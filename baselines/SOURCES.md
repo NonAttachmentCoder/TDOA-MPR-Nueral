@@ -11,7 +11,7 @@ The source is maintained by K. C. Ho's Computational Intelligence Signal Process
 | Sun et al. (TSP 2024), DOI 10.1109/TSP.2024.3352923 | NSP, INSP, NSPBS (check author implementation availability independently) | projection-based comparisons | paper identified; code availability not asserted |
 | Wang and Ho (TWC 2019), DOI 10.1109/TWC.2019.2903037 | convex relaxation | additional reference | not ported |
 
-The first two source bundles are listed on the official site as `TDOALoc_MLEMPR.zip` and `TDOALoc_AlgbSolMPR.zip`. Their MATLAB examples use paper-specific units and covariance conventions; source outputs should not be silently treated as equivalent to the new position-error protocol.
+The unqualified mirror-derived 2019 MATLAB source is now stored in `matlab/sun2019/` with full attribution and lab license. The first two source bundles are listed on the official site as `TDOALoc_MLEMPR.zip` and `TDOALoc_AlgbSolMPR.zip`. Their MATLAB examples use paper-specific units and covariance conventions; source outputs should not be silently treated as equivalent to the new position-error protocol.
 
 **Required before source reproduction claim:** obtain authorized files; preserve notices; record source version/sha, original license and citation; run original examples; compare original MATLAB to any translation on identical saved frames, including near/transition/far, zero- and negative-estimate cases and failure flags; verify full covariance/reference ordering. A solver started at a favorable true state is not a fair baseline.
 

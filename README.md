@@ -2,7 +2,7 @@
 
 Physics-embedded neural inference for **single-snapshot, single-source, eight-receiver 3-D time-difference-of-arrival (TDOA)** localization in modified polar representation (MPR). The repository name retains its historical spelling `TDOA-MPR-Nueral`; the Python import is `tdoa_mpr`.
 
-**Status (2026-11-23): research prototype and IEEE working manuscript, NOT experimentally validated.** The classical numerical WLS provided here is original reference code, **not** a port or reproduction of Ho's SUM/GTRS/NSP algorithms. No neural accuracy or superiority is claimed.
+**Status (2026-11-23): research prototype and IEEE working manuscript, NOT experimentally validated.** The classical numerical WLS provided here is original reference code, **not** a port or reproduction of Ho's SUM/GTRS/NSP algorithms. A separate, attributed MATLAB 2019 code snapshot from a public mirror is preserved but not yet verified against the official distribution. No neural accuracy or superiority is claimed.
 
 ## Research problem
 
@@ -40,7 +40,7 @@ Training and evaluation are opt-in commands. Neither is invoked when importing t
 | `src/tdoa_mpr/baseline.py` | explicit numerical nonlinear WLS check, **not** published SUM/GTRS |
 | `src/tdoa_mpr/neural.py` | provisional neural-first dynamic physical-query estimator |
 | `src/tdoa_mpr/train.py`, `evaluate.py` | reproducible smoke-training and development evaluation |
-| `baselines/` | official MATLAB source inventory, download/verification plan and restrictions |
+| `baselines/` | attributed 2019 MATLAB source snapshot, download/verification plan and restrictions |
 | `tests/` | limits, covariance, Jacobians, invariance and model execution |
 | `paper/` | IEEEtran LaTeX paper, BibTeX, argument map and prospective experiments |
 | `HANDOFF.md` | current verified state and next research decisions |

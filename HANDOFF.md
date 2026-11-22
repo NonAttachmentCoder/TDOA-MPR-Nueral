@@ -13,6 +13,7 @@ The user authorized building a new TDOA-specific analog of AOA-MPR-Nueral in `No
 - `src/tdoa_mpr/neural.py`, `train.py`, `evaluate.py`: initial neural-first repeated physical query, training loss and *development* run entry points; no trained evidence claimed.
 - `tests/`, `.github/workflows/tests.yml`: analytical limits, finite differences, covariance checks, model forward/backward.
 - `paper/IEEEtran_TDOA_MPR.tex`, BibTeX, Logic_Master, EXPERIMENT_CONTRACT: complete early argument and prospective study with results explicitly pending.
+- `baselines/matlab/sun2019/`: attributed MATLAB 2019 source snapshot from a public mirror, with CISP license; official bytewise fidelity and actual comparison remain unverified.
 - `baselines/SOURCES.md`: author-code reference and required port qualification.
 - `README.md`: installation and usage.
 
