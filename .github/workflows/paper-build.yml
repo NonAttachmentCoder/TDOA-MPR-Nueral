@@ -1,0 +1,21 @@
+name: IEEE manuscript build
+on:
+  push:
+    paths:
+      - 'paper/**'
+      - '.github/workflows/paper-build.yml'
+  pull_request:
+    paths:
+      - 'paper/**'
+      - '.github/workflows/paper-build.yml'
+jobs:
+  latex:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: xu-cheng/latex-action@v3
+        with:
+          root_file: IEEEtran_TDOA_MPR.tex
+          working_directory: paper
+          latexmk_use_xelatex: false
+          args: -pdf -bibtex -interaction=nonstopmode -halt-on-error
