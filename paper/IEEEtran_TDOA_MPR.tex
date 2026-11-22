@@ -54,12 +54,11 @@ The remainder is organized as follows. Section II presents the model and local i
 
 \section{Measurement Model}
 \label{sec:model}
-Consider a stationary source at an unknown position \(\mathbf p^\circ\in\RR^3\) and \(M\) spatially distributed receivers, with true positions \(\bs_i^\circ\), \(i=0,\ldots,M-1\). Receiver 0 serves as the reference. The signal propagation speed \(c\) is assumed known and common to all receivers. With emission time \(t_e\), the ideal time at receiver \(i\) is \(t_e+\|\mathbf p^\circ-\bs_i^\circ\|/c\). A time difference eliminates \(t_e\).
+Consider a stationary source at an unknown position \(\mathbf p^\circ\in\RR^3\) and \(M\) spatially distributed receivers, with true positions \(\bs_i^\circ\), \(i=0,\ldots,M-1\). Receiver 0 serves as the reference. The signal propagation speed \(c\) is assumed known and common to all receivers. With emission time \(t_e\), the ideal time at receiver \(i\) is \(t_e+\|\mathbf p^\circ-\bs_i^\circ\|/c\). Define \(d_i=\|\mathbf p^\circ-\bs_i^\circ\|\). A time difference eliminates \(t_e\).
 
 The observed range difference (TDOA multiplied by \(c\)) is
 \begin{equation}
- y_i=c(t_i-t_0)=\|\mathbf p^\circ-\bs_i^\circ\|
- -\|\mathbf p^\circ-\bs_0^\circ\|+n_{r,i},
+ y_i=c(t_i-t_0)=d_i-d_0+n_{r,i},
  \quad i=1,\ldots,M-1 .
  \label{eq:tdoa}
 \end{equation}
@@ -182,11 +181,13 @@ This is an observation-space consistency query, not an analytical GN step. A sta
 \end{equation}
 Two learned readouts map the hidden state into direction and scaled signed inverse range:
 \begin{equation}
- \hat\bu^{(t+1)}=
- \frac{f_{\omega,u}(\mathbf m^{(t+1)})}
- {\|f_{\omega,u}(\mathbf m^{(t+1)})\|},\qquad
+\begin{aligned}
+ \hat\bu^{(t+1)}
+ &=\frac{f_{\omega,u}(\mathbf m^{(t+1)})}
+ {\|f_{\omega,u}(\mathbf m^{(t+1)})\|},\\
  \hat g^{(t+1)}
- =\frac{\kappa}{L}\tanh f_{\omega,g}(\mathbf m^{(t+1)}),
+ &=\frac{\kappa}{L}\tanh f_{\omega,g}(\mathbf m^{(t+1)}).
+\end{aligned}
  \label{eq:readout}
 \end{equation}
 with \(\kappa=4\) in the present implementation. This range scaling is a training and numerical design choice, not a physical limit. It permits exact zero and negative estimates, but restricts \(|\hat g|L<4\); the support and saturation must be disclosed and tested.
@@ -241,16 +242,18 @@ A matched no-physical-query model, with the same data, parameter budget, and tra
 \centering
 \caption{Planned comparisons. No timings or risk values have been measured.}
 \label{tab:planned}
+\footnotesize
+\setlength{\tabcolsep}{3.5pt}
 \begin{tabular}{lccc}
 \toprule
-Method & Direction MSE & Inverse-range MSE & Runtime \\
+Method & $R_u$ & $R_g$ & CPU time \\
 \midrule
-Wang--Ho MPR MLE & Pending & Pending & Pending\\
-Sun--Ho--Wan SUM/GTRS & Pending & Pending & Pending\\
-NSP/INSP (if qualified) & Pending & Pending & Pending\\
-Numerical WLS sanity check & Pending & Pending & Pending\\
-Neural full & Pending & Pending & Pending\\
-Neural no-query control & Pending & Pending & Pending\\
+Wang--Ho MLE & -- & -- & --\\
+Sun--Ho--Wan SUM/GTRS & -- & -- & --\\
+NSP/INSP (if qualified) & -- & -- & --\\
+Numerical WLS & -- & -- & --\\
+Neural full & -- & -- & --\\
+Neural no-query & -- & -- & --\\
 \bottomrule
 \end{tabular}
 \end{table}
