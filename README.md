@@ -27,7 +27,7 @@ python -m tdoa_mpr.train --steps 200 --batch-size 128 --output runs/dev.pt
 python -m tdoa_mpr.evaluate --checkpoint runs/dev.pt --samples 64 --output runs/dev.json
 ```
 
-Training and evaluation are opt-in commands. Neither is invoked when importing this package. Do not compare a trained checkpoint on the same random seeds used for model selection; the included CLI is a smoke-test and development framework, not a completed paper experiment. A short CPU smoke run is not a robustness demonstration.
+Matched architectural development controls can be trained with \`--no-physical-query\` or \`--diagonal-qr\`; they preserve network parameter counts and must be **retrained** on the same data schedule. Training and evaluation are opt-in commands. Neither is invoked when importing this package. Do not compare a trained checkpoint on the same random seeds used for model selection; the included CLI is a smoke-test and development framework, not a completed paper experiment. A short CPU smoke run is not a robustness demonstration.
 
 ## Where things live
 

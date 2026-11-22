@@ -19,6 +19,8 @@ def main(argv=None):
     parser.add_argument("--seed", type=int, default=20261123)
     parser.add_argument("--device", default="cpu")
     parser.add_argument("--outlier-p", type=float, default=0.0)
+    parser.add_argument("--no-physical-query", action="store_true")
+    parser.add_argument("--diagonal-qr", action="store_true")
     parser.add_argument("--output", default="runs/dev.pt")
     args = parser.parse_args(argv)
     if args.steps < 1 or args.batch_size < 1:
@@ -27,7 +29,9 @@ def main(argv=None):
     rng = np.random.default_rng(args.seed)
     torch.set_num_threads(max(1, min(torch.get_num_threads(), 8)))
     config = SimulationConfig(outlier_probability=args.outlier_p)
-    model = DynamicTDOAMPR(args.hidden, args.iterations).to(args.device)
+    model = DynamicTDOAMPR(args.hidden, args.iterations,
+                           use_physical_query=not args.no_physical_query,
+                           use_full_qr=not args.diagonal_qr).to(args.device)
     optimizer = torch.optim.AdamW(model.parameters(), lr=args.lr)
     history = []
 
@@ -50,6 +54,8 @@ def main(argv=None):
     target.parent.mkdir(parents=True, exist_ok=True)
     torch.save({"model": model.state_dict(), "hidden": args.hidden,
                 "iterations": args.iterations, "radial_limit": model.radial_limit,
+                "use_physical_query": model.use_physical_query,
+                "use_full_qr": model.use_full_qr,
                 "seed": args.seed, "steps": args.steps,
                 "simulation": config.to_dict(), "optimizer": optimizer.state_dict(),
                 "loss_history": history, "status": "development_only"}, target)

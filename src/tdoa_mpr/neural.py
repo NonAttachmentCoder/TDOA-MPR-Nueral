@@ -30,13 +30,16 @@ def torch_range_differences(u, g, stations):
 class DynamicTDOAMPR(nn.Module):
     """One shared set of parameters for all ranges and station geometries."""
 
-    def __init__(self, hidden=96, iterations=3, radial_limit=4.0):
+    def __init__(self, hidden=96, iterations=3, radial_limit=4.0,
+                 use_physical_query=True, use_full_qr=True):
         super().__init__()
         if iterations < 1:
             raise ValueError("iterations must be positive")
         self.hidden = int(hidden)
         self.iterations = int(iterations)
         self.radial_limit = float(radial_limit)
+        self.use_physical_query = bool(use_physical_query)
+        self.use_full_qr = bool(use_full_qr)
         # Per-station: y, prediction, difference, standardized discrepancy,
         # position(3), baseline(3), site pos. uncertainty(3), Qr row(7),
         # state direction(3), scaled g(1), predicted bearing(3) = 27.
@@ -68,6 +71,8 @@ class DynamicTDOAMPR(nn.Module):
         diag_qr = torch.diagonal(qr, dim1=-2, dim2=-1).clamp_min(1e-14)
         sigmas = torch.sqrt(diag_qr)
         corr = qr / (sigmas[:, :, None] * sigmas[:, None, :])
+        if not self.use_full_qr:
+            corr = torch.diag_embed(torch.ones_like(sigmas))
         sig_norm = (sigmas / l).clamp_min(1e-12)
         qs_scaled = qs / (l[:, :, None] * l[:, None, :])
         site_sigmas = torch.sqrt(torch.diagonal(qs, dim1=-2, dim2=-1)
@@ -82,10 +87,11 @@ class DynamicTDOAMPR(nn.Module):
         for step in range(self.iterations):
             g = g_scaled / aperture
             prediction = (torch_range_differences(direction, g, stations)
-                          if step else torch.zeros_like(y))
+                          if step and self.use_physical_query else torch.zeros_like(y))
             residual = y - prediction
             source_vectors = direction[:, None, :] - g[:, None, None] * stations[:, 1:, :]
-            bearings = F.normalize(source_vectors, dim=-1)
+            bearings = (F.normalize(source_vectors, dim=-1) if self.use_physical_query
+                        else direction[:, None, :].expand(-1, 7, -1))
             features = torch.cat([
                 (y / l)[:, :, None],
                 (prediction / l)[:, :, None],

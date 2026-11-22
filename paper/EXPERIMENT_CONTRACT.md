@@ -25,7 +25,7 @@ Suggested axes and values above are *design candidates*. Do not assign a trial c
 
 ## Implementation constraints revealed by current code
 
-- The released simulator supports Gaussian independent receiver arrival errors, receiver outlier variance inflation, positive receiver delay bias, and noisy reported receiver positions. Differential persistent clock offsets, paired fixed geometry A/B sets, explicit exact g=0 test generator and ablation configurations are **planned, not implemented**.
+- The released simulator supports Gaussian independent receiver arrival errors, receiver outlier variance inflation, positive receiver delay bias, and noisy reported receiver positions. Differential persistent clock offsets, paired fixed geometry A/B sets, and explicit exact g=0 test generator are **planned, not implemented**. Matched no-query and diagonal-Qr network controls are now implemented as training flags; their fairness and statistical value remain untested.
 - The neural implementation accepts dense Qr and Qs, but training samples currently have Qs diagonal. Correlated Qs generalization must be tested; input shape alone does not imply it.
 - Range-distribution and geometry priors are presently illustrative. Their upper/lower bounds are in `SimulationConfig`. Any final study must disclose and freeze them.
 - Numerically stable signed g extension is mathematical; negative true ranges must not be manufactured as physical training data.

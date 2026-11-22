@@ -51,7 +51,9 @@ def main(argv=None):
         import torch
         from .neural import DynamicTDOAMPR
         ckpt = torch.load(args.checkpoint, map_location="cpu", weights_only=False)
-        model = DynamicTDOAMPR(ckpt["hidden"], ckpt["iterations"], ckpt["radial_limit"])
+        model = DynamicTDOAMPR(ckpt["hidden"], ckpt["iterations"], ckpt["radial_limit"],
+                               use_physical_query=ckpt.get("use_physical_query", True),
+                               use_full_qr=ckpt.get("use_full_qr", True))
         model.load_state_dict(ckpt["model"])
         model.eval()
         with torch.no_grad():

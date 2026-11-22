@@ -26,6 +26,19 @@ class TestNeural(unittest.TestCase):
                 torch.tensor(s, dtype=torch.float64)).numpy()
             np.testing.assert_allclose(got, expected, atol=1e-10, rtol=1e-9)
 
+    def test_controls_use_same_capacity(self):
+        base = DynamicTDOAMPR(hidden=16, iterations=2)
+        ctrl = DynamicTDOAMPR(hidden=16, iterations=2,
+                              use_physical_query=False, use_full_qr=False)
+        self.assertEqual(sum(p.numel() for p in base.parameters()),
+                         sum(p.numel() for p in ctrl.parameters()))
+        frames = sample_batch(np.random.default_rng(12), 2)
+        inputs = [torch.as_tensor(frames[k], dtype=torch.float32)
+                  for k in ("y", "stations", "qr", "qs")]
+        out = ctrl(*inputs)
+        self.assertTrue(torch.isfinite(out["u"]).all())
+        self.assertTrue(torch.isfinite(out["g"]).all())
+
     def test_forward_backward(self):
         torch.manual_seed(1)
         frames = sample_batch(np.random.default_rng(9), 3)
