@@ -4,7 +4,7 @@ Physics-embedded neural inference for **single-snapshot, single-source, seven-re
 
 The main experiments use the seven fixed receivers and the noise and distance sweeps from Sun, Ho and Wan (2019). The classical baselines are **SCO, SUM and GTRS** from DeviceIoT and the **Chan–Ho Cartesian estimator** from CISP. The neural model is a research candidate. Comparative neural accuracy and independent confirmation are pending. [Experiment contract](paper/EXPERIMENT_CONTRACT.md) · [Baseline sources](baselines/SOURCES.md)
 
-The current manuscript reports the paired classical pilot with 32 development frames per point and includes the measured noise and distance curves. [Read the working paper (PDF)](paper/IEEEtran_TDOA_MPR.pdf) · [LaTeX source](paper/IEEEtran_TDOA_MPR.tex) · [Raw observations, scores and figure bundle](experiments/seven_station_pilot/)
+The manuscript quantifies the separation of a finite-range source from its closest plane wave, specifies the recurrent estimator, and reports the four classical methods on paired noise and distance sweeps with 32 frames per point. [Read the working paper (PDF)](paper/IEEEtran_TDOA_MPR.pdf) · [LaTeX source](paper/IEEEtran_TDOA_MPR.tex) · [Raw observations, scores and table reproduction](experiments/seven_station_pilot/)
 
 ## Research problem
 

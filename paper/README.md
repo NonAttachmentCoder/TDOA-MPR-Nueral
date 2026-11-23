@@ -2,7 +2,7 @@
 
 [Read the compiled paper](IEEEtran_TDOA_MPR.pdf) · [LaTeX source](IEEEtran_TDOA_MPR.tex) · [Paper logic](Logic_Master.md) · [Experiment contract](EXPERIMENT_CONTRACT.md)
 
-The manuscript studies recurrent physical queries for single-snapshot TDOA direction and inverse-range estimation. Its measured results are the four classical estimators on the fixed seven-station Gaussian sweeps, with 32 frames per point. Neural comparisons and tests with timing biases remain prospective. [Saved observations, scores and all six figures](../experiments/seven_station_pilot/)
+The manuscript relates the distance to a best-fitting plane wave to the local information for inverse range, then specifies a recurrent estimator that updates the predicted TDOAs and receiver bearings. Table I evaluates the wavefront distance on the published seven-receiver array. Figure 1 reports four classical estimators on matched Gaussian sweeps with 32 frames per point. Comparative neural accuracy and sensitivity to timing biases remain open. [Saved observations, scores and reproduction of the table and figure](../experiments/seven_station_pilot/)
 
 ## Build
 

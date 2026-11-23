@@ -1,33 +1,24 @@
-# Argument of the TDOA–MPR manuscript
+# Scientific argument of the TDOA–MPR manuscript
 
 ## Research question
 
-In one seven-receiver snapshot, does evaluating the physical TDOA map again at an updated direction and inverse range help a learned estimator use directional and radial information? The intended outputs are a unit direction and a signed inverse-range estimate. The first comparison covers the published fixed array and clean Gaussian noise. A separate planned test places an arrival error at the reference or at an ordinary receiver.
+How much inverse-range information survives uncertainty in bearing in a single TDOA snapshot, and can an estimator use that information by evaluating the physical model at successive estimates? The target is a unit direction and signed inverse range. The Gaussian results condition on the seven published receiver positions, one bearing and known propagation speed.
 
-## What makes the question testable
+## Claims and evidence
 
-A small angular displacement can explain part of a radial change in the predicted TDOAs. Projecting the whitened inverse-range derivative off the angular Jacobian gives the radial information left after fitting direction. This standard nuisance-parameter calculation explains why accurate bearing and appreciable relative radial uncertainty can coexist. The recurrent candidate computes the range differences and local receiver directions at its current estimate. Its inputs include the dense nominal covariance. The information projection serves as an analytical diagnostic in this manuscript.
+| Claim | Evidence and scope |
+|---|---|
+| MPR connects point localization with direction finding as inverse range approaches zero. | Wang–Ho (2017) established the representation. Sun–Ho–Wan (2019) derived SUM and GTRS. The published MPR–Cartesian comparison and subsequent methods define the prior-art boundary. |
+| A fitted plane wave can absorb part of the delay due to wavefront curvature. | Section II minimizes the Mahalanobis distance between predicted means over unit plane-wave directions. At a rank-three array its far-field expansion has coefficient equal to the square root of the radial Fisher information after eliminating the direction nuisance. When this information is positive, the reciprocal distance approaches the relative radial standard-deviation bound in ratio. Both results follow from the measurement model and nuisance-parameter projection. |
+| The separation decreases appreciably on the published distance sweep. | Table I evaluates the global minimum from the six known mean differences. At a marginal variance of 1 m² it falls from 48.83 at 20 km to 2.16 at 460 km. The relative inverse-range standard-deviation bound rises from 2.07% to 46.39%. These numbers are deterministic properties of this array and bearing. |
+| The estimator recomputes predicted differences and local bearings at two successive states. | Section III corresponds to three shared recurrent passes in the implementation. The first has zero predicted differences. The two subsequent passes evaluate the model at the preceding readouts. The plane-wave fit uses known truth for analysis and is outside the estimator. |
+| Absolute inverse-range errors can be close to the nominal bound while relative range resolution is poor. | Figure 1 measures four published estimators on the same 32 centered draws per setting. At 460 km, the three DeviceIoT inverse-range MSEs are within 0.2 dB of the nominal bound. The Cartesian Chan–Ho gap is 20.00 dB. |
+| Refreshing the physical query improves neural estimation or helps with receiver-level timing errors. | Open. The Gaussian curves contain only classical estimators. Neither those curves nor the wavefront-distance calculation measures learned accuracy. |
 
-## Prior work and evidence
+[Manuscript](IEEEtran_TDOA_MPR.tex) · [Table and figure reproduction](../experiments/seven_station_pilot/) · [Source implementations](../baselines/SOURCES.md)
 
-| Claim | Support | Scope |
-|---|---|---|
-| MPR describes near-field localization and far-field direction finding. | Wang–Ho 2017, Sun–Ho–Wan 2019 and subsequent MPR methods. Sun et al. (2026) analyze the MPR–Cartesian comparison. | Established prior work. |
-| The radial derivative can be partly or wholly absorbed by a direction change. | Tangent Jacobian and Schur complement in Section II. | Local calculation for known stations, a fixed positive definite Gaussian covariance and the indicated rank conditions. |
-| The candidate makes two physical queries in three shared recurrent passes. | The first pass has zero predicted differences. The second and third use the preceding estimate. | Implemented forward computation. |
-| The four released classical estimators separate in the nominal sweeps. | Matched MATLAB frames and raw method outputs. At 460 km Chan–Ho inverse-range MSE was 20.00 dB above the nominal bound. The three DeviceIoT MPR methods were within 0.2 dB at this point. | One array, one bearing, the same centered bank of 32 draws at each point. |
-| Repeated queries improve neural estimation or help with timing biases. | Requires paired training and evaluation of refreshed, frozen-first-query and no-query alternatives. | Open. No learned curve is available in the paper. |
+## Comparison needed for the learned method
 
-Existing robust TDOA work includes Wang–So–Li (2016) and Wang–Ho–Wang (2023). The latter studies full-set measurements. This project supplies six reference differences. Representing shared-reference correlation, changing coordinates or displaying a Cartesian threshold does not by itself establish a learning contribution. [Manuscript and references](IEEEtran_TDOA_MPR.tex) · [Source implementations](../baselines/SOURCES.md)
+Compare updated queries with reuse of the first effective query on the final pass. The frozen-query control retains the first predicted differences and local receiver bearings while updating the hidden state and the other state inputs. Match observations, parameter count, number of readouts and training budget. The implemented no-query control measures the combined effect of physical feedback. Assess spherical direction error, signed inverse-range error and radial bias on paired evaluation frames.
 
-## Argument by section
-
-1. Explain the ambiguity between direction, curvature and a receiver-level delay. Establish the known role of MPR and identify what a physical query can change.
-2. Derive the exact forward map and the radial information conditional on fitting direction. Separate the known-station Gaussian bound from first-order station-error propagation.
-3. Describe the implemented readouts, stage-specific inputs, marginal residual scaling and training objective. Give the development sampling assumptions.
-4. Measure classical errors using paired data. Interpret inverse-range MSE together with the relative bound. Specify the neural control that would isolate refreshing a query.
-5. State the conditional classical finding and the remaining empirical question about learned inference.
-
-## Decisive comparison
-
-Hold the observations, model capacity, readout count and training budget fixed. Compare the candidate with a version that reuses the first effective predicted differences and receiver bearings during the final pass while still updating the hidden state. Include the existing no-query control. Evaluate both direction and inverse range, and report radial bias. Agreement with the frozen-query control would leave any gain from refreshing the query unestablished. Assess nominal Gaussian accuracy and receiver-delay mismatch separately. The mismatch and neural comparisons require their own data and an agreed training budget. [Pilot data and figures](../experiments/seven_station_pilot/) · [Experiment contract](EXPERIMENT_CONTRACT.md)
+Time-of-arrival contamination requires separate evidence. Place a matched excess delay at the reference or one other receiver before differencing and distinguish the resulting common shift from a single affected difference. Performance under varying geometries, correlations or station-position errors is outside the nominal comparison. Formal training and independent evaluation require their agreed data and resource budget. [Experiment contract](EXPERIMENT_CONTRACT.md)

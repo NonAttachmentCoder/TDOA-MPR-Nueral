@@ -18,3 +18,13 @@ matlab -singleCompThread -batch "addpath('experiments'); run_cisp_sweep('noise',
 ```
 
 For metric MSE and corresponding bound B, the paper reports the gap as 10 log₁₀(MSE/B). In each JSON the first CRLB row is the angular coordinate trace and the second is the inverse-range variance in m⁻². If range is r meters, the relative radial standard-deviation bound in percent is 100 r √Bgg. At 20, 300 and 460 km the published noise setting is 1 m². The resulting values are 2.07%, 30.27% and 46.39%. [Paper Figure 1](../../paper/fig/) · [Estimator attribution](../../baselines/SOURCES.md)
+
+## Reproduce the wavefront separation in Table I
+
+Run the following command from the repository root. It reads the geometry, bearing, nominal covariances, ranges and analytical bounds in the two saved MAT files.
+
+```sh
+python experiments/seven_station_pilot/wavefront_separation.py
+```
+
+Each output row gives the minimum Mahalanobis distance from the finite-range mean to any unit plane-wave mean, its first-order approximation at zero inverse range, and the relative standard-deviation bound at the finite range. The two distances are dimensionless. The last column is a percentage. The `range` rows for 5, 20, 100, 300 and 460 km reproduce Table I. The `noise` rows reproduce the separations at 15 km quoted in the text. These calculations use the seven known receivers with receiver 0 as reference, six predicted differences in meters and the full 6×6 covariance in m².
