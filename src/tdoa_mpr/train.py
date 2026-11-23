@@ -29,7 +29,7 @@ def main(argv=None):
     rng = np.random.default_rng(args.seed)
     torch.set_num_threads(max(1, min(torch.get_num_threads(), 8)))
     config = SimulationConfig(outlier_probability=args.outlier_p)
-    model = DynamicTDOAMPR(args.hidden, args.iterations,
+    model = DynamicTDOAMPR(args.hidden, args.iterations, n_receivers=config.n_receivers,
                            use_physical_query=not args.no_physical_query,
                            use_full_qr=not args.diagonal_qr).to(args.device)
     optimizer = torch.optim.AdamW(model.parameters(), lr=args.lr)

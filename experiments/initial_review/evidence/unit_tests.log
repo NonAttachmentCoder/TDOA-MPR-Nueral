@@ -1,0 +1,22 @@
+test_one_noiseless_case (test_baseline.TestNumericalWLS.test_one_noiseless_case) ... ok
+test_first_order_position_error (test_covariance.TestCovariance.test_first_order_position_error) ... ok
+test_monte_carlo_and_time_scaling (test_covariance.TestCovariance.test_monte_carlo_and_time_scaling) ... ok
+test_shared_reference_is_correlated (test_covariance.TestCovariance.test_shared_reference_is_correlated) ... ok
+test_controls_use_same_capacity (test_neural.TestNeural.test_controls_use_same_capacity) ... ok
+test_forward_backward (test_neural.TestNeural.test_forward_backward) ... ok
+test_physics_compatibility_and_zero_limit (test_neural.TestNeural.test_physics_compatibility_and_zero_limit) ... ok
+test_ambient_jacobian_includes_direction_normalization (test_physics.TestMPRPhysics.test_ambient_jacobian_includes_direction_normalization) ... ok
+test_angle_and_range_jacobian_including_exact_zero (test_physics.TestMPRPhysics.test_angle_and_range_jacobian_including_exact_zero) ... ok
+test_bound (test_physics.TestMPRPhysics.test_bound) ... ok
+test_cartesian_equivalence (test_physics.TestMPRPhysics.test_cartesian_equivalence) ... ok
+test_exact_plane_wave_and_very_small_g (test_physics.TestMPRPhysics.test_exact_plane_wave_and_very_small_g) ... ok
+test_reference_change (test_physics.TestMPRPhysics.test_reference_change) ... ok
+test_sensor_jacobian (test_physics.TestMPRPhysics.test_sensor_jacobian) ... ok
+test_reference_noise_shared_by_differences (test_simulation.TestSimulation.test_reference_noise_shared_by_differences) ... ok
+test_repeatable_and_dimensions (test_simulation.TestSimulation.test_repeatable_and_dimensions) ... ok
+test_zero_contamination_clean_contract (test_simulation.TestSimulation.test_zero_contamination_clean_contract) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.094s
+
+OK

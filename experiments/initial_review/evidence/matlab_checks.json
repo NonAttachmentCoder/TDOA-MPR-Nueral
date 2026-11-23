@@ -1,0 +1,6750 @@
+{
+  "role": "development_diagnostics_not_paper_reproduction",
+  "matlab": "24.1.0.2537033 (R2024a)",
+  "records": [
+    {
+      "name": "positive",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.70000000000000062,
+        0.39999999999999936,
+        0.0033333333333333453
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70446630527559151,
+        0.59336378336138806,
+        0.38941834230864991
+      ],
+      "g": 0.0033333333333333453,
+      "direction_chord": 9.3053645978892269E-16,
+      "angle_error_deg": 0,
+      "g_error": 1.1709383462843448E-17,
+      "forward_residual_norm_m": 2.789290353789334E-14,
+      "last_warning": "",
+      "last_warning_id": ""
+    },
+    {
+      "name": "positive",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.7,
+        0.39999999999999991,
+        0.0033333333333333353
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70446630527559173,
+        0.5933637833613874,
+        0.38941834230865041
+      ],
+      "g": 0.0033333333333333353,
+      "direction_chord": 1.1102230246251565E-16,
+      "angle_error_deg": 0,
+      "g_error": 1.7347234759768071E-18,
+      "forward_residual_norm_m": 6.1694844741610151E-15,
+      "last_warning": "",
+      "last_warning_id": ""
+    },
+    {
+      "name": "negative",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.70000000000000107,
+        2.7415926535897936,
+        0.0033333333333333119
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        -0.70446630527559118,
+        -0.59336378336138829,
+        0.38941834230865013
+      ],
+      "g": 0.0033333333333333119,
+      "direction_chord": 2,
+      "angle_error_deg": 180,
+      "g_error": -2.1684043449710089E-17,
+      "forward_residual_norm_m": 126.49109400335411,
+      "last_warning": "",
+      "last_warning_id": ""
+    },
+    {
+      "name": "negative",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.69999999999999962,
+        -0.4000000000000003,
+        0.0033333333333333392
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70446630527559184,
+        0.59336378336138718,
+        -0.38941834230865074
+      ],
+      "g": 0.0033333333333333392,
+      "direction_chord": 3.3306690738754696E-16,
+      "angle_error_deg": 0,
+      "g_error": 5.6378512969246231E-18,
+      "forward_residual_norm_m": 2.2765799233284228E-14,
+      "last_warning": "",
+      "last_warning_id": ""
+    },
+    {
+      "name": "equator",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        null,
+        null,
+        0.0020177652137529437
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": false,
+      "finite_real": false,
+      "error": "",
+      "last_warning": "Matrix is singular to working precision.",
+      "last_warning_id": "MATLAB:singularMatrix"
+    },
+    {
+      "name": "equator",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.7,
+        -2.4980018054066017E-16,
+        0.0033333333333333405
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.7648421872844885,
+        0.644217687237691,
+        -2.4980018054066017E-16
+      ],
+      "g": 0.0033333333333333405,
+      "direction_chord": 2.4980018054066017E-16,
+      "angle_error_deg": 0,
+      "g_error": 6.9388939039072284E-18,
+      "forward_residual_norm_m": 1.0841599276764049E-14,
+      "last_warning": "",
+      "last_warning_id": ""
+    },
+    {
+      "name": "near",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.70000000000000084,
+        0.39999999999999969,
+        0.016666666666666694
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.7044663052755914,
+        0.59336378336138818,
+        0.38941834230865019
+      ],
+      "g": 0.016666666666666694,
+      "direction_chord": 9.08756711201214E-16,
+      "angle_error_deg": 0,
+      "g_error": 2.7755575615628914E-17,
+      "forward_residual_norm_m": 2.8835892528401521E-14,
+      "last_warning": "",
+      "last_warning_id": ""
+    },
+    {
+      "name": "near",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.70000000000000007,
+        0.40000000000000008,
+        0.01666666666666668
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70446630527559173,
+        0.59336378336138751,
+        0.38941834230865058
+      ],
+      "g": 0.01666666666666668,
+      "direction_chord": 1.2412670766236366E-16,
+      "angle_error_deg": 0,
+      "g_error": 1.3877787807814457E-17,
+      "forward_residual_norm_m": 1.3359632472723714E-14,
+      "last_warning": "",
+      "last_warning_id": ""
+    },
+    {
+      "name": "far",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.69999999999999651,
+        0.40000000000000224,
+        1.2499999999973361E-5
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70446630527559317,
+        0.5933637833613844,
+        0.38941834230865258
+      ],
+      "g": 1.2499999999973361E-5,
+      "direction_chord": 3.90989277686334E-15,
+      "angle_error_deg": 0,
+      "g_error": -2.6639186191147746E-17,
+      "forward_residual_norm_m": 1.3541808526926506E-13,
+      "last_warning": "",
+      "last_warning_id": ""
+    },
+    {
+      "name": "far",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.69999999999999984,
+        0.40000000000000013,
+        1.2499999999999921E-5
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70446630527559173,
+        0.59336378336138729,
+        0.38941834230865063
+      ],
+      "g": 1.2499999999999921E-5,
+      "direction_chord": 1.5700924586837752E-16,
+      "angle_error_deg": 0,
+      "g_error": -7.9621097041904232E-20,
+      "forward_residual_norm_m": 1.3477211262985305E-14,
+      "last_warning": "",
+      "last_warning_id": ""
+    },
+    {
+      "name": "plane_wave",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.69999999999999962,
+        0.4000000000000008,
+        -1.474514954580286E-17
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70446630527559162,
+        0.59336378336138706,
+        0.38941834230865124
+      ],
+      "g": -1.474514954580286E-17,
+      "direction_chord": 8.0251540384162828E-16,
+      "angle_error_deg": 0,
+      "g_error": -1.474514954580286E-17,
+      "forward_residual_norm_m": 3.9611164341440311E-14,
+      "last_warning": "",
+      "last_warning_id": ""
+    },
+    {
+      "name": "plane_wave",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.69999999999999973,
+        0.4,
+        1.9813760617378979E-18
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70446630527559184,
+        0.59336378336138729,
+        0.38941834230865052
+      ],
+      "g": 1.9813760617378979E-18,
+      "direction_chord": 1.5700924586837752E-16,
+      "angle_error_deg": 0,
+      "g_error": 1.9813760617378979E-18,
+      "forward_residual_norm_m": 7.3777640556099254E-15,
+      "last_warning": "",
+      "last_warning_id": ""
+    },
+    {
+      "name": "signed_diagnostic",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.70000000000000184,
+        0.39999999999999825,
+        -0.003333333333333308
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70446630527559118,
+        0.59336378336138917,
+        0.38941834230864886
+      ],
+      "g": -0.003333333333333308,
+      "direction_chord": 2.4973849386715747E-15,
+      "angle_error_deg": 0,
+      "g_error": 2.5587171270657905E-17,
+      "forward_residual_norm_m": 1.0058896316963729E-13,
+      "last_warning": "",
+      "last_warning_id": ""
+    },
+    {
+      "name": "signed_diagnostic",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.69999999999999951,
+        0.4000000000000003,
+        -0.0033333333333333353
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.704466305275592,
+        0.59336378336138706,
+        0.38941834230865074
+      ],
+      "g": -0.0033333333333333353,
+      "direction_chord": 4.5775667985222375E-16,
+      "angle_error_deg": 0,
+      "g_error": -1.7347234759768071E-18,
+      "forward_residual_norm_m": 1.5027023461734351E-14,
+      "last_warning": "",
+      "last_warning_id": ""
+    },
+    {
+      "name": "translated",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.65615708216970736,
+        0.47351648803154833,
+        0.0017818039369189281
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70516126556885217,
+        0.54294987242630832,
+        0.4560186680099732
+      ],
+      "g": 0.0017818039369189281,
+      "direction_chord": 0.064960507909350762,
+      "angle_error_deg": 3.7226176737209506,
+      "g_error": -0.0014844623782997984,
+      "forward_residual_norm_m": 3.4476508070034377,
+      "last_warning": "",
+      "last_warning_id": ""
+    },
+    {
+      "name": "translated",
+      "method": "SUM",
+      "center_and_map_back": true,
+      "native_mpr_real": [
+        0.70000000000000251,
+        0.39999999999999936,
+        0.0033333333333333318
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.7327538310363193,
+        0.55202884464224578,
+        0.39791453577941116
+      ],
+      "g": 0.0032662663152187247,
+      "direction_chord": 2.42031165737973E-15,
+      "angle_error_deg": 1.2074182697257333E-6,
+      "g_error": -1.7347234759768071E-18,
+      "forward_residual_norm_m": 7.3948521249529084E-14,
+      "last_warning": "",
+      "last_warning_id": ""
+    },
+    {
+      "name": "translated",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.65595284660817321,
+        0.47363051876363216,
+        0.001778137291696613
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70523092754413907,
+        0.54277412292029859,
+        0.45612014899950848
+      ],
+      "g": 0.001778137291696613,
+      "direction_chord": 0.065046548725647815,
+      "angle_error_deg": 3.727550055246164,
+      "g_error": -0.0014881290235221134,
+      "forward_residual_norm_m": 3.4523831440794517,
+      "last_warning": "",
+      "last_warning_id": ""
+    },
+    {
+      "name": "translated",
+      "method": "GTRS",
+      "center_and_map_back": true,
+      "native_mpr_real": [
+        0.69999999999999984,
+        0.3999999999999998,
+        0.00333333333333334
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.73275383103632064,
+        0.55202884464224367,
+        0.39791453577941155
+      ],
+      "g": 0.0032662663152187321,
+      "direction_chord": 2.7194799110210365E-16,
+      "angle_error_deg": 1.2074182697257333E-6,
+      "g_error": 5.6378512969246231E-18,
+      "forward_residual_norm_m": 6.2960511820787992E-15,
+      "last_warning": "",
+      "last_warning_id": ""
+    }
+  ],
+  "noisy_records": [
+    {
+      "name": "positive",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.71321418821864691,
+        0.39639758977951062,
+        0.0033299363254166358
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.69762060571932483,
+        0.60353458254791892,
+        0.38609778313856169
+      ],
+      "g": 0.0033299363254166358,
+      "direction_chord": 0.012701766479883188,
+      "angle_error_deg": 0.72776250394153086,
+      "g_error": -3.3970079166977148E-6,
+      "forward_residual_norm_m": 2.4176852716928523,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 1
+    },
+    {
+      "name": "positive",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.71314329730749992,
+        0.39639202943320778,
+        0.0033302351972026578
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.69766501274493287,
+        0.60348653055344137,
+        0.38609265394744668
+      ],
+      "g": 0.0033302351972026578,
+      "direction_chord": 0.012640719674040688,
+      "angle_error_deg": 0.724264709412665,
+      "g_error": -3.098136130675732E-6,
+      "forward_residual_norm_m": 2.41771503008277,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 1
+    },
+    {
+      "name": "positive",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.68471895243458092,
+        0.40036924667922025,
+        0.0033313726069663617
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.71333949506625116,
+        0.58243896086263547,
+        0.38975841446706333
+      ],
+      "g": 0.0033313726069663617,
+      "direction_chord": 0.014078383883217088,
+      "angle_error_deg": 0.80663864048765621,
+      "g_error": -1.9607263669718482E-6,
+      "forward_residual_norm_m": 2.4334297409788008,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 2
+    },
+    {
+      "name": "positive",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.68471693225543062,
+        0.40036988018113823,
+        0.0033313813090838883
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.71334048043758547,
+        0.58243736362688436,
+        0.38975899786975948
+      ],
+      "g": 0.0033313813090838883,
+      "direction_chord": 0.014080258493067462,
+      "angle_error_deg": 0.80674605038166514,
+      "g_error": -1.9520242494452771E-6,
+      "forward_residual_norm_m": 2.4334301902811108,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 2
+    },
+    {
+      "name": "positive",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.726998970117011,
+        0.39233058280130234,
+        0.0029929787667931354
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.69040254987866068,
+        0.61413205562070572,
+        0.38234295780114741
+      ],
+      "g": 0.0029929787667931354,
+      "direction_chord": 0.026060917375082815,
+      "angle_error_deg": 1.493222834291972,
+      "g_error": -0.00034035456654019818,
+      "forward_residual_norm_m": 2.3078887791588283,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 3
+    },
+    {
+      "name": "positive",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.72688706731471886,
+        0.39232195485791016,
+        0.0029937814005204485
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.69047373367052478,
+        0.61405698600176273,
+        0.38233498539045097
+      ],
+      "g": 0.0029937814005204485,
+      "direction_chord": 0.025964873211112894,
+      "angle_error_deg": 1.4877194435314025,
+      "g_error": -0.0003395519328128851,
+      "forward_residual_norm_m": 2.3087320597337007,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 3
+    },
+    {
+      "name": "positive",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.70660362249752762,
+        0.40384968018754058,
+        0.0026102324083903746
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.699387235138249,
+        0.59702509208963639,
+        0.3929612382169988
+      ],
+      "g": 0.0026102324083903746,
+      "direction_chord": 0.0071940424297463152,
+      "angle_error_deg": 0.41218915772100934,
+      "g_error": -0.000723100924942959,
+      "forward_residual_norm_m": 0.25396593133525169,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 4
+    },
+    {
+      "name": "positive",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.70659766090917553,
+        0.40384972513184159,
+        0.0026102654047754463
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.69939078091085538,
+        0.59702091115359213,
+        0.39296127954575677
+      ],
+      "g": 0.0026102654047754463,
+      "direction_chord": 0.0071894322120472495,
+      "angle_error_deg": 0.41192500999722292,
+      "g_error": -0.00072306792855788725,
+      "forward_residual_norm_m": 0.25404724855454269,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 4
+    },
+    {
+      "name": "positive",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.68701188367455313,
+        0.38782195337009079,
+        0.0038044776462350192
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.71572697979185373,
+        0.587128654930437,
+        0.37817301987001578
+      ],
+      "g": 0.0038044776462350192,
+      "direction_chord": 0.017092012574898861,
+      "angle_error_deg": 0.97931210472227359,
+      "g_error": 0.00047114431290168563,
+      "forward_residual_norm_m": 1.1398712009195551,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 5
+    },
+    {
+      "name": "positive",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.68692525357360146,
+        0.38784150631823461,
+        0.003804917831289167
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.71577212263909906,
+        0.58706195986292109,
+        0.37819112064487254
+      ],
+      "g": 0.003804917831289167,
+      "direction_chord": 0.017134322045252091,
+      "angle_error_deg": 0.981736347554565,
+      "g_error": 0.0004715844979558334,
+      "forward_residual_norm_m": 1.1409888535615482,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 5
+    },
+    {
+      "name": "positive",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.65384498136652192,
+        0.40141737070348987,
+        0.0035537508672321342
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.73065422994137408,
+        0.55989248356809507,
+        0.39072343558165018
+      ],
+      "g": 0.0035537508672321342,
+      "direction_chord": 0.042518685029106579,
+      "angle_error_deg": 2.436324746197688,
+      "g_error": 0.0002204175338988007,
+      "forward_residual_norm_m": 1.6091249412949962,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 6
+    },
+    {
+      "name": "positive",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.65384431640785889,
+        0.40141771449840746,
+        0.0035537532536252022
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.730654495622909,
+        0.55989191600865851,
+        0.39072375204764
+      ],
+      "g": 0.0035537532536252022,
+      "direction_chord": 0.042519305172270233,
+      "angle_error_deg": 2.43636028581589,
+      "g_error": 0.00022041992029186866,
+      "forward_residual_norm_m": 1.6091333910671002,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 6
+    },
+    {
+      "name": "positive",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.70900442700542765,
+        0.41041200139781414,
+        0.0029759691350841723
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.69597957719406511,
+        0.59701062209903477,
+        0.398987149203698
+      ],
+      "g": 0.0029759691350841723,
+      "direction_chord": 0.013299851566949379,
+      "angle_error_deg": 0.76203097936741859,
+      "g_error": -0.00035736419824916122,
+      "forward_residual_norm_m": 0.61139784919407358,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 7
+    },
+    {
+      "name": "positive",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.70897537005280131,
+        0.41041269351968207,
+        0.0029761747005669172
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.6959967146052124,
+        0.59699021901351668,
+        0.39898778384926004
+      ],
+      "g": 0.0029761747005669172,
+      "direction_chord": 0.013283795130231193,
+      "angle_error_deg": 0.76111099299229523,
+      "g_error": -0.0003571586327664163,
+      "forward_residual_norm_m": 0.61192123819479083,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 7
+    },
+    {
+      "name": "positive",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.6921377847957958,
+        0.40451930956806142,
+        0.0032764360836047939
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70774748163739654,
+        0.58667769452664231,
+        0.39357691113787019
+      ],
+      "g": 0.0032764360836047939,
+      "direction_chord": 0.0085301580835718954,
+      "angle_error_deg": 0.48874353855543956,
+      "g_error": -5.6897249728539694E-5,
+      "forward_residual_norm_m": 0.72438192165803472,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 8
+    },
+    {
+      "name": "positive",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.69213336578049045,
+        0.40451897163333705,
+        0.0032764813498679527
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.7077501765655787,
+        0.58667465185411993,
+        0.39357660047726317
+      ],
+      "g": 0.0032764813498679527,
+      "direction_chord": 0.0085334285001722986,
+      "angle_error_deg": 0.48893092133033461,
+      "g_error": -5.6851983465380871E-5,
+      "forward_residual_norm_m": 0.72437300454368414,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 8
+    },
+    {
+      "name": "positive",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.70398418362562454,
+        0.4121690011816404,
+        0.0033655116041411914
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.69843248793592949,
+        0.59305446857341448,
+        0.40059762493146728
+      ],
+      "g": 0.0033655116041411914,
+      "direction_chord": 0.012707438266121151,
+      "angle_error_deg": 0.72808747991277512,
+      "g_error": 3.21782708078578E-5,
+      "forward_residual_norm_m": 0.67361400851385922,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 9
+    },
+    {
+      "name": "positive",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.703983530570449,
+        0.41216900617092139,
+        0.0033655111994640666
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.69843287370952623,
+        0.59305401116466372,
+        0.40059762950291639
+      ],
+      "g": 0.0033655111994640666,
+      "direction_chord": 0.012707270259506381,
+      "angle_error_deg": 0.72807785364850475,
+      "g_error": 3.2177866130733094E-5,
+      "forward_residual_norm_m": 0.67362450167469412,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 9
+    },
+    {
+      "name": "positive",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.6876298280576,
+        0.40955150333216828,
+        0.0032452679344133614
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70884553185826693,
+        0.5822167936468795,
+        0.398197962275195
+      ],
+      "g": 0.0032452679344133614,
+      "direction_chord": 0.01484973844600302,
+      "angle_error_deg": 0.85083515752162842,
+      "g_error": -8.8065398919972161E-5,
+      "forward_residual_norm_m": 1.4150396356832462,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 10
+    },
+    {
+      "name": "positive",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.68754080362297554,
+        0.40955170431630439,
+        0.0032458210592219935
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.708897298721096,
+        0.582153635976042,
+        0.39819814663783559
+      ],
+      "g": 0.0032458210592219935,
+      "direction_chord": 0.014912614504976829,
+      "angle_error_deg": 0.85443779005954223,
+      "g_error": -8.7512274111340056E-5,
+      "forward_residual_norm_m": 1.4152942326999094,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 10
+    },
+    {
+      "name": "positive",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.69935768394817532,
+        0.40610173412048073,
+        0.0033521584634553124
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70301583203382334,
+        0.59137056759111939,
+        0.39503112750357838
+      ],
+      "g": 0.0033521584634553124,
+      "direction_chord": 0.0061302642174976907,
+      "angle_error_deg": 0.35123881694786263,
+      "g_error": 1.8825130121978822E-5,
+      "forward_residual_norm_m": 0.92704640106114289,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 11
+    },
+    {
+      "name": "positive",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.69935439888307593,
+        0.40610208618081844,
+        0.0033522148362396067
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70301766829271051,
+        0.59136816860936814,
+        0.39503145093002712
+      ],
+      "g": 0.0033522148362396067,
+      "direction_chord": 0.0061309066003341108,
+      "angle_error_deg": 0.35127562294657583,
+      "g_error": 1.8881502906273155E-5,
+      "forward_residual_norm_m": 0.92705910615150522,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 11
+    },
+    {
+      "name": "positive",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.69378259517656782,
+        0.39598888260576454,
+        0.0033816745638216681
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70933706735655655,
+        0.58996647267517921,
+        0.38572073575737004
+      ],
+      "g": 0.0033816745638216681,
+      "direction_chord": 0.0069955941388892377,
+      "angle_error_deg": 0.4008188366572949,
+      "g_error": 4.8341230488334504E-5,
+      "forward_residual_norm_m": 2.2514411849038631,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 12
+    },
+    {
+      "name": "positive",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.693784414171655,
+        0.39598753527849834,
+        0.0033817063938559166
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70933639376429358,
+        0.589968095272091,
+        0.38571949269188871
+      ],
+      "g": 0.0033817063938559166,
+      "direction_chord": 0.0069949944942790648,
+      "angle_error_deg": 0.40078447934126538,
+      "g_error": 4.8373060522583031E-5,
+      "forward_residual_norm_m": 2.2514132813783725,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 12
+    },
+    {
+      "name": "positive",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.71065851297008242,
+        0.39736432066010119,
+        0.0034342560399960019
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.69887753722381174,
+        0.60150595561020481,
+        0.38698937108069764
+      ],
+      "g": 0.0034342560399960019,
+      "direction_chord": 0.010170014675123733,
+      "angle_error_deg": 0.58270142966947946,
+      "g_error": 0.0001009227066626683,
+      "forward_residual_norm_m": 2.3567337011023275,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 13
+    },
+    {
+      "name": "positive",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.71061444812560015,
+        0.39737479199345049,
+        0.0034344297131919778
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.69890097029114728,
+        0.60147251575296845,
+        0.38699902651025858
+      ],
+      "g": 0.0034344297131919778,
+      "direction_chord": 0.010128059212885059,
+      "angle_error_deg": 0.58029752780512567,
+      "g_error": 0.00010109637985864428,
+      "forward_residual_norm_m": 2.3566635763061545,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 13
+    },
+    {
+      "name": "positive",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.699537881591482,
+        0.40220019930980955,
+        0.0034989798043177167
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.704083158886389,
+        0.59248507668773243,
+        0.39144391587415933
+      ],
+      "g": 0.0034989798043177167,
+      "direction_chord": 0.002240954002913265,
+      "angle_error_deg": 0.12839723331516037,
+      "g_error": 0.0001656464709843832,
+      "forward_residual_norm_m": 1.6911403401658267,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 14
+    },
+    {
+      "name": "positive",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.69948942009421577,
+        0.40219917285919293,
+        0.003499149917307758
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.704112178217222,
+        0.59245121375596332,
+        0.39144297133207634
+      ],
+      "g": 0.003499149917307758,
+      "direction_chord": 0.0022488468024104242,
+      "angle_error_deg": 0.12884945770183762,
+      "g_error": 0.00016581658397442443,
+      "forward_residual_norm_m": 1.6910352650286178,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 14
+    },
+    {
+      "name": "positive",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.73451441925036887,
+        0.39779096021171956,
+        0.0031054981751238529
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.68420797490521379,
+        0.617894865586469,
+        0.38738273342778934
+      ],
+      "g": 0.0031054981751238529,
+      "direction_chord": 0.031879737264364848,
+      "angle_error_deg": 1.82665175523745,
+      "g_error": -0.00022783515820948069,
+      "forward_residual_norm_m": 1.3773240478649975,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 15
+    },
+    {
+      "name": "positive",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.73450488820808624,
+        0.39779002393252627,
+        0.0031055120904566148
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.68421413323713776,
+        0.61788858743063313,
+        0.38738187025405446
+      ],
+      "g": 0.0031055120904566148,
+      "direction_chord": 0.031871048074062137,
+      "angle_error_deg": 1.8261538380635332,
+      "g_error": -0.00022782124287671875,
+      "forward_residual_norm_m": 1.3774516070098637,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 15
+    },
+    {
+      "name": "positive",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.68822965101478217,
+        0.39655023659066441,
+        0.0037086087631988847
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.712434814433434,
+        0.5858808647115531,
+        0.38623858889039187
+      ],
+      "g": 0.0037086087631988847,
+      "direction_chord": 0.011384289240860948,
+      "angle_error_deg": 0.65227524863166164,
+      "g_error": 0.00037527542986555114,
+      "forward_residual_norm_m": 1.3353793886099519,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 16
+    },
+    {
+      "name": "positive",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.68822744375936162,
+        0.39655068735465077,
+        0.0037086087830815041
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.71243597314829454,
+        0.58587918159996544,
+        0.38623900467456312
+      ],
+      "g": 0.0037086087830815041,
+      "direction_chord": 0.011386090519568012,
+      "angle_error_deg": 0.65237845597181177,
+      "g_error": 0.00037527544974817056,
+      "forward_residual_norm_m": 1.33540813031774,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 16
+    },
+    {
+      "name": "positive",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.70855227046606251,
+        0.39429001170472527,
+        0.0034523824271035443
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70104295719160836,
+        0.60080397596964741,
+        0.38415277511832208
+      ],
+      "g": 0.0034523824271035443,
+      "direction_chord": 0.0097366306280962968,
+      "angle_error_deg": 0.55787004531548623,
+      "g_error": 0.00011904909377021076,
+      "forward_residual_norm_m": 2.0126078330692692,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 17
+    },
+    {
+      "name": "positive",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.708491868524344,
+        0.3943018416869728,
+        0.0034525877428870084
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.701075794735755,
+        0.60075867340484412,
+        0.38416369735372097
+      ],
+      "g": 0.0034525877428870084,
+      "direction_chord": 0.0096845884826318816,
+      "angle_error_deg": 0.55488821487614381,
+      "g_error": 0.00011925440955367489,
+      "forward_residual_norm_m": 2.0117485090294145,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 17
+    },
+    {
+      "name": "positive",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.69354515279930551,
+        0.40842980675731616,
+        0.0033209199925610575
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70573217766685314,
+        0.58668479900539894,
+        0.3971687802705493
+      ],
+      "g": 0.0033209199925610575,
+      "direction_chord": 0.010309246021884346,
+      "angle_error_deg": 0.59067890277221458,
+      "g_error": -1.241334077227603E-5,
+      "forward_residual_norm_m": 0.42054109277638313,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 18
+    },
+    {
+      "name": "positive",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.6935253926950673,
+        0.40843137423511877,
+        0.0033210305560387619
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70574329173929451,
+        0.58667045558023356,
+        0.39717021881589537
+      ],
+      "g": 0.0033210305560387619,
+      "direction_chord": 0.01032099416713431,
+      "angle_error_deg": 0.591352030865342,
+      "g_error": -1.2302777294571649E-5,
+      "forward_residual_norm_m": 0.42018394627209743,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 18
+    },
+    {
+      "name": "positive",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.70631045341054377,
+        0.38146255711725191,
+        0.0036736397505694519
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70607900535316148,
+        0.60237970381460326,
+        0.372278297288092
+      ],
+      "g": 0.0036736397505694519,
+      "direction_chord": 0.019433701820952269,
+      "angle_error_deg": 1.1134866171714741,
+      "g_error": 0.00034030641723611834,
+      "forward_residual_norm_m": 2.4649888235120163,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 19
+    },
+    {
+      "name": "positive",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.70618020439141271,
+        0.381470072409179,
+        0.003673875531500967
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70615533002894759,
+        0.60228591702066825,
+        0.37228527237896597
+      ],
+      "g": 0.003673875531500967,
+      "direction_chord": 0.019390702897702863,
+      "angle_error_deg": 1.1110228442889891,
+      "g_error": 0.00034054219816763345,
+      "forward_residual_norm_m": 2.4636274595904872,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 19
+    },
+    {
+      "name": "positive",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.681884240334938,
+        0.40402946676004742,
+        0.0033682062553365292
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.71387529236812863,
+        0.57951149971025384,
+        0.39312655551347769
+      ],
+      "g": 0.0033682062553365292,
+      "direction_chord": 0.017151257844002073,
+      "angle_error_deg": 0.98270673299261879,
+      "g_error": 3.4872922003195608E-5,
+      "forward_residual_norm_m": 2.2755530415504666,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 20
+    },
+    {
+      "name": "positive",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.68186900200649569,
+        0.40402831747304663,
+        0.0033682221185364781
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.71388447385895315,
+        0.57950090613080707,
+        0.39312549876178127
+      ],
+      "g": 0.0033682221185364781,
+      "direction_chord": 0.01716462273231624,
+      "angle_error_deg": 0.9834725128672489,
+      "g_error": 3.4888785203144538E-5,
+      "forward_residual_norm_m": 2.275456493047225,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 20
+    },
+    {
+      "name": "positive",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.6919030331854108,
+        0.38508121036216597,
+        0.0038410118092501765
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.71364213787911956,
+        0.59128140146590558,
+        0.3756344011453614
+      ],
+      "g": 0.0038410118092501765,
+      "direction_chord": 0.016689195676233507,
+      "angle_error_deg": 0.9562315733710155,
+      "g_error": 0.000507678475916843,
+      "forward_residual_norm_m": 3.3167828579038741,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 21
+    },
+    {
+      "name": "positive",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.69183049246661432,
+        0.38508955796701794,
+        0.0038413611455850017
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.71368261325639692,
+        0.59122763139630807,
+        0.37564213742474556
+      ],
+      "g": 0.0038413611455850017,
+      "direction_chord": 0.016711890946816663,
+      "angle_error_deg": 0.95753196192736523,
+      "g_error": 0.00050802781225166814,
+      "forward_residual_norm_m": 3.3166718142557832,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 21
+    },
+    {
+      "name": "positive",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.68737574140616475,
+        0.39420196553497455,
+        0.0034453108632244017
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.71363390491738088,
+        0.58584617902774028,
+        0.38407148328269236
+      ],
+      "g": 0.0034453108632244017,
+      "direction_chord": 0.013005697195955039,
+      "angle_error_deg": 0.74517681090284638,
+      "g_error": 0.00011197752989106817,
+      "forward_residual_norm_m": 0.83803094251050814,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 22
+    },
+    {
+      "name": "positive",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.68735576329757209,
+        0.3942039395781759,
+        0.0034453642117249737
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.71364502285963516,
+        0.58583144079616034,
+        0.38407330592266586
+      ],
+      "g": 0.0034453642117249737,
+      "direction_chord": 0.013021307729066973,
+      "angle_error_deg": 0.74607124750106391,
+      "g_error": 0.00011203087839164018,
+      "forward_residual_norm_m": 0.83807471228635511,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 22
+    },
+    {
+      "name": "positive",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.71342372639645479,
+        0.39413259559085645,
+        0.0037346800963864489
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.69815357610054019,
+        0.60425150036164088,
+        0.38400743285610128
+      ],
+      "g": 0.0037346800963864489,
+      "direction_chord": 0.013699301888010293,
+      "angle_error_deg": 0.78491831830287462,
+      "g_error": 0.00040134676305311539,
+      "forward_residual_norm_m": 1.9884181924718718,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 23
+    },
+    {
+      "name": "positive",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.71341605474312009,
+        0.39413606708790583,
+        0.0037348515460170675
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.698157203700532,
+        0.60424527195259847,
+        0.38401063819116288
+      ],
+      "g": 0.0037348515460170675,
+      "direction_chord": 0.013691414114961626,
+      "angle_error_deg": 0.78446637160145,
+      "g_error": 0.00040151821268373392,
+      "forward_residual_norm_m": 1.9882162123506741,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 23
+    },
+    {
+      "name": "positive",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.68582842915553643,
+        0.40945890633407878,
+        0.0030073606219414247
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70992171781962432,
+        0.58096228515251991,
+        0.39811302138764032
+      ],
+      "g": 0.0030073606219414247,
+      "direction_chord": 0.016098326873832402,
+      "angle_error_deg": 0.92237614725157646,
+      "g_error": -0.00032597271139190882,
+      "forward_residual_norm_m": 2.3212830068695469,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 24
+    },
+    {
+      "name": "positive",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.68580739649913025,
+        0.40946420162743491,
+        0.00300757532490193
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70993230533783669,
+        0.58094601840466831,
+        0.3981178789472628
+      ],
+      "g": 0.00300757532490193,
+      "direction_chord": 0.016117071102633381,
+      "angle_error_deg": 0.9234501472850335,
+      "g_error": -0.00032575800843140336,
+      "forward_residual_norm_m": 2.3209274446576211,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 24
+    },
+    {
+      "name": "positive",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.69474264498196137,
+        0.40870307440922293,
+        0.0032490586249406287
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70494571769718972,
+        0.58745998324287951,
+        0.39741955561933529
+      ],
+      "g": 0.0032490586249406287,
+      "direction_chord": 0.0099551045475351589,
+      "angle_error_deg": 0.57038783052575925,
+      "g_error": -8.42747083927048E-5,
+      "forward_residual_norm_m": 2.0614034803371437,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 25
+    },
+    {
+      "name": "positive",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.69472559572935977,
+        0.4087057862922987,
+        0.0032490854945428122
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70495490538243288,
+        0.58744727440605427,
+        0.39742204414217275
+      ],
+      "g": 0.0032490854945428122,
+      "direction_chord": 0.0099650916364511857,
+      "angle_error_deg": 0.57096005566593355,
+      "g_error": -8.4247838790521383E-5,
+      "forward_residual_norm_m": 2.0611460217604849,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 25
+    },
+    {
+      "name": "positive",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.68584684712740152,
+        0.39682521296600237,
+        0.0035887389862152919
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.71374661142029749,
+        0.58411432493912929,
+        0.38649221219443497
+      ],
+      "g": 0.0035887389862152919,
+      "direction_chord": 0.013425304491513929,
+      "angle_error_deg": 0.76921906291245357,
+      "g_error": 0.00025540565288195835,
+      "forward_residual_norm_m": 2.7313478984599304,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 26
+    },
+    {
+      "name": "positive",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.68580515716276291,
+        0.3968159227297629,
+        0.0035892355697014844
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.71377374127691,
+        0.58408684225165752,
+        0.38648364386096618
+      ],
+      "g": 0.0035892355697014844,
+      "direction_chord": 0.013464860053148406,
+      "angle_error_deg": 0.771485480863511,
+      "g_error": 0.00025590223636815087,
+      "forward_residual_norm_m": 2.7312135384860734,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 26
+    },
+    {
+      "name": "positive",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.71197708052846043,
+        0.39820051665555678,
+        0.0033352692357944331
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.69783857203746147,
+        0.60221532159983082,
+        0.38776027878978131
+      ],
+      "g": 0.0033352692357944331,
+      "direction_chord": 0.011181491479004387,
+      "angle_error_deg": 0.64065560787363951,
+      "g_error": 1.9359024610995576E-6,
+      "forward_residual_norm_m": 0.47854705421094551,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 27
+    },
+    {
+      "name": "positive",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.711956639618724,
+        0.39820220389521849,
+        0.00333536482991623
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.69785038640098118,
+        0.60220062958924958,
+        0.38776183401968883
+      ],
+      "g": 0.00333536482991623,
+      "direction_chord": 0.011162627536638003,
+      "angle_error_deg": 0.63957476672801561,
+      "g_error": 2.0314965828963256E-6,
+      "forward_residual_norm_m": 0.47900502133114226,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 27
+    },
+    {
+      "name": "positive",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.702386183734017,
+        0.39944763136455563,
+        0.0036407702283017505
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70321250710066951,
+        0.59518195275251484,
+        0.388909517722174
+      ],
+      "g": 0.0036407702283017505,
+      "direction_chord": 0.0022664183766626144,
+      "angle_error_deg": 0.12985623538813393,
+      "g_error": 0.000307436894968417,
+      "forward_residual_norm_m": 2.0397554266317184,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 28
+    },
+    {
+      "name": "positive",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.7023615030461452,
+        0.39944638707517743,
+        0.0036408785470652895
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70322756576808509,
+        0.59516490942278988,
+        0.38890837138798656
+      ],
+      "g": 0.0036408785470652895,
+      "direction_chord": 0.0022446828275825169,
+      "angle_error_deg": 0.12861087936378307,
+      "g_error": 0.00030754521373195596,
+      "forward_residual_norm_m": 2.0397809690188571,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 28
+    },
+    {
+      "name": "positive",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.70470090115439232,
+        0.40161487244021915,
+        0.0029995967609173137
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70118920292090114,
+        0.59626068370678009,
+        0.39090522991215454
+      ],
+      "g": 0.0029995967609173137,
+      "direction_chord": 0.0046197690634607281,
+      "angle_error_deg": 0.26469350504442768,
+      "g_error": -0.00033373657241601981,
+      "forward_residual_norm_m": 1.7917445406350121,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 29
+    },
+    {
+      "name": "positive",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.70469378755383927,
+        0.40161720433025766,
+        0.0029996792100349177
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70119275003523573,
+        0.5962551052088364,
+        0.390907376254814
+      ],
+      "g": 0.0029996792100349177,
+      "direction_chord": 0.0046144477491922289,
+      "angle_error_deg": 0.26438861538249137,
+      "g_error": -0.00033365412329841582,
+      "forward_residual_norm_m": 1.7919107940402001,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 29
+    },
+    {
+      "name": "positive",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.7096632787290148,
+        0.38685250177683178,
+        0.0035000279614247794
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70252300851610328,
+        0.60342746440523176,
+        0.37727538709403757
+      ],
+      "g": 0.0035000279614247794,
+      "direction_chord": 0.015890419748759519,
+      "angle_error_deg": 0.91046356550829233,
+      "g_error": 0.00016669462809144582,
+      "forward_residual_norm_m": 1.3110303132021417,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 30
+    },
+    {
+      "name": "positive",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.709655335718472,
+        0.38685182712975447,
+        0.0035000856622599483
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.7025279946057974,
+        0.60342205008163219,
+        0.37727476230253859
+      ],
+      "g": 0.0035000856622599483,
+      "direction_chord": 0.015886859759973459,
+      "angle_error_deg": 0.91025958673859408,
+      "g_error": 0.00016675232892661472,
+      "forward_residual_norm_m": 1.3110858460967458,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 30
+    },
+    {
+      "name": "positive",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.67589398740277662,
+        0.4299958826239858,
+        0.0022129023767710762
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70912914064040222,
+        0.56864551021560084,
+        0.41686705987190176
+      ],
+      "g": 0.0022129023767710762,
+      "direction_chord": 0.037231265850306207,
+      "angle_error_deg": 2.1333176252032748,
+      "g_error": -0.0011204309565622573,
+      "forward_residual_norm_m": 1.4270767394047419,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 31
+    },
+    {
+      "name": "positive",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.67587306516462242,
+        0.4299926652194539,
+        0.0022130466111782757
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.7091420841937307,
+        0.56863151256431821,
+        0.41686413535369943
+      ],
+      "g": 0.0022130466111782757,
+      "direction_chord": 0.037240027969142678,
+      "angle_error_deg": 2.1338197446628686,
+      "g_error": -0.0011202867221550578,
+      "forward_residual_norm_m": 1.4269016108399444,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 31
+    },
+    {
+      "name": "positive",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.6967152541090913,
+        0.39929224142253528,
+        0.0036334352338949693
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70662275707055355,
+        0.59122330774815557,
+        0.38876635601005793
+      ],
+      "g": 0.0036334352338949693,
+      "direction_chord": 0.0031075724172393319,
+      "angle_error_deg": 0.17805085568231455,
+      "g_error": 0.00030010190056163578,
+      "forward_residual_norm_m": 0.83240745545930006,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 32
+    },
+    {
+      "name": "positive",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.69671505750454177,
+        0.39929227874248835,
+        0.0036334360064995096
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70662286218018977,
+        0.59122315951260973,
+        0.38876639039428806
+      ],
+      "g": 0.0036334360064995096,
+      "direction_chord": 0.0031077402470872733,
+      "angle_error_deg": 0.17806047163336375,
+      "g_error": 0.000300102673166176,
+      "forward_residual_norm_m": 0.83240764738249151,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 32
+    },
+    {
+      "name": "negative",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.70696221515711954,
+        2.7558096631518891,
+        0.0029157599862999609
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        -0.70445673380082074,
+        -0.60178944645390808,
+        0.37628469586123009
+      ],
+      "g": 0.0029157599862999609,
+      "direction_chord": 1.9999391279338561,
+      "angle_error_deg": 179.10594805752157,
+      "g_error": -0.0004175733470333726,
+      "forward_residual_norm_m": 126.42996422538883,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 1
+    },
+    {
+      "name": "negative",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.706854897499058,
+        -0.38577617414186216,
+        0.0029113152421505134
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70452326270831289,
+        0.60171550806948226,
+        -0.37627838052633134
+      ],
+      "g": 0.0029113152421505134,
+      "direction_chord": 0.015569622519179881,
+      "angle_error_deg": 0.892082669638745,
+      "g_error": -0.00042201809118282011,
+      "forward_residual_norm_m": 2.4620992169635403,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 1
+    },
+    {
+      "name": "negative",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.68460475136533971,
+        2.7406812081896743,
+        0.0034046396468108762
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        -0.713242192601612,
+        -0.58222377145075255,
+        0.39025767724736282
+      ],
+      "g": 0.0034046396468108762,
+      "direction_chord": 1.9999495442268367,
+      "angle_error_deg": 179.18602892193243,
+      "g_error": 7.1306313477542682E-5,
+      "forward_residual_norm_m": 126.37842507506853,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 2
+    },
+    {
+      "name": "negative",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.684607909704681,
+        -0.40090538291728256,
+        0.0034044598054989387
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.71324218653308857,
+        0.58222752023987012,
+        -0.39025209547782141
+      ],
+      "g": 0.0034044598054989387,
+      "direction_chord": 0.014203083908238118,
+      "angle_error_deg": 0.81378360421797047,
+      "g_error": 7.112647216560514E-5,
+      "forward_residual_norm_m": 2.4541637592177068,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 2
+    },
+    {
+      "name": "negative",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.72060830245848506,
+        2.7593129260508582,
+        0.0023678811224960824
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        -0.6971655734233162,
+        -0.61221226202545076,
+        0.37303660605766242
+      ],
+      "g": 0.0023678811224960824,
+      "direction_chord": 1.9998307610605139,
+      "angle_error_deg": 178.50924649810528,
+      "g_error": -0.00096545221083725119,
+      "forward_residual_norm_m": 126.40187868756047,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 3
+    },
+    {
+      "name": "negative",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.72046454132416438,
+        -0.38182678292535921,
+        0.002355394324066503
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.697380484046119,
+        0.61222343946923363,
+        -0.37261631826325414
+      ],
+      "g": 0.002355394324066503,
+      "direction_chord": 0.026233633050424924,
+      "angle_error_deg": 1.5031195593579663,
+      "g_error": -0.00097793900926683051,
+      "forward_residual_norm_m": 2.3511020382597838,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 3
+    },
+    {
+      "name": "negative",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.71440375521855537,
+        2.7530599462603345,
+        0.0023048098204205519
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        -0.69917470310938046,
+        -0.60633479879968111,
+        0.378830894062852
+      ],
+      "g": 0.0023048098204205519,
+      "direction_chord": 1.9999229129255598,
+      "angle_error_deg": 178.99389153041457,
+      "g_error": -0.0010285235129127816,
+      "forward_residual_norm_m": 125.63642513156321,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 4
+    },
+    {
+      "name": "negative",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.71440188405915384,
+        -0.38853326210888067,
+        0.0023046631457944874
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.6991756788786,
+        0.60633335283662193,
+        -0.37883140749223715
+      ],
+      "g": 0.0023046631457944874,
+      "direction_chord": 0.017558008111755355,
+      "angle_error_deg": 1.0060126841279771,
+      "g_error": -0.0010286701875388462,
+      "forward_residual_norm_m": 0.41564766250077217,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 4
+    },
+    {
+      "name": "negative",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.68520382260099111,
+        2.7109470826249251,
+        0.0042539887758393184
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        -0.70359463782033516,
+        -0.57505113405927677,
+        0.41745751741657633
+      ],
+      "g": 0.0042539887758393184,
+      "direction_chord": 1.9997194032490291,
+      "angle_error_deg": 178.08045178661993,
+      "g_error": 0.0009206554425059848,
+      "forward_residual_norm_m": 128.4045932562251,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 5
+    },
+    {
+      "name": "negative",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.68520296421574,
+        -0.43055193633325006,
+        0.0042523441608109565
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.7036253941952032,
+        0.575075263953201,
+        -0.417372430130215
+      ],
+      "g": 0.0042523441608109565,
+      "direction_chord": 0.033415686429048151,
+      "angle_error_deg": 1.914666889486653,
+      "g_error": 0.00091901082747762293,
+      "forward_residual_norm_m": 0.83343070377389072,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 5
+    },
+    {
+      "name": "negative",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.653127138977013,
+        2.74037895347141,
+        0.0036732341868781272
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        -0.73111914158677471,
+        -0.55941619110080809,
+        0.39053594705184513
+      ],
+      "g": 0.0036732341868781272,
+      "direction_chord": 1.9995339302587281,
+      "angle_error_deg": 177.52607507435707,
+      "g_error": 0.00033990085354479362,
+      "forward_residual_norm_m": 127.98841390604584,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 6
+    },
+    {
+      "name": "negative",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.65314198838468673,
+        -0.40120095333517036,
+        0.0036732825761088394
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.73111478792887852,
+        0.55943007278113754,
+        -0.39052421248855018
+      ],
+      "g": 0.0036732825761088394,
+      "direction_chord": 0.043160876848385266,
+      "angle_error_deg": 2.4731280711053243,
+      "g_error": 0.00033994924277550584,
+      "forward_residual_norm_m": 1.62839927284683,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 6
+    },
+    {
+      "name": "negative",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.71659779784654754,
+        2.7506060278555493,
+        0.0029154823783489659
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        -0.69713962138659546,
+        -0.60725493176379841,
+        0.38110076901194917
+      ],
+      "g": 0.0029154823783489659,
+      "direction_chord": 1.9999210418598297,
+      "angle_error_deg": 178.98175447071367,
+      "g_error": -0.00041785095498436762,
+      "forward_residual_norm_m": 125.03781110515985,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 7
+    },
+    {
+      "name": "negative",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.71659151792438647,
+        -0.39088318305974956,
+        0.0029124278280777058
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.69717315733318,
+        0.607276443666913,
+        -0.38100513075462866
+      ],
+      "g": 0.0029124278280777058,
+      "direction_chord": 0.0178194907991104,
+      "angle_error_deg": 1.0209951245369193,
+      "g_error": -0.00042090550525562776,
+      "forward_residual_norm_m": 0.75773697654751382,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 7
+    },
+    {
+      "name": "negative",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.6924600325136,
+        2.74965905819165,
+        0.0032037945504258887
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        -0.71131480845300421,
+        -0.59002160966236539,
+        0.38197610318827169
+      ],
+      "g": 0.0032037945504258887,
+      "direction_chord": 1.9999716350378745,
+      "angle_error_deg": 179.38969876982549,
+      "g_error": -0.00012953878290744483,
+      "forward_residual_norm_m": 126.33789830872279,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 8
+    },
+    {
+      "name": "negative",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.69245829033861206,
+        -0.39192984809458403,
+        0.003203707960359133
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.7113169380711114,
+        0.59002128426037814,
+        -0.38197264003181269
+      ],
+      "g": 0.003203707960359133,
+      "direction_chord": 0.010655606615045688,
+      "angle_error_deg": 0.61052417555418881,
+      "g_error": -0.00012962537297420054,
+      "forward_residual_norm_m": 0.56278774749269,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 8
+    },
+    {
+      "name": "negative",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.70621417815811016,
+        2.7528597578200937,
+        0.00335927616312883
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        -0.70405911359776829,
+        -0.600539357186966,
+        0.3790161540480701
+      ],
+      "g": 0.00335927616312883,
+      "direction_chord": 1.9999600345543416,
+      "angle_error_deg": 179.27557124368812,
+      "g_error": 2.5942829795496357E-5,
+      "forward_residual_norm_m": 125.16601644785473,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 9
+    },
+    {
+      "name": "negative",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.70621700775743312,
+        -0.38871605722379454,
+        0.0033584211117570545
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.704062269839018,
+        0.60054549102135146,
+        -0.37900057177140739
+      ],
+      "g": 0.0033584211117570545,
+      "direction_chord": 0.012659783272783342,
+      "angle_error_deg": 0.7253569950127704,
+      "g_error": 2.5087778423720907E-5,
+      "forward_residual_norm_m": 0.68156044120462533,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 9
+    },
+    {
+      "name": "negative",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.68499185994634226,
+        2.7661332551955766,
+        0.002930449379906443
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        -0.7204772334233025,
+        -0.58859467584003633,
+        0.36669996412798683
+      ],
+      "g": 0.002930449379906443,
+      "direction_chord": 1.9998011853897226,
+      "angle_error_deg": 178.38422689867738,
+      "g_error": -0.00040288395342689054,
+      "forward_residual_norm_m": 125.75462153747826,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 10
+    },
+    {
+      "name": "negative",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.68495406734975672,
+        -0.3753833339976364,
+        0.0029282164089182616
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.72052107688061329,
+        0.5885850910484427,
+        -0.366629197372901
+      ],
+      "g": 0.0029282164089182616,
+      "direction_chord": 0.028283152554370614,
+      "angle_error_deg": 1.6205592901211403,
+      "g_error": -0.0004051169244150719,
+      "forward_residual_norm_m": 1.0253449582358865,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 10
+    },
+    {
+      "name": "negative",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.70098596529591639,
+        2.7468065919356008,
+        0.0033455162112813286
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        -0.70542299991963608,
+        -0.59535954564882287,
+        0.38461071564532395
+      ],
+      "g": 0.0033455162112813286,
+      "direction_chord": 1.9999929970862689,
+      "angle_error_deg": 179.69675605146159,
+      "g_error": 1.2182877947995024E-5,
+      "forward_residual_norm_m": 125.75925975070811,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 11
+    },
+    {
+      "name": "negative",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.70099106634519848,
+        -0.394724481295024,
+        0.0033445469399556076
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.705438061362789,
+        0.59537841880717091,
+        -0.38455387138784997
+      ],
+      "g": 0.0033445469399556076,
+      "direction_chord": 0.0053540772511915082,
+      "angle_error_deg": 0.30676639608917861,
+      "g_error": 1.1213606622274049E-5,
+      "forward_residual_norm_m": 0.95983280806280769,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 11
+    },
+    {
+      "name": "negative",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.69280430705628571,
+        2.7383736227807387,
+        0.0033693775427844214
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        -0.70774947019301038,
+        -0.58747565681356329,
+        0.3923812432991487
+      ],
+      "g": 0.0033693775427844214,
+      "direction_chord": 1.9999864429569523,
+      "angle_error_deg": 179.57807490103383,
+      "g_error": 3.6044209451087817E-5,
+      "forward_residual_norm_m": 127.70682184950637,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 12
+    },
+    {
+      "name": "negative",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.69278956872615338,
+        -0.40320619404476821,
+        0.0033688728348194165
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.7077620042023659,
+        0.5874684426577973,
+        -0.39236943597669854
+      ],
+      "g": 0.0033688728348194165,
+      "direction_chord": 0.007370592056608464,
+      "angle_error_deg": 0.42230477327457344,
+      "g_error": 3.5539501486082925E-5,
+      "forward_residual_norm_m": 2.3410967975978521,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 12
+    },
+    {
+      "name": "negative",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.70570708120467929,
+        2.7443421363063507,
+        0.0033517431707752771
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        -0.70188079086039146,
+        -0.59806671156223912,
+        0.386884432282201
+      ],
+      "g": 0.0033517431707752771,
+      "direction_chord": 1.9999911942009956,
+      "angle_error_deg": 179.659954390696,
+      "g_error": 1.8409837441943529E-5,
+      "forward_residual_norm_m": 125.76930713411326,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 13
+    },
+    {
+      "name": "negative",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.70572989992580637,
+        -0.39714126662803761,
+        0.0033496767022812039
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70189931069360312,
+        0.5981101380390812,
+        -0.38678368686219966
+      ],
+      "g": 0.0033496767022812039,
+      "direction_chord": 0.0060048941066381751,
+      "angle_error_deg": 0.34405560565949533,
+      "g_error": 1.6343368947870345E-5,
+      "forward_residual_norm_m": 2.364151125565749,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 13
+    },
+    {
+      "name": "negative",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.69460909970007789,
+        2.7537436499605894,
+        0.0032958957802565344
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        -0.71123796475648349,
+        -0.59254264324868633,
+        0.3781980611014753
+      ],
+      "g": 0.0032958957802565344,
+      "direction_chord": 1.9999568934470617,
+      "angle_error_deg": 179.24764111209853,
+      "g_error": -3.7437553076799177E-5,
+      "forward_residual_norm_m": 126.24601109735677,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 14
+    },
+    {
+      "name": "negative",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.69456897003608664,
+        -0.38787377045588634,
+        0.0032946237338679512
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.71125454573885782,
+        0.59250810561032619,
+        -0.37822098824876654
+      ],
+      "g": 0.0032946237338679512,
+      "direction_chord": 0.013122238031036645,
+      "angle_error_deg": 0.75185425134908512,
+      "g_error": -3.8709599465382334E-5,
+      "forward_residual_norm_m": 1.6333244415336463,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 14
+    },
+    {
+      "name": "negative",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.73661388183052734,
+        2.7410529192847837,
+        0.0029801664393502691
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        -0.68211787340893981,
+        -0.6186122993231632,
+        0.38991541377864863
+      ],
+      "g": 0.0029801664393502691,
+      "direction_chord": 1.9997156830296612,
+      "angle_error_deg": 178.06776847080943,
+      "g_error": -0.00035316689398306447,
+      "forward_residual_norm_m": 125.84811210282606,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 15
+    },
+    {
+      "name": "negative",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.73662058966565058,
+        -0.400560597653204,
+        0.0029802689655321485
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.682107697794927,
+        0.61861140974917939,
+        -0.38993462572210419
+      ],
+      "g": 0.0029802689655321485,
+      "direction_chord": 0.033728571200911786,
+      "angle_error_deg": 1.9325963926003107,
+      "g_error": -0.00035306436780118506,
+      "forward_residual_norm_m": 1.381078172995871,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 15
+    },
+    {
+      "name": "negative",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.68326719749761389,
+        2.7381501523155714,
+        0.0037452183615318511
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        -0.71325199875957312,
+        -0.58064378467583855,
+        0.39258678223138421
+      ],
+      "g": 0.0037452183615318511,
+      "direction_chord": 1.9999377425839788,
+      "angle_error_deg": 179.09583165062898,
+      "g_error": 0.00041188502819851759,
+      "forward_residual_norm_m": 127.04738963747684,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 16
+    },
+    {
+      "name": "negative",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.68326813467779435,
+        -0.40344128597228418,
+        0.0037451802305839654
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.71325182459732051,
+        0.58064475433599749,
+        -0.39258566449971416
+      ],
+      "g": 0.0037451802305839654,
+      "direction_chord": 0.015779447992980766,
+      "angle_error_deg": 0.90410515296085714,
+      "g_error": 0.00041184689725063187,
+      "forward_residual_norm_m": 1.4332437790881605,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 16
+    },
+    {
+      "name": "negative",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.70290279883563489,
+        2.7415777889274606,
+        0.0033776038403128838
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        -0.70273650741731275,
+        -0.59540246254654916,
+        0.389432033526291
+      ],
+      "g": 0.0033776038403128838,
+      "direction_chord": 1.9999982128489764,
+      "angle_error_deg": 179.84680898718312,
+      "g_error": 4.4270506979550255E-5,
+      "forward_residual_norm_m": 126.283212336159,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 17
+    },
+    {
+      "name": "negative",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.702943437178375,
+        -0.39985683379644615,
+        0.003374296222460397
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70275925512489978,
+        0.59547079766896516,
+        -0.38928647351247947
+      ],
+      "g": 0.003374296222460397,
+      "direction_chord": 0.0027149436253297017,
+      "angle_error_deg": 0.15555485912019446,
+      "g_error": 4.09628891270635E-5,
+      "forward_residual_norm_m": 1.9220785025678302,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 17
+    },
+    {
+      "name": "negative",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.69319423509099187,
+        2.7546674515018155,
+        0.0032359056269553074
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        -0.71234406246052007,
+        -0.59175874553428653,
+        0.37734271393645624
+      ],
+      "g": 0.0032359056269553074,
+      "direction_chord": 1.9999473853066048,
+      "angle_error_deg": 179.16879699975422,
+      "g_error": -9.7427706378026141E-5,
+      "forward_residual_norm_m": 125.6313246340915,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 18
+    },
+    {
+      "name": "negative",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.69319651370366742,
+        -0.38691749559933936,
+        0.0032357872671285115
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.71234495089385608,
+        0.5917622268730417,
+        -0.37733557714889354
+      ],
+      "g": 0.0032357872671285115,
+      "direction_chord": 0.014513140730710059,
+      "angle_error_deg": 0.83154900938307563,
+      "g_error": -9.7546066204822011E-5,
+      "forward_residual_norm_m": 0.44454670331543356,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 18
+    },
+    {
+      "name": "negative",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.6943739671102267,
+        2.7374077666587393,
+        0.0034297219379572285
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        -0.70653490015748088,
+        -0.588343070755703,
+        0.39326945718325035
+      ],
+      "g": 0.0034297219379572285,
+      "direction_chord": 1.9999889205379036,
+      "angle_error_deg": 179.61857235492559,
+      "g_error": 9.638860462389499E-5,
+      "forward_residual_norm_m": 128.08554898302228,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 19
+    },
+    {
+      "name": "negative",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.6941146007356479,
+        -0.40423891219761987,
+        0.0034203251428432989
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70667114128562891,
+        0.58814620722725719,
+        -0.3933191286960997
+      ],
+      "g": 0.0034203251428432989,
+      "direction_chord": 0.00687753858492343,
+      "angle_error_deg": 0.39405471098153511,
+      "g_error": 8.6991809509965375E-5,
+      "forward_residual_norm_m": 2.8207511142620261,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 19
+    },
+    {
+      "name": "negative",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.68589922337965381,
+        2.734094701885768,
+        0.0036664983345765126
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        -0.71048335230668491,
+        -0.58150588425050376,
+        0.3963134020911917
+      ],
+      "g": 0.0036664983345765126,
+      "direction_chord": 1.9999439100945549,
+      "angle_error_deg": 179.14178520535435,
+      "g_error": 0.000333165001243179,
+      "forward_residual_norm_m": 126.57888466059177,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 20
+    },
+    {
+      "name": "negative",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.68585131271343613,
+        -0.40755948172127415,
+        0.0036657519403075919
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.71049233928088074,
+        0.58145639884154565,
+        -0.39636989299062952
+      ],
+      "g": 0.0036657519403075919,
+      "direction_chord": 0.015047356871570137,
+      "angle_error_deg": 0.86215817554861118,
+      "g_error": 0.0003324186069742583,
+      "forward_residual_norm_m": 2.3539494513094761,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 20
+    },
+    {
+      "name": "negative",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.69029904203968784,
+        2.7025582866833728,
+        0.0044481396423838434
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        -0.69793067374320072,
+        -0.5763783506892971,
+        0.425065608471266
+      ],
+      "g": 0.0044481396423838434,
+      "direction_chord": 1.9995994731476969,
+      "angle_error_deg": 177.70662172107086,
+      "g_error": 0.0011148063090505099,
+      "forward_residual_norm_m": 128.14668055214574,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 21
+    },
+    {
+      "name": "negative",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.69023959761593645,
+        -0.43904513105061427,
+        0.00444683760998092
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.69796140683538821,
+        0.57633394825025486,
+        -0.42507535174676758
+      ],
+      "g": 0.00444683760998092,
+      "direction_chord": 0.040046863918410565,
+      "angle_error_deg": 2.2946696393253827,
+      "g_error": 0.0011135042766475868,
+      "forward_residual_norm_m": 2.6261545476401578,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 21
+    },
+    {
+      "name": "negative",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.6830945238847429,
+        2.7419085720831968,
+        0.003347011279130415
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        -0.71449164559233824,
+        -0.58144784766844615,
+        0.38912734267908222
+      ],
+      "g": 0.003347011279130415,
+      "direction_chord": 1.9999393536673333,
+      "angle_error_deg": 179.10760732372887,
+      "g_error": 1.3677945797081412E-5,
+      "forward_residual_norm_m": 127.41091824756271,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 22
+    },
+    {
+      "name": "negative",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.68305793493210942,
+        -0.39966809667783237,
+        0.0033455221849156887
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.7145177442142826,
+        0.58142563065253439,
+        -0.3891126176613085
+      ],
+      "g": 0.0033455221849156887,
+      "direction_chord": 0.015609112159188233,
+      "angle_error_deg": 0.89434532808344835,
+      "g_error": 1.2188851582355196E-5,
+      "forward_residual_norm_m": 0.99979168985519917,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 22
+    },
+    {
+      "name": "negative",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.70947762432968864,
+        2.7317271164482864,
+        0.003803330489179003
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        -0.6958623131094801,
+        -0.59748183609215189,
+        0.39848600569389481
+      ],
+      "g": 0.003803330489179003,
+      "direction_chord": 1.9999566971415266,
+      "angle_error_deg": 179.24592994556403,
+      "g_error": 0.00046999715584566948,
+      "forward_residual_norm_m": 126.73054744692186,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 23
+    },
+    {
+      "name": "negative",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.70949101924033553,
+        -0.40979751355283506,
+        0.0038029019593384494
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.69587487370862944,
+        0.59750881410284773,
+        -0.39842361527701586
+      ],
+      "g": 0.0038029019593384494,
+      "direction_chord": 0.01311826655668419,
+      "angle_error_deg": 0.751626697733817,
+      "g_error": 0.00046956862600511587,
+      "forward_residual_norm_m": 2.1939623280149192,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 23
+    },
+    {
+      "name": "negative",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.69288800759356028,
+        2.7509600570551553,
+        0.0029430431646101764
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        -0.71144398281412791,
+        -0.59064291397319335,
+        0.38077343327867
+      ],
+      "g": 0.0029430431646101764,
+      "direction_chord": 1.9999672933410197,
+      "angle_error_deg": 179.34465300662444,
+      "g_error": -0.00039029016872315714,
+      "forward_residual_norm_m": 126.12512879179602,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 24
+    },
+    {
+      "name": "negative",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.69289702183984958,
+        -0.39043213370637636,
+        0.0029407247905023273
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.71149737320100948,
+        0.59069807302406252,
+        -0.38058806399271483
+      ],
+      "g": 0.0029407247905023273,
+      "direction_chord": 0.011598092209981906,
+      "angle_error_deg": 0.66452545861858547,
+      "g_error": -0.00039260854283100629,
+      "forward_residual_norm_m": 2.1400082460312908,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 24
+    },
+    {
+      "name": "negative",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.69541752851844019,
+        2.7544393528956572,
+        0.0031693385085307356
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        -0.710960546751484,
+        -0.59328586969123454,
+        0.377553940235758
+      ],
+      "g": 0.0031693385085307356,
+      "direction_chord": 1.9999542631571765,
+      "angle_error_deg": 179.225027044814,
+      "g_error": -0.00016399482480259795,
+      "forward_residual_norm_m": 125.1042173978272,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 25
+    },
+    {
+      "name": "negative",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.695425292973398,
+        -0.38715826642254769,
+        0.0031693485335508981
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.71095450072024491,
+        0.59329018866083372,
+        -0.37755853843400194
+      ],
+      "g": 0.0031693485335508981,
+      "direction_chord": 0.013518766373197565,
+      "angle_error_deg": 0.77457415577095534,
+      "g_error": -0.00016398479978243542,
+      "forward_residual_norm_m": 2.2301734147158263,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 25
+    },
+    {
+      "name": "negative",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.67991437533831123,
+        2.7460298580751883,
+        0.0034795933198380445
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        -0.71757811668985438,
+        -0.580176092051185,
+        0.38532758616540358
+      ],
+      "g": 0.0034795933198380445,
+      "direction_chord": 1.9999093556742817,
+      "angle_error_deg": 178.90900042928709,
+      "g_error": 0.00014625998650471097,
+      "forward_residual_norm_m": 127.77485588530526,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 26
+    },
+    {
+      "name": "negative",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.67979949964543784,
+        -0.39545763948661383,
+        0.0034755268407736292
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.71767626809760343,
+        0.58011912480545025,
+        -0.38523054817142327
+      ],
+      "g": 0.0034755268407736292,
+      "direction_chord": 0.019169291008226817,
+      "angle_error_deg": 1.0983362879899197,
+      "g_error": 0.00014219350744029561,
+      "forward_residual_norm_m": 2.7208595572165404,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 26
+    },
+    {
+      "name": "negative",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.71365174529386866,
+        2.7349450604279255,
+        0.0034079423896583539
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        -0.69432809811292073,
+        -0.60121752180490318,
+        0.39553253171599562
+      ],
+      "g": 0.0034079423896583539,
+      "direction_chord": 1.9999495374223517,
+      "angle_error_deg": 179.18597403732451,
+      "g_error": 7.4609056325020389E-5,
+      "forward_residual_norm_m": 126.46213826098131,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 27
+    },
+    {
+      "name": "negative",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.71365378059483808,
+        -0.40662838263618517,
+        0.0034073590670943704
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.69433261851724815,
+        0.60122390876635567,
+        -0.395514887697905
+      ],
+      "g": 0.0034073590670943704,
+      "direction_chord": 0.01420003677394167,
+      "angle_error_deg": 0.81360901188208867,
+      "g_error": 7.4025733761036872E-5,
+      "forward_residual_norm_m": 0.42485554204984166,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 27
+    },
+    {
+      "name": "negative",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.70299035630382756,
+        2.7269311040604411,
+        0.0039754002613308307
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        -0.6982575912169614,
+        -0.59171267709772235,
+        0.40288018574972545
+      ],
+      "g": 0.0039754002613308307,
+      "direction_chord": 1.9999443753487274,
+      "angle_error_deg": 179.14535199089821,
+      "g_error": 0.00064206692799749715,
+      "forward_residual_norm_m": 126.40234631631982,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 28
+    },
+    {
+      "name": "negative",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.70295031470434732,
+        -0.41467511809741936,
+        0.0039740368653520125
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.69827711310766072,
+        0.59168118327749963,
+        -0.40289260438157604
+      ],
+      "g": 0.0039740368653520125,
+      "direction_chord": 0.014922901230784737,
+      "angle_error_deg": 0.855027192429872,
+      "g_error": 0.000640703532018679,
+      "forward_residual_norm_m": 1.8662248762286315,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 28
+    },
+    {
+      "name": "negative",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.70617605871378053,
+        2.7498786629487273,
+        0.0028261664896273792
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        -0.70321920770290025,
+        -0.59977663713085583,
+        0.3817731413676278
+      ],
+      "g": 0.0028261664896273792,
+      "direction_chord": 1.9999747175793865,
+      "angle_error_deg": 179.42381438477335,
+      "g_error": -0.00050716684370595436,
+      "forward_residual_norm_m": 125.98112641280288,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 29
+    },
+    {
+      "name": "negative",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.70618032425674027,
+        -0.391650157124069,
+        0.0028255178532937348
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70323518965188381,
+        0.59979544994554335,
+        -0.38171414207480237
+      ],
+      "g": 0.0028255178532937348,
+      "direction_chord": 0.010111215652527247,
+      "angle_error_deg": 0.57933245052962867,
+      "g_error": -0.00050781548003959879,
+      "forward_residual_norm_m": 1.9253161140728143,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 29
+    },
+    {
+      "name": "negative",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.70363855775698414,
+        2.7343878679576514,
+        0.0033770968920031051
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        -0.70014514072959944,
+        -0.59409237826007122,
+        0.39604422481084356
+      ],
+      "g": 0.0033770968920031051,
+      "direction_chord": 1.9999842235296525,
+      "angle_error_deg": 179.54484655278767,
+      "g_error": 4.3763558669771517E-5,
+      "forward_residual_norm_m": 127.75160253278834,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 30
+    },
+    {
+      "name": "negative",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.7035730073558093,
+        -0.40714779569134568,
+        0.0033745594299423153
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.7002012919180427,
+        0.59406108315080519,
+        -0.39599189421249026
+      ],
+      "g": 0.0033745594299423153,
+      "direction_chord": 0.00786690222189578,
+      "angle_error_deg": 0.45074145747612243,
+      "g_error": 4.1226096608981775E-5,
+      "forward_residual_norm_m": 1.6585204314451047,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 30
+    },
+    {
+      "name": "negative",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.68814852923975667,
+        2.7945885312296932,
+        0.0015227293933883241
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        -0.726383535345954,
+        -0.597253023753253,
+        0.34008202715802155
+      ],
+      "g": 0.0015227293933883241,
+      "direction_chord": 1.9992674750624477,
+      "angle_error_deg": 176.89846210723712,
+      "g_error": -0.0018106039399450095,
+      "forward_residual_norm_m": 123.27970076909877,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 31
+    },
+    {
+      "name": "negative",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.68814777272938454,
+        -0.34699215228505403,
+        0.00152253068112308
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.72638713150992973,
+        0.59725505959419578,
+        -0.34007077052565077
+      ],
+      "g": 0.00152253068112308,
+      "direction_chord": 0.054137302245257604,
+      "angle_error_deg": 3.1022178501966291,
+      "g_error": -0.0018108026522102535,
+      "forward_residual_norm_m": 0.59268996060379264,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 31
+    },
+    {
+      "name": "negative",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.69405991554206936,
+        2.73651922078079,
+        0.00376615882183168
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        -0.7064507590654302,
+        -0.58789739864381729,
+        0.39408625157915633
+      ],
+      "g": 0.00376615882183168,
+      "direction_chord": 1.9999860977527613,
+      "angle_error_deg": 179.57273690359375,
+      "g_error": 0.00043282548849834634,
+      "forward_residual_norm_m": 126.54135016230016,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 32
+    },
+    {
+      "name": "negative",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.694059585893345,
+        -0.40507380391792724,
+        0.0037661357874054897
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70645084044991713,
+        0.58789707221314658,
+        -0.39408659265549228
+      ],
+      "g": 0.0037661357874054897,
+      "direction_chord": 0.0074576049732620895,
+      "angle_error_deg": 0.42729028042071626,
+      "g_error": 0.0004328024540721561,
+      "forward_residual_norm_m": 0.749161590847192,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 32
+    },
+    {
+      "name": "far",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.71262622560680855,
+        0.39658177055165372,
+        1.083504514493987E-5
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.69792152249701178,
+        0.60307779865455224,
+        0.38626767558965169
+      ],
+      "g": 1.083504514493987E-5,
+      "direction_chord": 0.012129426017287217,
+      "angle_error_deg": 0.69496917899821864,
+      "g_error": -1.6649548550601304E-6,
+      "forward_residual_norm_m": 2.4144633601351089,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 1
+    },
+    {
+      "name": "far",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.71260187622584448,
+        0.39656958966215061,
+        1.1265030101860181E-5
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.69793976697379312,
+        0.60306388068007444,
+        0.3862564400701381
+      ],
+      "g": 1.1265030101860181E-5,
+      "direction_chord": 0.012111367221034697,
+      "angle_error_deg": 0.69393446718961127,
+      "g_error": -1.2349698981398196E-6,
+      "forward_residual_norm_m": 2.4140788254353578,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 1
+    },
+    {
+      "name": "far",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.68520487024282906,
+        0.40067118928716727,
+        5.4133251993927073E-6
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.71296523889962216,
+        0.58271101530073355,
+        0.39003646081872012
+      ],
+      "g": 5.4133251993927073E-6,
+      "direction_chord": 0.01364167917055127,
+      "angle_error_deg": 0.7816167026604296,
+      "g_error": -7.0866748006072933E-6,
+      "forward_residual_norm_m": 2.4277507002438869,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 2
+    },
+    {
+      "name": "far",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.685206303497414,
+        0.40066971990543271,
+        5.4536879686505437E-6
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.71296484747927069,
+        0.58271239984453982,
+        0.3900351078124602
+      ],
+      "g": 5.4536879686505437E-6,
+      "direction_chord": 0.013640292888987918,
+      "angle_error_deg": 0.781537272730404,
+      "g_error": -7.0463120313494569E-6,
+      "forward_residual_norm_m": 2.4277965942476345,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 2
+    },
+    {
+      "name": "far",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.72543456467109069,
+        0.39283333870897069,
+        -0.00029070284327099383
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.69121854378783942,
+        0.6129236237332556,
+        0.38280746621965622
+      ],
+      "g": -0.00029070284327099383,
+      "direction_chord": 0.02453149450142357,
+      "angle_error_deg": 1.4055863463217697,
+      "g_error": -0.00030320284327099381,
+      "forward_residual_norm_m": 2.313126387976955,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 3
+    },
+    {
+      "name": "far",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.7254135011023739,
+        0.39279277429550485,
+        -0.00028995266536873711
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.6912430721344176,
+        0.61291936577506323,
+        0.38276999135782114
+      ],
+      "g": -0.00028995266536873711,
+      "direction_chord": 0.024524992734133628,
+      "angle_error_deg": 1.4052137944782039,
+      "g_error": -0.00030245266536873709,
+      "forward_residual_norm_m": 2.3129775834843063,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 3
+    },
+    {
+      "name": "far",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.7063941522447641,
+        0.40337982915398124,
+        -0.00063563726959811183
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.69965265343963057,
+        0.5969983567996604,
+        0.39252914097349462
+      ],
+      "g": -0.00063563726959811183,
+      "direction_chord": 0.0067866366050679128,
+      "angle_error_deg": 0.38884638079754,
+      "g_error": -0.00064813726959811187,
+      "forward_residual_norm_m": 0.25614582076443071,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 4
+    },
+    {
+      "name": "far",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.70639330526566768,
+        0.40337812604637913,
+        -0.00063558540813278108
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.69965366763145775,
+        0.59699819813955535,
+        0.39252757455747461
+      ],
+      "g": -0.00063558540813278108,
+      "direction_chord": 0.0067851143727006343,
+      "angle_error_deg": 0.388759162806157,
+      "g_error": -0.00064808540813278111,
+      "forward_residual_norm_m": 0.25619904384057951,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 4
+    },
+    {
+      "name": "far",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.68832064007820715,
+        0.38813228384458204,
+        0.00044248637412639617
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.71486728654664233,
+        0.58799028477334436,
+        0.37846028541658394
+      ],
+      "g": 0.00044248637412639617,
+      "direction_chord": 0.016035395515116357,
+      "angle_error_deg": 0.918770329643804,
+      "g_error": 0.00042998637412639619,
+      "forward_residual_norm_m": 1.1366031442159745,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 5
+    },
+    {
+      "name": "far",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.68828386446196721,
+        0.3881311590464307,
+        0.000442899360647492
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.71488923854519459,
+        0.58796426509496835,
+        0.37845924428345767
+      ],
+      "g": 0.000442899360647492,
+      "direction_chord": 0.016059083565937781,
+      "angle_error_deg": 0.92012759867050553,
+      "g_error": 0.000430399360647492,
+      "forward_residual_norm_m": 1.1371594506137896,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 5
+    },
+    {
+      "name": "far",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.65640939764693351,
+        0.40139163614463996,
+        0.00020760612062241206
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.72922399693107864,
+        0.56177047832783988,
+        0.39069974658191448
+      ],
+      "g": 0.00020760612062241206,
+      "direction_chord": 0.040158712827510844,
+      "angle_error_deg": 2.3010793984392413,
+      "g_error": 0.00019510612062241205,
+      "forward_residual_norm_m": 1.6091567157616959,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 6
+    },
+    {
+      "name": "far",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.65640928294734424,
+        0.40139133457750853,
+        0.00020761597352635507
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.72922415470329649,
+        0.56177046659021124,
+        0.39069946898387165
+      ],
+      "g": 0.00020761597352635507,
+      "direction_chord": 0.040158810471013016,
+      "angle_error_deg": 2.301084994127776,
+      "g_error": 0.00019511597352635506,
+      "forward_residual_norm_m": 1.609151965424866,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 6
+    },
+    {
+      "name": "far",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.70864456296204748,
+        0.40959103467953845,
+        -0.00030570787187276865
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.69644283466649559,
+        0.59697309892275219,
+        0.39823422404944359
+      ],
+      "g": -0.00030570787187276865,
+      "direction_chord": 0.012454838830919818,
+      "angle_error_deg": 0.71361431199444636,
+      "g_error": -0.00031820787187276863,
+      "forward_residual_norm_m": 0.61060911392686956,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 7
+    },
+    {
+      "name": "far",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.70863449891500818,
+        0.40958408228877652,
+        -0.00030548687204306769
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.696450944703444,
+        0.59696789169495923,
+        0.39822784672465567
+      ],
+      "g": -0.00030548687204306769,
+      "direction_chord": 0.012443591524848273,
+      "angle_error_deg": 0.71296987634081921,
+      "g_error": -0.00031798687204306767,
+      "forward_residual_norm_m": 0.61086388541521353,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 7
+    },
+    {
+      "name": "far",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.69237829055786981,
+        0.40439840571993091,
+        -4.1812883822933363E-5
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70764298420369309,
+        0.58687826741071281,
+        0.39346576235841862
+      ],
+      "g": -4.1812883822933363E-5,
+      "direction_chord": 0.0082785756756801228,
+      "angle_error_deg": 0.47432880110460818,
+      "g_error": -5.4312883822933362E-5,
+      "forward_residual_norm_m": 0.72661197091596064,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 8
+    },
+    {
+      "name": "far",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.69237609114772081,
+        0.40439771264084723,
+        -4.1791566768827203E-5
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70764448489579812,
+        0.58687688509677172,
+        0.39346512518350513
+      ],
+      "g": -4.1791566768827203E-5,
+      "direction_chord": 0.0082799230932410033,
+      "angle_error_deg": 0.474406003104691,
+      "g_error": -5.42915667688272E-5,
+      "forward_residual_norm_m": 0.72660923501398189,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 8
+    },
+    {
+      "name": "far",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.703583390269761,
+        0.41157571252189845,
+        3.6171360711633058E-5
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.69885123139103078,
+        0.59292815115294228,
+        0.40005395130356286
+      ],
+      "g": 3.6171360711633058E-5,
+      "direction_chord": 0.012034741743916793,
+      "angle_error_deg": 0.68954407075435753,
+      "g_error": 2.3671360711633059E-5,
+      "forward_residual_norm_m": 0.67415859187942617,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 9
+    },
+    {
+      "name": "far",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.7035830653769074,
+        0.41157552359453864,
+        3.6179656488725178E-5
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.69885148166190991,
+        0.5929279729986503,
+        0.40005377815321919
+      ],
+      "g": 3.6179656488725178E-5,
+      "direction_chord": 0.012034478405355337,
+      "angle_error_deg": 0.689528982292434,
+      "g_error": 2.3679656488725179E-5,
+      "forward_residual_norm_m": 0.67416790682806238,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 9
+    },
+    {
+      "name": "far",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.687731969691049,
+        0.40947371492685786,
+        -7.61949425012812E-5
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70880999158645808,
+        0.58230885411228861,
+        0.39812660580478487
+      ],
+      "g": -7.61949425012812E-5,
+      "direction_chord": 0.01472796403403721,
+      "angle_error_deg": 0.84385780690740808,
+      "g_error": -8.86949425012812E-5,
+      "forward_residual_norm_m": 1.4232437595098189,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 10
+    },
+    {
+      "name": "far",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.68770579158697542,
+        0.40945482086213,
+        -7.5661025349242256E-5
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70883104741845693,
+        0.58229507336368469,
+        0.39810927363229615
+      ],
+      "g": -7.5661025349242256E-5,
+      "direction_chord": 0.014734300195776928,
+      "angle_error_deg": 0.84422085208088093,
+      "g_error": -8.8161025349242262E-5,
+      "forward_residual_norm_m": 1.4230665389256238,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 10
+    },
+    {
+      "name": "far",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.69951127845849281,
+        0.4056655090939183,
+        2.8814566192579433E-5
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70305677931327881,
+        0.5915894324599219,
+        0.39463034407326958
+      ],
+      "g": 2.8814566192579433E-5,
+      "direction_chord": 0.0056833130262513012,
+      "angle_error_deg": 0.32563028830088148,
+      "g_error": 1.6314566192579434E-5,
+      "forward_residual_norm_m": 0.92562915890024478,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 11
+    },
+    {
+      "name": "far",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.6995089341853773,
+        0.40566483570566303,
+        2.88340198493963E-5
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70305836949116618,
+        0.59158795539527331,
+        0.39462972533713542
+      ],
+      "g": 2.88340198493963E-5,
+      "direction_chord": 0.0056828127901488428,
+      "angle_error_deg": 0.32560162676854704,
+      "g_error": 1.63340198493963E-5,
+      "forward_residual_norm_m": 0.92564592428043047,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 11
+    },
+    {
+      "name": "far",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.69429389395762831,
+        0.39604698793244775,
+        5.9978394894109085E-5
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70901810023520329,
+        0.59031473728934969,
+        0.3857743439860527
+      ],
+      "g": 5.9978394894109085E-5,
+      "direction_chord": 0.006579836098175201,
+      "angle_error_deg": 0.376997518392056,
+      "g_error": 4.7478394894109086E-5,
+      "forward_residual_norm_m": 2.2468934004380361,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 12
+    },
+    {
+      "name": "far",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.69429384363730229,
+        0.39604701331444997,
+        5.9977593889132816E-5
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70901812241503526,
+        0.59031469534616088,
+        0.38577436740331444
+      ],
+      "g": 5.9977593889132816E-5,
+      "direction_chord": 0.0065798579092750109,
+      "angle_error_deg": 0.37699876808134497,
+      "g_error": 4.7477593889132818E-5,
+      "forward_residual_norm_m": 2.2468942637723441,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 12
+    },
+    {
+      "name": "far",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.7096804751607082,
+        0.39793393283007861,
+        9.7217080315225568E-5
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.69929817043930009,
+        0.60067840910363224,
+        0.38751453863949042
+      ],
+      "g": 9.7217080315225568E-5,
+      "direction_chord": 0.00915630033615704,
+      "angle_error_deg": 0.52461919784919331,
+      "g_error": 8.4717080315225562E-5,
+      "forward_residual_norm_m": 2.3520801728840861,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 13
+    },
+    {
+      "name": "far",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.709676670936333,
+        0.39792324902953435,
+        9.7592934102737715E-5
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.69930359609743742,
+        0.60067844643782831,
+        0.387504689610628
+      ],
+      "g": 9.7592934102737715E-5,
+      "direction_chord": 0.0091553224207941257,
+      "angle_error_deg": 0.52456316683888848,
+      "g_error": 8.509293410273771E-5,
+      "forward_residual_norm_m": 2.3523651413285585,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 13
+    },
+    {
+      "name": "far",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.69942980330989135,
+        0.40226556537131763,
+        0.00015587755672484619
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70412760851344869,
+        0.59239250333278548,
+        0.391504065016249
+      ],
+      "g": 0.00015587755672484619,
+      "direction_chord": 0.0023255837124556721,
+      "angle_error_deg": 0.13324616165301784,
+      "g_error": 0.00014337755672484619,
+      "forward_residual_norm_m": 1.6975083284122929,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 14
+    },
+    {
+      "name": "far",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.69941193227422072,
+        0.40225913836619137,
+        0.00015615564675866637
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70414012050180241,
+        0.5923815395839962,
+        0.39149815102986324
+      ],
+      "g": 0.00015615564675866637,
+      "direction_chord": 0.0023231021634246307,
+      "angle_error_deg": 0.1331039792730033,
+      "g_error": 0.00014365564675866636,
+      "forward_residual_norm_m": 1.6971856077867054,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 14
+    },
+    {
+      "name": "far",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.73283011941832477,
+        0.39760538724606143,
+        -0.00018379990254093926
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.68530114536018916,
+        0.61678965887246284,
+        0.38721164351811987
+      ],
+      "g": -0.00018379990254093926,
+      "direction_chord": 0.030347067693526623,
+      "angle_error_deg": 1.7388256272041236,
+      "g_error": -0.00019629990254093927,
+      "forward_residual_norm_m": 1.3852819213379894,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 15
+    },
+    {
+      "name": "far",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.73282769966102157,
+        0.39760288221147572,
+        -0.00018371500774354055
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.68530335880852467,
+        0.61678864949679968,
+        0.38720933389791679
+      ],
+      "g": -0.00018371500774354055,
+      "direction_chord": 0.0303450587232972,
+      "angle_error_deg": 1.7387105084362326,
+      "g_error": -0.00019621500774354055,
+      "forward_residual_norm_m": 1.385380397599753,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 15
+    },
+    {
+      "name": "far",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.68901316251699063,
+        0.39679794054660189,
+        0.00034659015596142978
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.71190168221601768,
+        0.58637804123670045,
+        0.38646705889818689
+      ],
+      "g": 0.00034659015596142978,
+      "direction_chord": 0.0106205224470231,
+      "angle_error_deg": 0.6085139723620141,
+      "g_error": 0.0003340901559614298,
+      "forward_residual_norm_m": 1.334378711676931,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 16
+    },
+    {
+      "name": "far",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.68901335484189119,
+        0.39679763941864343,
+        0.00034660782889494712
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.71190165926847282,
+        0.58637825214216555,
+        0.38646678116688643
+      ],
+      "g": 0.00034660782889494712,
+      "direction_chord": 0.010620444839447529,
+      "angle_error_deg": 0.60850952571381312,
+      "g_error": 0.00033410782889494714,
+      "forward_residual_norm_m": 1.3343763818277625,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 16
+    },
+    {
+      "name": "far",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.70764962122951469,
+        0.39507886635442746,
+        0.0001135739319871009
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.7013544903443848,
+        0.59997375721719581,
+        0.38488098098561535
+      ],
+      "g": 0.0001135739319871009,
+      "direction_chord": 0.0086001624587172,
+      "angle_error_deg": 0.49275453058240648,
+      "g_error": 0.0001010739319871009,
+      "forward_residual_norm_m": 2.0046703296773352,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 17
+    },
+    {
+      "name": "far",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.70763568367358343,
+        0.39506646745977697,
+        0.0001140216380642961
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.7013664787122571,
+        0.59996708399538878,
+        0.3848695371951894
+      ],
+      "g": 0.0001140216380642961,
+      "direction_chord": 0.0085967512436971264,
+      "angle_error_deg": 0.49255908055105563,
+      "g_error": 0.00010152163806429609,
+      "forward_residual_norm_m": 2.0046424452812888,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 17
+    },
+    {
+      "name": "far",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.69346909605955431,
+        0.40830240992395106,
+        -6.716481409065533E-6
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70581570280609518,
+        0.58666345957869237,
+        0.39705185916640373
+      ],
+      "g": -6.716481409065533E-6,
+      "direction_chord": 0.010246257468260293,
+      "angle_error_deg": 0.58706987683845491,
+      "g_error": -1.9216481409065532E-5,
+      "forward_residual_norm_m": 0.40879201578589214,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 18
+    },
+    {
+      "name": "far",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.69346336414322751,
+        0.40829841289789659,
+        -6.5869492740091312E-6
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70582028597665636,
+        0.58666042832232368,
+        0.3970481907080029
+      ],
+      "g": -6.5869492740091312E-6,
+      "direction_chord": 0.010246112390350618,
+      "angle_error_deg": 0.58706156437712287,
+      "g_error": -1.908694927400913E-5,
+      "forward_residual_norm_m": 0.40867926875125016,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 18
+    },
+    {
+      "name": "far",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.70600480361734008,
+        0.38267210356308645,
+        0.00031885782010957988
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70591992196875186,
+        0.60187127613484193,
+        0.37340063033081272
+      ],
+      "g": 0.00031885782010957988,
+      "direction_chord": 0.018194986446435826,
+      "angle_error_deg": 1.0425103124693382,
+      "g_error": 0.0003063578201095799,
+      "forward_residual_norm_m": 2.4597254695991855,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 19
+    },
+    {
+      "name": "far",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.70595684403278558,
+        0.38265833380938269,
+        0.00031954728018216192
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70595269932476257,
+        0.60184075545806348,
+        0.37338785650546913
+      ],
+      "g": 0.00031954728018216192,
+      "direction_chord": 0.018194639273237476,
+      "angle_error_deg": 1.0424904200872145,
+      "g_error": 0.00030704728018216194,
+      "forward_residual_norm_m": 2.4584059940325642,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 19
+    },
+    {
+      "name": "far",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.68257698036160241,
+        0.40403448264219632,
+        3.8785847254040284E-5
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.71347214021209,
+        0.580004646752683,
+        0.39313116753378274
+      ],
+      "g": 3.8785847254040284E-5,
+      "direction_chord": 0.016533501292401942,
+      "angle_error_deg": 0.94731063457393039,
+      "g_error": 2.6285847254040285E-5,
+      "forward_residual_norm_m": 2.2668990462245335,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 20
+    },
+    {
+      "name": "far",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.68256941533513926,
+        0.404034926092519,
+        3.8859615355983212E-5
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.71347639266673846,
+        0.57999913933237357,
+        0.39313157527851134
+      ],
+      "g": 3.8859615355983212E-5,
+      "direction_chord": 0.016540359243584088,
+      "angle_error_deg": 0.947703579665759,
+      "g_error": 2.6359615355983213E-5,
+      "forward_residual_norm_m": 2.2669558414448767,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 20
+    },
+    {
+      "name": "far",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.69250345407475888,
+        0.38590004822938284,
+        0.00047103919925485982
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.713050020667305,
+        0.59151320045410238,
+        0.37639314780545718
+      ],
+      "g": 0.00047103919925485982,
+      "direction_chord": 0.015708612888116175,
+      "angle_error_deg": 0.90004647465260146,
+      "g_error": 0.00045853919925485984,
+      "forward_residual_norm_m": 3.32481724891416,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 21
+    },
+    {
+      "name": "far",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.6924624792582762,
+        0.38590740664169126,
+        0.00047127448990819663
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.71307212545591125,
+        0.591482214604076,
+        0.37639996507019907
+      ],
+      "g": 0.00047127448990819663,
+      "direction_chord": 0.015718733660416664,
+      "angle_error_deg": 0.90062637008960356,
+      "g_error": 0.00045877448990819665,
+      "forward_residual_norm_m": 3.3248233880347144,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 21
+    },
+    {
+      "name": "far",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.68806429804522973,
+        0.39461616740860023,
+        0.00011229252875166451
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.7131073983119175,
+        0.58623634253922829,
+        0.3844538843073857
+      ],
+      "g": 0.00011229252875166451,
+      "direction_chord": 0.012252132254515538,
+      "angle_error_deg": 0.70199985912263385,
+      "g_error": 9.97925287516645E-5,
+      "forward_residual_norm_m": 0.83902101389299477,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 22
+    },
+    {
+      "name": "far",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.68805828396098789,
+        0.3946143407659603,
+        0.00011240395504169532
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.713111466454652,
+        0.58623249980168812,
+        0.38445219805218894
+      ],
+      "g": 0.00011240395504169532,
+      "direction_chord": 0.012257920125239578,
+      "angle_error_deg": 0.70233148591244055,
+      "g_error": 9.9903955041695313E-5,
+      "forward_residual_norm_m": 0.838924990240899,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 22
+    },
+    {
+      "name": "far",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.71332977220270422,
+        0.39407181482281178,
+        0.00037710178652034594
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.698227993303192,
+        0.60420117495017345,
+        0.38395131144017153
+      ],
+      "g": 0.00037710178652034594,
+      "direction_chord": 0.013647491316376761,
+      "angle_error_deg": 0.7819497218364525,
+      "g_error": 0.00036460178652034596,
+      "forward_residual_norm_m": 1.978502795066865,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 23
+    },
+    {
+      "name": "far",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.71332686123859712,
+        0.39407004255682909,
+        0.00037714968716928476
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.69823026666643129,
+        0.60419958769368243,
+        0.38394967501185412
+      ],
+      "g": 0.00037714968716928476,
+      "direction_chord": 0.013645847539298317,
+      "angle_error_deg": 0.78185553815436148,
+      "g_error": 0.00036464968716928478,
+      "forward_residual_norm_m": 1.9784683066165167,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 23
+    },
+    {
+      "name": "far",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.68695713513878465,
+        0.40859072956864395,
+        -0.00027759625937130554
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70953249869675006,
+        0.5819821843078048,
+        0.39731646132706683
+      ],
+      "g": -0.00027759625937130554,
+      "direction_chord": 0.014750843936065816,
+      "angle_error_deg": 0.84516876433094645,
+      "g_error": -0.00029009625937130552,
+      "forward_residual_norm_m": 2.3227311788786515,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 24
+    },
+    {
+      "name": "far",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.686956725466102,
+        0.40858243195962174,
+        -0.00027743111506394895
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70953528609491545,
+        0.58198398438494658,
+        0.39730884674976563
+      ],
+      "g": -0.00027743111506394895,
+      "direction_chord": 0.014746336888398163,
+      "angle_error_deg": 0.84491052249952414,
+      "g_error": -0.00028993111506394893,
+      "forward_residual_norm_m": 2.3225632838337202,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 24
+    },
+    {
+      "name": "far",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.69463356964284939,
+        0.40855701962096252,
+        -7.0986886501394781E-5
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70505437869772458,
+        0.58742023614288164,
+        0.39728552610057011
+      ],
+      "g": -7.0986886501394781E-5,
+      "direction_chord": 0.00987745740078229,
+      "angle_error_deg": 0.56593892204035678,
+      "g_error": -8.3486886501394787E-5,
+      "forward_residual_norm_m": 2.0551428069750277,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 25
+    },
+    {
+      "name": "far",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.6946311201434604,
+        0.40855334322960857,
+        -7.080872024570298E-5
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70505693972293093,
+        0.58741944402529711,
+        0.397282152291726
+      ],
+      "g": -7.080872024570298E-5,
+      "direction_chord": 0.0098754000750800562,
+      "angle_error_deg": 0.56582104452329773,
+      "g_error": -8.3308720245702986E-5,
+      "forward_residual_norm_m": 2.0550893860807289,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 25
+    },
+    {
+      "name": "far",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.68635077826981727,
+        0.39724897512497587,
+        0.00023786990625496071
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.71332540848359682,
+        0.5843700865201179,
+        0.38688301021391419
+      ],
+      "g": 0.00023786990625496071,
+      "direction_chord": 0.01287626503895237,
+      "angle_error_deg": 0.73776073932568054,
+      "g_error": 0.0002253699062549607,
+      "forward_residual_norm_m": 2.7325168114532978,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 26
+    },
+    {
+      "name": "far",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.68632885223836637,
+        0.397239231920871,
+        0.00023811050610856235
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.71334113718069248,
+        0.584356834681943,
+        0.38687402570637491
+      ],
+      "g": 0.00023811050610856235,
+      "direction_chord": 0.012898112762360031,
+      "angle_error_deg": 0.73901254765670776,
+      "g_error": 0.00022561050610856234,
+      "forward_residual_norm_m": 2.7324717791355191,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 26
+    },
+    {
+      "name": "far",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.71158568355241392,
+        0.39803367095387204,
+        1.9678749043847412E-5
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.698123210270402,
+        0.6019843840659469,
+        0.38760648165696437
+      ],
+      "g": 1.9678749043847412E-5,
+      "direction_chord": 0.010855065627320862,
+      "angle_error_deg": 0.62195250039971672,
+      "g_error": 7.1787490438474113E-6,
+      "forward_residual_norm_m": 0.47574880400545416,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 27
+    },
+    {
+      "name": "far",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.71157930750851173,
+        0.39802983518664009,
+        1.9815681349285232E-5
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.698128174506336,
+        0.60198090369026647,
+        0.38760294574822413
+      ],
+      "g": 1.9815681349285232E-5,
+      "direction_chord": 0.010849992123599671,
+      "angle_error_deg": 0.62166180576955432,
+      "g_error": 7.3156813492852317E-6,
+      "forward_residual_norm_m": 0.4759597028958224,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 27
+    },
+    {
+      "name": "far",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.70218465165131116,
+        0.39955040347469539,
+        0.00028572328019898314
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70330192367155553,
+        0.59501440214978418,
+        0.38900419714217022
+      ],
+      "g": 0.00028572328019898314,
+      "direction_chord": 0.0020619997874261262,
+      "angle_error_deg": 0.11814390610698314,
+      "g_error": 0.00027322328019898317,
+      "forward_residual_norm_m": 2.037635936427189,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 28
+    },
+    {
+      "name": "far",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.70217041394489677,
+        0.39955004272687084,
+        0.00028584007627992491
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.703310502376281,
+        0.59500447932049527,
+        0.38900386480826848
+      ],
+      "g": 0.00028584007627992491,
+      "direction_chord": 0.002049281623059875,
+      "angle_error_deg": 0.11741520858213954,
+      "g_error": 0.00027334007627992493,
+      "forward_residual_norm_m": 2.037736400844175,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 28
+    },
+    {
+      "name": "far",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.70414573249655232,
+        0.40174030991965243,
+        -0.00029063082541419712
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70148274245167064,
+        0.59583956499822932,
+        0.39102068337263707
+      ],
+      "g": -0.00029063082541419712,
+      "direction_chord": 0.0041950731487001769,
+      "angle_error_deg": 0.24036016241854241,
+      "g_error": -0.0003031308254141971,
+      "forward_residual_norm_m": 1.790781548585533,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 29
+    },
+    {
+      "name": "far",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.70414595416358083,
+        0.401736968103367,
+        -0.00029058472248844915
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70148360630509643,
+        0.5958405664385209,
+        0.39101760762326171
+      ],
+      "g": -0.00029058472248844915,
+      "direction_chord": 0.0041938761434128042,
+      "angle_error_deg": 0.24029157891826888,
+      "g_error": -0.00030308472248844913,
+      "forward_residual_norm_m": 1.7908116912053689,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 29
+    },
+    {
+      "name": "far",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.70943843502568171,
+        0.38742485223455631,
+        0.00016836116031919331
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70249471760894,
+        0.60312873155267754,
+        0.377805379669472
+      ],
+      "g": 0.00016836116031919331,
+      "direction_chord": 0.015300401052417896,
+      "angle_error_deg": 0.87665695644400354,
+      "g_error": 0.00015586116031919331,
+      "forward_residual_norm_m": 1.3021673887609306,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 30
+    },
+    {
+      "name": "far",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.70943518713072762,
+        0.38742375735344414,
+        0.00016840125656727674
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70249699035370661,
+        0.603126719375189,
+        0.37780436593521038
+      ],
+      "g": 0.00016840125656727674,
+      "direction_chord": 0.015299593722513351,
+      "angle_error_deg": 0.87661069849384543,
+      "g_error": 0.00015590125656727674,
+      "forward_residual_norm_m": 1.3021797070974919,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 30
+    },
+    {
+      "name": "far",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.67663531952266931,
+        0.4286129479870604,
+        -0.0010077940652007276
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70915620053622419,
+        0.56953149850983964,
+        0.4156096190491303
+      ],
+      "g": -0.0010077940652007276,
+      "direction_chord": 0.035720524857529912,
+      "angle_error_deg": 2.0467441409671094,
+      "g_error": -0.0010202940652007276,
+      "forward_residual_norm_m": 1.4433580539964721,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 31
+    },
+    {
+      "name": "far",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.67662722573503942,
+        0.42860942419652714,
+        -0.0010076485891188987
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70916195204679355,
+        0.5695266757626547,
+        0.41560641400719661
+      ],
+      "g": -0.0010076485891188987,
+      "direction_chord": 0.035722148543468786,
+      "angle_error_deg": 2.0468371861608023,
+      "g_error": -0.0010201485891188986,
+      "forward_residual_norm_m": 1.443163287404805,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 31
+    },
+    {
+      "name": "far",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.69676624191727377,
+        0.39950442896307831,
+        0.00027713410523860825
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.706529330660601,
+        0.59120638471588627,
+        0.3889618433567163
+      ],
+      "g": 0.00027713410523860825,
+      "direction_chord": 0.0030197407087231331,
+      "angle_error_deg": 0.17301846357253309,
+      "g_error": 0.00026463410523860827,
+      "forward_residual_norm_m": 0.82877955219341515,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 32
+    },
+    {
+      "name": "far",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.69676634630455736,
+        0.39950431548599585,
+        0.00027713745046986692
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70652930279673476,
+        0.59120648679388876,
+        0.38896173881551294
+      ],
+      "g": 0.00027713745046986692,
+      "direction_chord": 0.003019664551291934,
+      "angle_error_deg": 0.17301410006983806,
+      "g_error": 0.00026463745046986694,
+      "forward_residual_norm_m": 0.82878295897952714,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 32
+    }
+  ],
+  "crlb2019": {
+    "angle_covariance": [
+      [
+        0.00031657862029191986,
+        -0.00011054376917970765,
+        1.1202748461566534E-6
+      ],
+      [
+        -0.00011054376917970793,
+        0.00014713299732149645,
+        -2.9563629849594619E-6
+      ],
+      [
+        1.1202748461566639E-6,
+        -2.956362984959464E-6,
+        9.6225659359932871E-8
+      ]
+    ],
+    "spherical_direction_bound": 0.000415703531864081,
+    "unweighted_angle_trace": 0.00046371161761341631,
+    "inverse_range_variance": 9.6225659359932871E-8,
+    "python_direction_relative_error": 5.5511151231257827E-16,
+    "python_g_relative_error": 2.4202861936828413E-14
+  },
+  "theory_covariance": {
+    "sum": [
+      [
+        -0.00030646266878999286,
+        -0.00056755298238434111,
+        1.1202748461566434E-6
+      ],
+      [
+        0.00017466412389161953,
+        0.00021135333807206696,
+        -2.9563629849594145E-6
+      ],
+      [
+        -2.6834511139280205E-6,
+        -2.3197565130858145E-6,
+        9.6225659359930635E-8
+      ]
+    ],
+    "sum_symmetry_relative": 1.497637371913034,
+    "gtrs": [
+      [
+        0.00031657862029192105,
+        -0.00011054376917970795,
+        1.1202748461566483E-6
+      ],
+      [
+        -0.00011054376917970788,
+        0.00014713299732149561,
+        -2.9563629849594149E-6
+      ],
+      [
+        1.1202748461566436E-6,
+        -2.9563629849594145E-6,
+        9.6225659359930661E-8
+      ]
+    ],
+    "gtrs_symmetry_relative": 2.5111404262565727E-16
+  },
+  "theory_bias": {
+    "sum": [
+      7.1172411357490309E-5,
+      0.00021067147776473343,
+      -3.6833984802340261E-6
+    ],
+    "gtrs": [
+      -7.4545368614577567E-5,
+      0.00012055308307580906,
+      -3.7868774632333637E-6
+    ]
+  },
+  "author2019_geometry": [
+    {
+      "name": "author_example_noiseless",
+      "method": "SUM",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.38624136346634536,
+        0.25150194521238156,
+        6.666666666666667E-5
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.89718888472600544,
+        0.36485796767502854,
+        0.24885893302864237
+      ],
+      "g": 6.666666666666667E-5,
+      "direction_chord": 1.3380375466713835E-15,
+      "angle_error_deg": 8.5377364625159387E-7,
+      "g_error": 0,
+      "forward_residual_norm_m": 3.234085822117419E-12,
+      "last_warning": "",
+      "last_warning_id": ""
+    },
+    {
+      "name": "author_example_noiseless",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.38624136346634508,
+        0.25150194521238273,
+        6.6666666666667009E-5
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.89718888472600522,
+        0.36485796767502815,
+        0.24885893302864348
+      ],
+      "g": 6.6666666666667009E-5,
+      "direction_chord": 1.7554167342883506E-16,
+      "angle_error_deg": 0,
+      "g_error": 3.3881317890172014E-19,
+      "forward_residual_norm_m": 1.6826516134205672E-12,
+      "last_warning": "",
+      "last_warning_id": ""
+    }
+  ],
+  "cvx_path": "/usr/local/Matlab/R2024a/bin/cvx/commands/cvx_begin.m",
+  "cvx_solver": "SDPT3",
+  "wang2017": [
+    {
+      "name": "positive",
+      "method": "GTRS",
+      "center_and_map_back": false,
+      "native_mpr_real": [
+        0.69676634630455736,
+        0.39950431548599585,
+        0.00027713745046986692
+      ],
+      "native_mpr_imag": [
+        0,
+        0,
+        0
+      ],
+      "native_cartesian_finite": true,
+      "finite_real": true,
+      "error": "",
+      "u": [
+        0.70652930279673476,
+        0.59120648679388876,
+        0.38896173881551294
+      ],
+      "g": 0.00027713745046986692,
+      "direction_chord": 2.8484307380932659E-15,
+      "angle_error_deg": 0.17301410006983806,
+      "g_error": 1.0842021724855044E-17,
+      "forward_residual_norm_m": 8.4008016720628972E-14,
+      "last_warning": "",
+      "last_warning_id": "",
+      "draw": 32,
+      "initialization": "original SDR at centered reported coordinates",
+      "initial_mpr": [
+        0.69971611603608208,
+        0.4004821752689503,
+        0.0031679085562736874
+      ],
+      "estimated_mpr": [
+        0.69999999999999685,
+        0.40000000000000024,
+        0.0033333333333333444
+      ]
+    },
+    {
+      "name": "negative",
+      "initialization": "original SDR at centered reported coordinates",
+      "initial_mpr": [
+        0.6948502246995133,
+        -0.40883903457034504,
+        0.00424563431470969
+      ],
+      "estimated_mpr": [
+        0.6999999999999994,
+        -0.40000000000000019,
+        0.0033333333333333435
+      ],
+      "direction_chord": 5.23691153334427E-16,
+      "g_error": 9.9746599868666408E-18,
+      "forward_residual_norm_m": 2.2539441496237913E-14,
+      "finite_real": true,
+      "error": "",
+      "last_warning": "",
+      "last_warning_id": ""
+    },
+    {
+      "name": "far",
+      "initialization": "original SDR at centered reported coordinates",
+      "initial_mpr": [
+        0.699999968483768,
+        0.39999977223266447,
+        1.2506712893211682E-5
+      ],
+      "estimated_mpr": [
+        0.70000000000026641,
+        0.39999999999981684,
+        1.2499999997864661E-5
+      ],
+      "direction_chord": 3.0630717243134007E-13,
+      "g_error": -2.13533956684199E-15,
+      "forward_residual_norm_m": 1.8275512002559085E-11,
+      "finite_real": true,
+      "error": "",
+      "last_warning": "",
+      "last_warning_id": ""
+    },
+    {
+      "name": "translated",
+      "initialization": "original SDR at centered reported coordinates",
+      "initial_mpr": [
+        0.699716115958745,
+        0.40048217547932952,
+        0.0031679085554765568
+      ],
+      "estimated_mpr": [
+        0.69999999999999851,
+        0.40000000000000008,
+        0.0033333333333333357
+      ],
+      "direction_chord": 1.2658490090568385E-15,
+      "g_error": 1.3010426069826053E-18,
+      "forward_residual_norm_m": 4.1706573774554185E-14,
+      "finite_real": true,
+      "error": "",
+      "last_warning": "",
+      "last_warning_id": ""
+    }
+  ],
+  "author2017_geometry": {
+    "initial_mpr": [
+      1.7635083858689273,
+      0.53357320113055451,
+      0.0119234130592876
+    ],
+    "estimated_mpr": [
+      1.7681918866447748,
+      0.5318080969475697,
+      0.012499999999999603
+    ],
+    "direction_chord": 3.0490734703424357E-15,
+    "g_error": -3.9725167599868882E-16,
+    "forward_residual_norm_m": 1.6106367057446042E-14
+  }
+}

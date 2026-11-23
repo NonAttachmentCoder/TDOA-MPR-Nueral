@@ -1,4 +1,4 @@
-"""Numerical nonlinear TDOA-MPR WLS for smoke comparisons.
+"""Archived eight-receiver nonlinear WLS diagnostic from the initial review.
 
 This module is NOT the Wang-Ho MLE implementation or the Sun-Ho-Wan GTRS,
 SUM, NSP or NSPBS. Any claim of source-paper fidelity requires a separate,

@@ -55,6 +55,19 @@ class TestMPRPhysics(unittest.TestCase):
                       range_differences(self.u, g, sm)) / (2 * eps)
                 np.testing.assert_allclose(j.ds[:, 3*i+k], fd, atol=4e-7, rtol=1e-5)
 
+    def test_ambient_jacobian_includes_direction_normalization(self):
+        for scale in (1., 2.5):
+            u = scale * self.u
+            for g in (0., -1/100., 1/100.):
+                j = mpr_jacobians(u, g, self.stations)
+                eps = 1e-7
+                fd = np.column_stack([
+                    (range_differences(u + eps * axis, g, self.stations) -
+                     range_differences(u - eps * axis, g, self.stations)) / (2 * eps)
+                    for axis in np.eye(3)])
+                np.testing.assert_allclose(j.du, fd, atol=3e-6, rtol=3e-5)
+                np.testing.assert_allclose(j.du @ u, 0., atol=1e-11)
+
     def test_reference_change(self):
         # Exact all-pairs consistency; differences must agree through a receiver-level vector.
         h0 = range_differences(self.u, 1/100., self.stations, ref=0)
@@ -70,6 +83,8 @@ class TestMPRPhysics(unittest.TestCase):
         self.assertTrue(b.valid)
         np.testing.assert_allclose(b.covariance @ b.information, np.eye(3), atol=1e-8)
         self.assertTrue(b.direction_trace > 0 and b.inverse_range_variance > 0)
+        scaled = local_information(2.5 * self.u, 1/500., self.stations, qr)
+        np.testing.assert_allclose(scaled.information, b.information, rtol=1e-12)
 
 
 if __name__ == "__main__":

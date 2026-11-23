@@ -2,7 +2,7 @@
 import numpy as np
 
 
-def differencing_matrix(n_receivers=8, ref=0):
+def differencing_matrix(n_receivers=7, ref=0):
     if n_receivers < 2 or not 0 <= ref < n_receivers:
         raise ValueError("invalid number/reference of receivers")
     d = np.zeros((n_receivers - 1, n_receivers), dtype=np.float64)

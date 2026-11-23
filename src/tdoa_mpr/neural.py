@@ -14,7 +14,7 @@ import torch.nn.functional as F
 def torch_range_differences(u, g, stations):
     """Batch exact analytic continuation with reference station 0.
 
-    u [B,3], g [B], stations [B,8,3], result [B,7] in meters.
+    u [B,3], g [B] in 1/m, stations [B,M,3] and result [B,M-1] in meters.
     """
     si, s0 = stations[:, 1:, :], stations[:, :1, :]
     x_i = u[:, None, :] - g[:, None, None] * si
@@ -31,7 +31,7 @@ class DynamicTDOAMPR(nn.Module):
     """One shared set of parameters for all ranges and station geometries."""
 
     def __init__(self, hidden=96, iterations=3, radial_limit=4.0,
-                 use_physical_query=True, use_full_qr=True):
+                 use_physical_query=True, use_full_qr=True, n_receivers=7):
         super().__init__()
         if iterations < 1:
             raise ValueError("iterations must be positive")
@@ -40,15 +40,16 @@ class DynamicTDOAMPR(nn.Module):
         self.radial_limit = float(radial_limit)
         self.use_physical_query = bool(use_physical_query)
         self.use_full_qr = bool(use_full_qr)
+        self.n_receivers = n_receivers
+        differences = n_receivers - 1
         # Per-station: y, prediction, difference, standardized discrepancy,
-        # position(3), baseline(3), site pos. uncertainty(3), Qr row(7),
-        # state direction(3), scaled g(1), predicted bearing(3) = 27.
+        # position(3), baseline(3), site uncertainty(3), one Qr row,
+        # state direction(3), scaled g(1), predicted bearing(3).
         self.station_encoder = nn.Sequential(
-            nn.Linear(27, hidden), nn.SiLU(),
+            nn.Linear(20 + differences, hidden), nn.SiLU(),
             nn.Linear(hidden, hidden), nn.SiLU())
-        # Full Qr correlation(49), receiver arrival precisions(7),
-        # full reported station Qs(576), log aperture(1) = 633.
-        extra_features = 49 + 7 + 576 + 1
+        # Full TDOA correlation, marginal scales, full Qs and log aperture.
+        extra_features = differences**2 + differences + (3*n_receivers)**2 + 1
         self.global_encoder = nn.Sequential(
             nn.Linear(2 * hidden + extra_features + 4, hidden),
             nn.SiLU(), nn.Linear(hidden, hidden), nn.SiLU())
@@ -57,11 +58,13 @@ class DynamicTDOAMPR(nn.Module):
         self.range_head = nn.Linear(hidden, 1)
 
     def forward(self, y, stations, qr, qs):
-        if y.ndim != 2 or y.shape[1] != 7:
-            raise ValueError("y must be [B,7]")
+        m = self.n_receivers
+        differences = m - 1
+        if y.ndim != 2 or y.shape[1] != differences:
+            raise ValueError(f"expected {differences} range differences for {m} receivers")
         b = y.shape[0]
-        if stations.shape != (b, 8, 3) or qr.shape != (b, 7, 7) or qs.shape != (b, 24, 24):
-            raise ValueError("expected stations [B,8,3], Qr [B,7,7], Qs [B,24,24]")
+        if stations.shape != (b,m,3) or qr.shape != (b,differences,differences) or qs.shape != (b,3*m,3*m):
+            raise ValueError(f"station and covariance sizes must correspond to {m} receivers")
         # Scale every frame by its reported station-network RMS aperture.
         aperture = torch.sqrt((stations - stations.mean(dim=1, keepdim=True)).square()
                              .sum(-1).mean(-1)).clamp_min(1.)
@@ -76,7 +79,7 @@ class DynamicTDOAMPR(nn.Module):
         sig_norm = (sigmas / l).clamp_min(1e-12)
         qs_scaled = qs / (l[:, :, None] * l[:, None, :])
         site_sigmas = torch.sqrt(torch.diagonal(qs, dim1=-2, dim2=-1)
-                                 .clamp_min(0)).reshape(b, 8, 3) / l[:, :, None]
+                                 .clamp_min(0)).reshape(b, m, 3) / l[:, :, None]
         extras = torch.cat([corr.reshape(b, -1), sig_norm.log(),
                             qs_scaled.reshape(b, -1), aperture.log()[:, None]], dim=-1)
         hidden_state = y.new_zeros((b, self.hidden))
@@ -91,7 +94,7 @@ class DynamicTDOAMPR(nn.Module):
             residual = y - prediction
             source_vectors = direction[:, None, :] - g[:, None, None] * stations[:, 1:, :]
             bearings = (F.normalize(source_vectors, dim=-1) if self.use_physical_query
-                        else direction[:, None, :].expand(-1, 7, -1))
+                        else direction[:, None, :].expand(-1, differences, -1))
             features = torch.cat([
                 (y / l)[:, :, None],
                 (prediction / l)[:, :, None],
@@ -99,8 +102,8 @@ class DynamicTDOAMPR(nn.Module):
                 torch.asinh(residual / sigmas)[:, :, None],
                 pos[:, 1:, :], baseline,
                 site_sigmas[:, 1:, :], corr,
-                direction[:, None, :].expand(-1, 7, -1),
-                g_scaled[:, None, None].expand(-1, 7, -1),
+                direction[:, None, :].expand(-1, differences, -1),
+                g_scaled[:, None, None].expand(-1, differences, -1),
                 bearings
             ], dim=-1)
             nodes = self.station_encoder(features)

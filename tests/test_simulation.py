@@ -11,9 +11,12 @@ class TestSimulation(unittest.TestCase):
         b = sample_batch(np.random.default_rng(20), 4, cfg)
         for key in a:
             np.testing.assert_array_equal(a[key], b[key])
-        self.assertEqual(a["y"].shape, (4, 7))
-        self.assertEqual(a["stations"].shape, (4, 8, 3))
-        self.assertEqual(a["qs"].shape, (4, 24, 24))
+        self.assertEqual(a["y"].shape, (4, 6))
+        self.assertEqual(a["stations"].shape, (4, 7, 3))
+        self.assertEqual(a["qs"].shape, (4, 21, 21))
+        np.testing.assert_array_equal(a["stations"], a["s_true"])
+        self.assertFalse(a["qs"].any())
+        np.testing.assert_allclose(a["stations"][:, -1], np.tile([-815.6, 1044.8, -804.9], (4,1)))
         self.assertTrue(np.all(a["g"] > 0))
         self.assertTrue(np.all(np.linalg.eigvalsh(a["qr"]) > 0))
 
@@ -22,7 +25,9 @@ class TestSimulation(unittest.TestCase):
         frame = sample_frame(np.random.default_rng(25), cfg)
         e = frame["arrival_error"]
         np.testing.assert_allclose(frame["y"] - frame["clean_y"], e[1:] - e[0])
-        self.assertTrue(np.all(frame["qr"][~np.eye(7, dtype=bool)] > 0))
+        variance = frame["qr"][0,0]
+        np.testing.assert_allclose(frame["qr"], variance * (np.ones((6,6))+np.eye(6))/2)
+        self.assertIn(round(10*np.log10(variance)), range(-40, 51, 10))
 
     def test_zero_contamination_clean_contract(self):
         cfg = SimulationConfig(outlier_probability=0., positive_delay_bias_probability=0.)

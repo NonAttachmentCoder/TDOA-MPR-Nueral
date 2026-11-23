@@ -1,0 +1,271 @@
+[
+  {
+    "doi": "10.1109/TSP.2016.2630030",
+    "title": [
+      "TDOA Positioning Irrespective of Source Range"
+    ],
+    "authors": [
+      "Yue Wang",
+      "K. C. Ho"
+    ],
+    "journal": [
+      "IEEE Transactions on Signal Processing"
+    ],
+    "volume": "65",
+    "issue": "6",
+    "page": "1447-1460",
+    "article_number": null,
+    "published": {
+      "date-parts": [
+        [
+          2017,
+          3,
+          15
+        ]
+      ]
+    }
+  },
+  {
+    "doi": "10.1109/TSP.2018.2879622",
+    "title": [
+      "Solution and Analysis of TDOA Localization of a Near or Distant Source in Closed Form"
+    ],
+    "authors": [
+      "Yimao Sun",
+      "K. C. Ho",
+      "Qun Wan"
+    ],
+    "journal": [
+      "IEEE Transactions on Signal Processing"
+    ],
+    "volume": "67",
+    "issue": "2",
+    "page": "320-335",
+    "article_number": null,
+    "published": {
+      "date-parts": [
+        [
+          2019,
+          1,
+          15
+        ]
+      ]
+    }
+  },
+  {
+    "doi": "10.1109/TSP.2024.3352923",
+    "title": [
+      "Projection-Based Algorithm and Performance Analysis for TDOA Localization in MPR"
+    ],
+    "authors": [
+      "Yimao Sun",
+      "K. C. Ho",
+      "Tianyi Xing",
+      "Yanbing Yang",
+      "Liangyin Chen"
+    ],
+    "journal": [
+      "IEEE Transactions on Signal Processing"
+    ],
+    "volume": "72",
+    "issue": null,
+    "page": "896-911",
+    "article_number": null,
+    "published": {
+      "date-parts": [
+        [
+          2024
+        ]
+      ]
+    }
+  },
+  {
+    "doi": "10.1109/TWC.2019.2903037",
+    "title": [
+      "Convex Relaxation Methods for Unified Near-Field and Far-Field TDOA-Based Localization"
+    ],
+    "authors": [
+      "Gang Wang",
+      "K. C. Ho"
+    ],
+    "journal": [
+      "IEEE Transactions on Wireless Communications"
+    ],
+    "volume": "18",
+    "issue": "4",
+    "page": "2346-2360",
+    "article_number": null,
+    "published": {
+      "date-parts": [
+        [
+          2019,
+          4
+        ]
+      ]
+    }
+  },
+  {
+    "doi": "10.1016/j.sigpro.2025.110148",
+    "title": [
+      "On the analysis and comparison between MPR and cartesian for TDOA localization"
+    ],
+    "authors": [
+      "Yimao Sun",
+      "Tianyi Xing",
+      "Yanbin Zou",
+      "Yangbing Yang",
+      "Liangyin Chen"
+    ],
+    "journal": [
+      "Signal Processing"
+    ],
+    "volume": "238",
+    "issue": null,
+    "page": "110148",
+    "article_number": "110148",
+    "published": {
+      "date-parts": [
+        [
+          2026,
+          1
+        ]
+      ]
+    }
+  },
+  {
+    "doi": "10.1109/TCOMM.2023.3342228",
+    "title": [
+      "Unified Near-Field and Far-Field TDOA Source Localization Without the Knowledge of Signal Propagation Speed"
+    ],
+    "authors": [
+      "Gang Wang",
+      "Yudong Xiao",
+      "K. C. Ho",
+      "Lei Huang"
+    ],
+    "journal": [
+      "IEEE Transactions on Communications"
+    ],
+    "volume": "72",
+    "issue": "4",
+    "page": "2166-2181",
+    "article_number": null,
+    "published": {
+      "date-parts": [
+        [
+          2024,
+          4
+        ]
+      ]
+    }
+  },
+  {
+    "doi": "10.1109/TSP.2016.2539139",
+    "title": [
+      "Robust Convex Approximation Methods for TDOA-Based Localization Under NLOS Conditions"
+    ],
+    "authors": [
+      "Gang Wang",
+      "Anthony Man-Cho So",
+      "Youming Li"
+    ],
+    "journal": [
+      "IEEE Transactions on Signal Processing"
+    ],
+    "volume": "64",
+    "issue": "13",
+    "page": "3281-3296",
+    "article_number": null,
+    "published": {
+      "date-parts": [
+        [
+          2016,
+          7
+        ]
+      ]
+    }
+  },
+  {
+    "doi": "10.1109/JPROC.2023.3247480",
+    "title": [
+      "Model-Based Deep Learning"
+    ],
+    "authors": [
+      "Nir Shlezinger",
+      "Jay Whang",
+      "Yonina C. Eldar",
+      "Alexandros G. Dimakis"
+    ],
+    "journal": [
+      "Proceedings of the IEEE"
+    ],
+    "volume": "111",
+    "issue": "5",
+    "page": "465-499",
+    "article_number": null,
+    "published": {
+      "date-parts": [
+        [
+          2023,
+          5
+        ]
+      ]
+    }
+  },
+  {
+    "doi": "10.1109/TVT.2023.3320360",
+    "title": [
+      "DA-MUSIC: Data-Driven DoA Estimation via Deep Augmented MUSIC Algorithm"
+    ],
+    "authors": [
+      "Julian P. Merkofer",
+      "Guy Revach",
+      "Nir Shlezinger",
+      "Tirza Routtenberg",
+      "Ruud J. G. van Sloun"
+    ],
+    "journal": [
+      "IEEE Transactions on Vehicular Technology"
+    ],
+    "volume": "73",
+    "issue": "2",
+    "page": "2771-2785",
+    "article_number": null,
+    "published": {
+      "date-parts": [
+        [
+          2024,
+          2
+        ]
+      ]
+    }
+  },
+  {
+    "doi": "10.1109/TSP.2022.3158588",
+    "title": [
+      "KalmanNet: Neural Network Aided Kalman Filtering for Partially Known Dynamics"
+    ],
+    "authors": [
+      "Guy Revach",
+      "Nir Shlezinger",
+      "Xiaoyong Ni",
+      "Adria Lopez Escoriza",
+      "Ruud J. G. van Sloun",
+      "Yonina C. Eldar"
+    ],
+    "journal": [
+      "IEEE Transactions on Signal Processing"
+    ],
+    "volume": "70",
+    "issue": null,
+    "page": "1532-1547",
+    "article_number": null,
+    "published": {
+      "date-parts": [
+        [
+          2022
+        ]
+      ]
+    }
+  }
+]

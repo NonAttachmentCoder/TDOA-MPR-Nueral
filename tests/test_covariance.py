@@ -9,17 +9,17 @@ class TestCovariance(unittest.TestCase):
     def test_shared_reference_is_correlated(self):
         D = differencing_matrix()
         np.testing.assert_allclose(D.sum(axis=1), 0.)
-        Q = range_difference_covariance(np.eye(8) * 0.25)
+        Q = range_difference_covariance(np.eye(7) * 0.25)
         np.testing.assert_allclose(np.diag(Q), 0.5)
         self.assertAlmostEqual(Q[0, 1], 0.25)
-        self.assertEqual(np.linalg.matrix_rank(Q), 7)
+        self.assertEqual(np.linalg.matrix_rank(Q), 6)
 
     def test_monte_carlo_and_time_scaling(self):
         rng = np.random.default_rng(10)
-        sigmas = np.arange(1., 9.) / 10
+        sigmas = np.arange(1., 8.) / 10
         Q = np.diag(sigmas**2)
         expected = range_difference_covariance(Q)
-        samples = rng.normal(size=(50000, 8)) * sigmas[None, :]
+        samples = rng.normal(size=(50000, 7)) * sigmas[None, :]
         D = differencing_matrix()
         actual = np.cov((samples @ D.T), rowvar=False)
         np.testing.assert_allclose(actual, expected, rtol=0.08, atol=0.015)

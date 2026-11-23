@@ -1,0 +1,6 @@
+# CISP source and license snapshots retain the authors' line endings and whitespace.
+baselines/matlab/chan_ho1994/private/TDOALoc.m -text -whitespace
+baselines/matlab/device_iot/private/*.m -text -whitespace
+baselines/matlab/*/CISP_LICENSE.txt -text -whitespace
+baselines/matlab/sun2019/*.m -text -whitespace
+baselines/matlab/wang2017/*.m -text -whitespace

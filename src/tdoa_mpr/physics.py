@@ -65,7 +65,8 @@ class MPRJacobians:
 
 
 def mpr_jacobians(u, g, stations, ref=0):
-    """Closed-form derivatives of the rationalized range-difference map."""
+    """Derivatives of range_differences, including its input normalization."""
+    input_norm = np.linalg.norm(u)
     u, g, s, take = _inputs(u, g, stations, ref)
     inds = np.flatnonzero(take)
     si, s0 = s[take], s[ref]
@@ -83,6 +84,7 @@ def mpr_jacobians(u, g, stations, ref=0):
     dn_du = -2 * delta
     dd_du = vi + v0
     du = (dn_du * den[:, None] - num[:, None] * dd_du) / den2[:, None]
+    du = du @ (np.eye(3) - np.outer(u, u)) / input_norm
     dd_dg = -np.einsum("ij,ij->i", vi, si) - v0 @ s0
     dg = (q_delta * den - num * dd_dg) / den2
 
@@ -116,6 +118,7 @@ def local_information(u, g, stations, qr, qs=None, ref=0, max_condition=1e12):
     nuisance-position approximation, not an exact finite-noise CRLB.
     """
     from .covariance import effective_covariance
+    u, g, stations, _ = _inputs(u, g, stations, ref)
     j = mpr_jacobians(u, g, stations, ref=ref)
     E = tangent_basis(u)
     H = np.column_stack((j.du @ E, j.dg))

@@ -1,0 +1,127 @@
+{
+  "date": "2026-11-23",
+  "archives": [
+    {
+      "url": "https://cisp.ece.missouri.edu/code/TDOALoc_AlgbSolMPR/TDOALoc_AlgbSolMPR.zip",
+      "status": 200,
+      "content_type": "application/zip",
+      "bytes": 13583,
+      "sha256": "e8551e410310384f7c7fb015c96cde9109eabce92d3a85e5083d12a423e407ef",
+      "local": "runs/initial_review/sources/TDOALoc_AlgbSolMPR.zip",
+      "members": [
+        "Bias_GTRS_MPR.m",
+        "Bias_SUM_MPR.m",
+        "Cov_GTRS_MPR.m",
+        "Cov_SUM_MPR.m",
+        "Example.m",
+        "TDOALocCRLB_MPR.m",
+        "TDOA_GTRS_MPR.m",
+        "TDOA_SUM_MPR.m"
+      ]
+    },
+    {
+      "url": "https://cisp.ece.missouri.edu/code/TDOALoc_MLEMPR/TDOALoc_MLEMPR.zip",
+      "status": 200,
+      "content_type": "application/zip",
+      "bytes": 7769,
+      "sha256": "ab253d5f4a6a7d60c200dc5c49b6f7f9b22e590aaf5f7a1b90b578678d0118ba",
+      "local": "runs/initial_review/sources/TDOALoc_MLEMPR.zip",
+      "members": [
+        "Example_Fig3.m",
+        "Example_Fig8.m",
+        "TDOALocCRLB_MPR.m",
+        "TDOA_MLEMPR.m",
+        "TDOA_SDRMPR_3D.m"
+      ]
+    },
+    {
+      "url": "https://cisp.ece.missouri.edu/code/license.txt",
+      "status": 200,
+      "content_type": "text/plain",
+      "bytes": 1379,
+      "sha256": "d865bab62715c6f45ab573a6bcfa2e59615e39035b46ee9d20c02cd1659f3f10",
+      "local": "runs/initial_review/sources/license.txt"
+    }
+  ],
+  "files": [
+    {
+      "file": "baselines/matlab/sun2019/Bias_GTRS_MPR.m",
+      "sha256": "d299b1f7b97032dd3d97268a19a81ad7710d7274bfbccde5b48b6b01452b5871",
+      "bytes": 2484,
+      "official_byte_identity": true
+    },
+    {
+      "file": "baselines/matlab/sun2019/Bias_SUM_MPR.m",
+      "sha256": "bb7320d4641c52267b1547d7cefbb6b58b8e5964291c9f1090a24da123c16916",
+      "bytes": 2719,
+      "official_byte_identity": true
+    },
+    {
+      "file": "baselines/matlab/sun2019/Cov_GTRS_MPR.m",
+      "sha256": "05e23aa727d154ee137c1751b22ec0e8d156cf91317b8ab51abb9c4e6f2d0f31",
+      "bytes": 2166,
+      "official_byte_identity": true
+    },
+    {
+      "file": "baselines/matlab/sun2019/Cov_SUM_MPR.m",
+      "sha256": "f4ee72726d56b53e240877cfe26725a102b6213612d3cb8bf075cbf45f177245",
+      "bytes": 2231,
+      "official_byte_identity": true
+    },
+    {
+      "file": "baselines/matlab/sun2019/Example.m",
+      "sha256": "fd97718364586e54693281ff2bb85ce9d8b91acca8eba68f051700b0eb0f45fe",
+      "bytes": 21127,
+      "official_byte_identity": true
+    },
+    {
+      "file": "baselines/matlab/sun2019/TDOALocCRLB_MPR.m",
+      "sha256": "58834c51efcb891432fdcad15b016f184670a827fc7f2a3e689e6732ce7a0365",
+      "bytes": 1904,
+      "official_byte_identity": true
+    },
+    {
+      "file": "baselines/matlab/sun2019/TDOA_GTRS_MPR.m",
+      "sha256": "ce1d05bddbe3ad291880ec33211f0dfadb81ec705c6c0e197601e88c8b932ccc",
+      "bytes": 4262,
+      "official_byte_identity": true
+    },
+    {
+      "file": "baselines/matlab/sun2019/TDOA_SUM_MPR.m",
+      "sha256": "5fd5206e6ca219c325b44053d079335eaa1008362f7fb7eb3dace8886623cebf",
+      "bytes": 3218,
+      "official_byte_identity": true
+    },
+    {
+      "file": "baselines/matlab/wang2017/Example_Fig3.m",
+      "sha256": "ba445f4949e2dc0094300381e7b6f194e16335dc56239ebb0dce7aa01e52e99c",
+      "bytes": 4709,
+      "official_byte_identity": true
+    },
+    {
+      "file": "baselines/matlab/wang2017/Example_Fig8.m",
+      "sha256": "9a968d00fe94eb9dc37df898d141d3f34c5638914cf10635774a8b6d928b9bec",
+      "bytes": 4248,
+      "official_byte_identity": true
+    },
+    {
+      "file": "baselines/matlab/wang2017/TDOALocCRLB_MPR.m",
+      "sha256": "9f25d1aa957bd9df85dc46b8630ec9f57be4a3b71593ea12d818076e598366b9",
+      "bytes": 2390,
+      "official_byte_identity": true
+    },
+    {
+      "file": "baselines/matlab/wang2017/TDOA_MLEMPR.m",
+      "sha256": "d1d34f37dc7debc310393818f5db67045cdf9dfa21fa988486104e05f25f31b8",
+      "bytes": 2566,
+      "official_byte_identity": true
+    },
+    {
+      "file": "baselines/matlab/wang2017/TDOA_SDRMPR_3D.m",
+      "sha256": "a9753c0e1602d2338f269dd3d5c8f28089f012f3b5238af052b4e913f6fa0e38",
+      "bytes": 3987,
+      "official_byte_identity": true
+    }
+  ],
+  "license_sun2019_text_identical_after_newline_normalization": true
+}

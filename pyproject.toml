@@ -18,5 +18,8 @@ dev = ["pytest>=7.0"]
 [tool.setuptools.packages.find]
 where = ["src"]
 
+[tool.setuptools.package-data]
+tdoa_mpr = ["sun2019_design.json"]
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]

@@ -1,56 +1,33 @@
-# TDOA--MPR paper logic master (working, 2026-11-23)
+# Argument of the TDOA–MPR manuscript
 
-This document implements the evidence-first / reference-calibrated argument discipline of `NonAttachmentCoder/research-lifecycle` (prewriting logic, technical core, reference use). It is not a completed experiment report.
+## Research question
 
-## Question, mechanism, closest prior
+In one seven-receiver snapshot, does evaluating the physical TDOA map again at an updated direction and inverse range help a learned estimator use directional and radial information? The intended outputs are a unit direction and a signed inverse-range estimate. The first comparison covers the published fixed array and clean Gaussian noise. A separate planned test places an arrival error at the reference or at an ordinary receiver.
 
-**Question.** For one single-snapshot 3-D source observed by eight TDOA receivers, can a neural inference mechanism that repeatedly queries a stable MPR forward model and fuses correlated receiver evidence yield a useful direction / inverse-range risk tradeoff under varying distance, geometry and nominal/mismatched error statistics?
+## What makes the question testable
 
-**Established prior.** Wang--Ho 2017 already provides source-range-invariant TDOA MPR and MLE/SDR. Sun--Ho--Wan 2019 supplies closed-form SUM and GTRS plus asymptotic performance. Sun et al. 2024 supplies NSP/INSP and a demonstrated equivalence to GTRS within its assumptions. Wang--Ho 2019 has convex alternatives. Sun et al. 2026 analyzes both strengths and limitations of MPR vs Cartesian. Wang--So--Li 2016 addresses NLOS robustness. **No claim here that MPR itself, a forward physics residual, or handling NLOS is independently novel.**
+A small angular displacement can explain part of a radial change in the predicted TDOAs. Projecting the whitened inverse-range derivative off the angular Jacobian gives the radial information left after fitting direction. This standard nuisance-parameter calculation explains why accurate bearing and appreciable relative radial uncertainty can coexist. The recurrent candidate computes the range differences and local receiver directions at its current estimate. Its inputs include the dense nominal covariance. The information projection serves as an analytical diagnostic in this manuscript.
 
-**Candidate mechanism.** Receiver-reference covariance is kept, including its off-diagonal structure; receiver-position covariance remains visible. A shared station encoder fuses the TDOA range-difference observations and model-dependent discrepancies. The next query is evaluated at the network's own state. A recurrent shared latent state produces a direction on S² and signed g. A matched no-query control determines whether the dynamic physics input matters. The whole method, not a traditional solver, is trained end to end.
+## Prior work and evidence
 
-## Claim-to-evidence map
-
-| Manuscript claim | Source/evidence | Status |
+| Claim | Support | Scope |
 |---|---|---|
-| TDOA MPR unifies near/far | Wang--Ho TSP 2017 and subsequent work | Established prior, cited |
-| Closed-form SUM/GTRS and NSP alternatives exist | Sun--Ho--Wan 2019; Sun et al. 2024 | Established prior, cited |
-| A common reference correlates the seven TDOAs | Eq. Qr = D Qtoa D^T; unit/M-C checks | Derivable, implementation tests |
-| Stable rational h supports exact g=0 | Algebraic rationalization; numerical limiting tests | Derivable, implementation tests |
-| Local curvature sensitivity depends on geometry | Derivative of h at g=0 | Derivable; no performance assertion |
-| Network is neural-first and uses its own physical queries | `src/tdoa_mpr/neural.py` forward | Implemented computational construction |
-| Proposed network matches/improves Gaussian MPR risk | Publication-grade paired experiments vs qualified baselines | **Unverified** |
-| Proposed network improves under NLOS/outliers or unseen geometry | Independent test scenes, matched learning controls and relevant robust references | **Unverified** |
-| End-to-end runtime competitive | Full matched CPU/GPU timing | **Unverified** |
+| MPR describes near-field localization and far-field direction finding. | Wang–Ho 2017, Sun–Ho–Wan 2019 and subsequent MPR methods. Sun et al. (2026) analyze the MPR–Cartesian comparison. | Established prior work. |
+| The radial derivative can be partly or wholly absorbed by a direction change. | Tangent Jacobian and Schur complement in Section II. | Local calculation for known stations, a fixed positive definite Gaussian covariance and the indicated rank conditions. |
+| The candidate makes two physical queries in three shared recurrent passes. | The first pass has zero predicted differences. The second and third use the preceding estimate. | Implemented forward computation. |
+| The four released classical estimators separate in the nominal sweeps. | Matched MATLAB frames and raw method outputs. At 460 km Chan–Ho inverse-range MSE was 20.00 dB above the nominal bound. The three DeviceIoT MPR methods were within 0.2 dB at this point. | One array, one bearing, the same centered bank of 32 draws at each point. |
+| Repeated queries improve neural estimation or help with timing biases. | Requires paired training and evaluation of refreshed, frozen-first-query and no-query alternatives. | Open. No learned curve is available in the paper. |
 
-## Five-section story
+Existing robust TDOA work includes Wang–So–Li (2016) and Wang–Ho–Wang (2023). The latter studies full-set measurements. This project supplies six reference differences. Representing shared-reference correlation, changing coordinates or displaying a Cartesian threshold does not by itself establish a learning contribution. [Manuscript and references](IEEEtran_TDOA_MPR.tex) · [Source implementations](../baselines/SOURCES.md)
 
-I. **Introduction:** TDOA needs range-agnostic operation; traditional MPR has solved the representation problem. Correlated TDOA quality and unmodeled delays motivate learning, but classical NLOS robustness already exists. Introduce *specific computation* and tests, not generic neural claims.
+## Argument by section
 
-II. **Measurement model:** emission-time cancellation, 7D reference-star covariance, reported receiver errors; exact signed-g MPR forward map and its derivatives; conditional CRLB vs approximate local information distinguish exact and first-order.
+1. Explain the ambiguity between direction, curvature and a receiver-level delay. Establish the known role of MPR and identify what a physical query can change.
+2. Derive the exact forward map and the radial information conditional on fitting direction. Separate the known-station Gaussian bound from first-order station-error propagation.
+3. Describe the implemented readouts, stage-specific inputs, marginal residual scaling and training objective. Give the development sampling assumptions.
+4. Measure classical errors using paired data. Interpret inverse-range MSE together with the relative bound. Specify the neural control that would isolate refreshing a query.
+5. State the conditional classical finding and the remaining empirical question about learned inference.
 
-III. **Method:** scale inputs; covariance-aware station tokens; dynamic physical query; recurrent latent state; sphere/g readouts and declared saturation; joint point loss; complete inference budget. Each equation corresponds to code.
+## Decisive comparison
 
-IV. **Results (prospective):** describe conditions, paired baselines, and success criteria before plotting; present no imaginary observed numbers. State unsupported baseline ports as pending. Gaussian figure validates efficiency, range/geometry figure tests physics, contamination tests generalization, ablations test specific novelty, time table measures costs.
-
-V. **Conclusion:** summarize what has actually been established and what requires evidence. Revise after experiments, not before.
-
-## Source roles
-
-- Closest theoretical: Wang--Ho 2017; Sun--Ho--Wan 2019; Sun et al. 2024; Sun et al. 2026.
-- Comparator implementation: Ho lab `TDOA_MLEMPR`, `TDOA_SUM_MPR`, `TDOA_GTRS_MPR` original MATLAB. See `baselines/SOURCES.md`.
-- Robustness context: Wang--So--Li 2016; NLOS is not a vacant research field.
-- Method-organizing precedents: Shlezinger et al. 2023; DA-MUSIC; recurrent inference machines; KalmanNet. Different modalities, no source-performance transfer.
-- Writing structure: AOA--MPR manuscript's IEEEtran five-section presentation. No AOA mathematics, observations or performance is copied into this paper.
-- Workflow principles: `research-lifecycle` evidence before conclusions, concise citation-led prose, matched comparison.
-
-## Open scientific questions
-
-1. Is a two-parameter angular plus inverse-range neural readout more stable than direct Cartesian in near/far regimes? Does saturation at |g|L<4 create failures?
-2. Does encoding the full Qr correlation improve over only diagonal quality, and can a network use dense cross-station Qs after being trained only on diagonal Qs?
-3. Does recurrent dynamic querying improve over same-capacity static-query/no-query alternatives on matched inputs and budget?
-4. What actually constitutes an independent confirmation scenario for outliers, systematic timing bias, receiver displacement and geometry?
-5. Are actual Gaussian results competitive with the **published** GTRS/SUM/MLE/NSP codes when same covariance and source configurations are used?
-
-No answer is prejudged by the working manuscript.
+Hold the observations, model capacity, readout count and training budget fixed. Compare the candidate with a version that reuses the first effective predicted differences and receiver bearings during the final pass while still updating the hidden state. Include the existing no-query control. Evaluate both direction and inverse range, and report radial bias. Agreement with the frozen-query control would leave any gain from refreshing the query unestablished. Assess nominal Gaussian accuracy and receiver-delay mismatch separately. The mismatch and neural comparisons require their own data and an agreed training budget. [Pilot data and figures](../experiments/seven_station_pilot/) · [Experiment contract](EXPERIMENT_CONTRACT.md)

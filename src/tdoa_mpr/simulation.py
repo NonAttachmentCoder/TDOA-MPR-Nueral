@@ -1,17 +1,40 @@
-"""Synthetic *range-difference* measurements for independent research pilots.
-
-Random generation is per frame with a common reference-receiver error.
-These development recipes are not calibrated reconstructions of published
-figures and should not be reported as independent confirmation evidence.
-"""
+"""Development frames in meters, differenced against receiver 0."""
 from dataclasses import dataclass, asdict
+import json
+from pathlib import Path
 import numpy as np
 from .physics import range_differences
 from .covariance import differencing_matrix, range_difference_covariance
 
+SUN2019 = json.loads(Path(__file__).with_name("sun2019_design.json").read_text())
+_STATIONS_M = 1000 * np.asarray(SUN2019["stations_km"])
+_RANGES_M = 1000 * np.union1d(SUN2019["range"]["range_km"], SUN2019["noise"]["range_km"])
+_VARIANCES_DB = np.array(SUN2019["noise"]["tdoa_variance_db"])
+
 
 @dataclass(frozen=True)
 class SimulationConfig:
+    """Seven known stations, Gaussian marginal TDOA variance from the 2019 grid."""
+    n_receivers: int = 7
+    reference: int = 0
+    outlier_probability: float = 0.0
+    outlier_std_multiplier: float = 8.0
+    positive_delay_bias_probability: float = 0.0
+    positive_delay_bias_m: float = 5.0
+
+    def __post_init__(self):
+        if self.n_receivers != 7 or self.reference != 0:
+            raise ValueError("the Sun 2019 design uses seven stations, reference 0")
+        if not 0 <= self.outlier_probability <= 1 or not 0 <= self.positive_delay_bias_probability <= 1:
+            raise ValueError("invalid contamination probability")
+
+    def to_dict(self):
+        return asdict(self)
+
+
+@dataclass(frozen=True)
+class LegacyEightReceiverConfig:
+    """Archived eight-station generator for old checkpoints and the initial audit."""
     n_receivers: int = 8
     reference: int = 0
     aperture_low_m: float = 25.0
@@ -51,8 +74,7 @@ def _log_uniform(rng, low, high):
     return float(np.exp(rng.uniform(np.log(low), np.log(high))))
 
 
-def sample_frame(rng, config=SimulationConfig()):
-    """Return inference inputs plus separately marked private truth."""
+def _legacy_geometry(rng, config):
     n = config.n_receivers
     L = _log_uniform(rng, config.aperture_low_m, config.aperture_high_m)
     s_true = rng.normal(size=(n, 3)) * L / np.sqrt(3)
@@ -60,7 +82,6 @@ def sample_frame(rng, config=SimulationConfig()):
     direction = rng.normal(size=3)
     direction /= np.linalg.norm(direction)
     r = _log_uniform(rng, config.range_low_m, config.range_high_m)
-    g = 1.0 / r
 
     arrival_sigma = _log_uniform(rng, config.arrival_sigma_low_m, config.arrival_sigma_high_m)
     arrival_sigmas = arrival_sigma * rng.uniform(0.7, 1.3, size=n)
@@ -71,6 +92,25 @@ def sample_frame(rng, config=SimulationConfig()):
     position_sigmas = position_sigma * rng.uniform(0.7, 1.3, size=n)
     qs = np.diag(np.repeat(position_sigmas**2, 3))
     s_reported = s_true + rng.normal(size=(n, 3)) * position_sigmas[:, None]
+    return s_true, s_reported, direction, r, arrival_sigmas, qr, qs
+
+
+def sample_frame(rng, config=SimulationConfig()):
+    """Draw one development frame. Exact figure ensembles use run_cisp_sweep.m."""
+    n = config.n_receivers
+    if isinstance(config, LegacyEightReceiverConfig):
+        s_true, s_reported, direction, r, arrival_sigmas, qr, qs = _legacy_geometry(rng, config)
+    else:
+        s_true = _STATIONS_M.copy()
+        s_reported = s_true.copy()
+        direction = rng.normal(size=3)
+        direction /= np.linalg.norm(direction)
+        r = float(rng.choice(_RANGES_M))
+        variance = 10.0 ** (rng.choice(_VARIANCES_DB) / 10.0)
+        arrival_sigmas = np.full(n, np.sqrt(variance / 2))
+        qr = variance * (np.eye(n-1) + np.ones((n-1,n-1))) / 2
+        qs = np.zeros((3*n, 3*n))
+    g = 1.0 / r
 
     arrival_error = rng.normal(size=n) * arrival_sigmas
     if config.outlier_probability:
